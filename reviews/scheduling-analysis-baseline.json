@@ -1,0 +1,52 @@
+{
+  "sourceCommit": "670247748710f2bf06f7749bc7a5d6aa34310ed6",
+  "method": "Source/model inspection; not human participant outcomes",
+  "poolTotals": [
+    100
+  ],
+  "reportTotals": [
+    100
+  ],
+  "trendDirections": [
+    "up",
+    "down"
+  ],
+  "scatterDirections": [
+    "up",
+    "down"
+  ],
+  "schedulingActions": [
+    {
+      "level": 6,
+      "assignments": 5,
+      "confirmations": 2,
+      "workPlacements": 1,
+      "planButton": 1,
+      "minimumCoreActions": 9
+    },
+    {
+      "level": 7,
+      "assignments": 35,
+      "confirmations": 10,
+      "workPlacements": 2,
+      "planButton": 1,
+      "minimumCoreActions": 48
+    },
+    {
+      "level": 11,
+      "assignments": 35,
+      "confirmations": 10,
+      "workPlacements": 2,
+      "planButton": 1,
+      "minimumCoreActions": 48
+    },
+    {
+      "level": 12,
+      "assignments": 110,
+      "confirmations": 20,
+      "workPlacements": 4,
+      "planButton": 1,
+      "minimumCoreActions": 135
+    }
+  ]
+}
