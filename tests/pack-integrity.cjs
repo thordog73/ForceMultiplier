@@ -1,5 +1,5 @@
 const assert=require('node:assert/strict');
-const pack=require('../www/pack-integrity.js');
+const pack=require('../dist/pack-integrity.js');
 const clone=x=>JSON.parse(JSON.stringify(x));
 let checks=0;
 const ok=(condition,label)=>{assert.ok(condition,label);checks++;};

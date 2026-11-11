@@ -1,0 +1,10 @@
+const fs=require('node:fs'),assert=require('node:assert/strict');
+const s=fs.readFileSync('dist/index.html','utf8');
+assert(s.includes("force-multiplier-recognize-integrate-v2"));
+assert(s.includes('4-HOUR GRADUATE → 12-HOUR ADVANCED → 24-HOUR EXPERT'));
+assert(s.includes('4-hour Graduate'));assert(s.includes('12-hour Advanced Graduate'));assert(s.includes('24-hour Expert'));assert(s.includes('Expert challenge'));
+assert(s.includes('./worlds.html'));assert(s.includes('./native.js'));assert(fs.existsSync('ios/App/App/public/index.html'));assert(fs.readFileSync('native-src/native.js','utf8').includes('force-multiplier-recognize-integrate-v2'));assert(fs.readFileSync('dist/native.js','utf8').includes('force-multiplier-recognize-integrate-v2'));
+const ids=[...s.matchAll(/\[\"([SADIB]\d{2})\",/g)].map(m=>m[1]);
+for(const prefix of ['S','A','D','I','B'])for(let i=1;i<=20;i++)assert(ids.includes(prefix+String(i).padStart(2,'0')),'missing '+prefix+i);
+assert(s.includes('TEACH')||s.includes('Teach'));assert(s.includes('Recognize'));assert(s.includes('Integrate'));
+console.log('PASS guided path: 4/12/24-hour designations, 100 skills, integrated challenges, Worlds link and native bridge present.');

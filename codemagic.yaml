@@ -1,82 +1,82 @@
-# Version 22: every game asset is bundled. Workflows are started manually.
-# App Store Connect record: ForceMultiplierSimulator (6833361372).
-# A manually started ios-app-store build uploads to Apple without requesting review.
 workflows:
-  ios-simulator:
-    name: Force Multiplier - iPhone and iPad simulator check
+  ios-validate:
+    name: Force Multiplier — unsigned iOS validation
     instance_type: mac_mini_m2
-    max_build_duration: 60
+    max_build_duration: 30
     environment:
       xcode: latest
       node: 22
-      cocoapods: 1.16.2
+    triggering:
+      events:
+        - push
+      branch_patterns:
+        - pattern: 'release/force-multiplier-*'
+          include: true
+          source: true
+      cancel_previous_builds: false
     scripts:
-      - name: Check current Apple SDK
-        script: bash scripts/check-apple-tools.sh
       - name: Install locked dependencies
         script: npm ci
-      - name: Select build number
-        script: node scripts/set-build-number.mjs --offline
-      - name: Sync bundled game and native project
-        script: npm run ios:sync
-      - name: Validate game and native configuration
+      - name: Model, persistence and package checks
+        script: npm test && npm run check
+      - name: Bundle offline app and synchronize native plugins
+        script: npm run ios:prepare
+      - name: Compile for iOS Simulator (not signed or device-tested)
         script: |
-          npm test
-          npm run verify
-      - name: Build and launch on iPhone and iPad
-        script: npm run ios:simulator
+          xcodebuild -resolvePackageDependencies -project ios/App/App.xcodeproj -scheme App
+          xcodebuild -project ios/App/App.xcodeproj -scheme App -configuration Debug -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' -derivedDataPath build CODE_SIGNING_ALLOWED=NO build
+          cd build/Build/Products/Debug-iphonesimulator
+          zip -r "$CM_BUILD_DIR/ForceMultiplier-Simulator.zip" App.app
     artifacts:
-      - artifacts/simulator/**
-      - ios/App/Podfile.lock
-      - build/simulator/Build/Products/Debug-iphonesimulator/App.app
-
-  ios-app-store:
-    name: ForceMultiplierSimulator - App Store upload
+      - ForceMultiplier-Simulator.zip
+      - build/Logs/**
+  ios-release:
+    name: Force Multiplier — signed IPA + TestFlight upload
     instance_type: mac_mini_m2
-    max_build_duration: 60
+    max_build_duration: 45
     integrations:
       app_store_connect: ten-minute-wins-apple
     environment:
       xcode: latest
       node: 22
-      cocoapods: 1.16.2
-      vars:
-        APP_STORE_APPLE_ID: "6833361372"
       ios_signing:
         distribution_type: app_store
         bundle_identifier: com.fredesser.forcemultiplier
-      # Import this app's App Store profile and its matching certificate in Codemagic.
-      # APPLE_TEAM_ID is optional when xcode-project use-profiles configures it.
+      vars:
+        XCODE_PROJECT: ios/App/App.xcodeproj
+        XCODE_SCHEME: App
+        APP_STORE_APPLE_ID: "6833361372"
+    triggering:
+      events:
+        - push
+      branch_patterns:
+        - pattern: 'testflight/force-multiplier-*'
+          include: true
+          source: true
+      cancel_previous_builds: false
     scripts:
-      - name: Check current Apple SDK
-        script: bash scripts/check-apple-tools.sh
-      - name: Verify Apple application selection
-        script: |
-          if [ -z "${APP_STORE_APPLE_ID:-}" ]; then
-            echo "Set APP_STORE_APPLE_ID to the numeric ID of the Force Multiplier app in App Store Connect." >&2
-            exit 1
-          fi
-      - name: Install locked dependencies
-        script: npm ci
-      - name: Choose a new Apple build number
-        script: node scripts/set-build-number.mjs
-      - name: Sync bundled game and native project
-        script: npm run ios:sync
-      - name: Validate game and native configuration
-        script: |
-          npm test
-          npm run verify
-      - name: Apply authorized distribution signing
+      - name: Install and verify
+        script: npm ci && npm test && npm run check && npm run ios:prepare
+      - name: Apply authorized signing profiles
         script: xcode-project use-profiles
-      - name: Create signed IPA artifact
-        script: npm run ios:archive
+      - name: Set next unused TestFlight build number
+        script: |
+          set -euo pipefail
+          LATEST="$(app-store-connect get-latest-testflight-build-number "$APP_STORE_APPLE_ID" --platform IOS 2>/dev/null || true)"
+          if ! echo "$LATEST" | grep -Eq '^[0-9]+$'; then LATEST=0; fi
+          NEXT=$((LATEST + 1))
+          echo "Latest TestFlight build: $LATEST; building: $NEXT"
+          cd ios/App
+          agvtool new-version -all "$NEXT"
+      - name: Create signed App Store IPA
+        script: xcode-project build-ipa --project "$XCODE_PROJECT" --scheme "$XCODE_SCHEME"
     artifacts:
-      - ios/App/build/ios/ipa/*.ipa
-      - ios/App/build/ios/xcarchive/*.xcarchive
-      - ios/App/Podfile.lock
+      - build/ios/ipa/*.ipa
       - /tmp/xcodebuild_logs/*.log
     publishing:
       app_store_connect:
         auth: integration
         submit_to_testflight: false
         submit_to_app_store: false
+# The signed IPA is uploaded to App Store Connect and appears in TestFlight after Apple processing.
+# Public App Store review submission remains manual.
