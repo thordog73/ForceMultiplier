@@ -1,0 +1,117 @@
+/* Touch, safe areas and viewport sizing shared by the bundled iOS app and web app. */
+html { -webkit-text-size-adjust:100%; text-size-adjust:100%; }
+body.game-app,body.practice-app { min-height:100svh; }
+button,a,input,select,textarea { touch-action:manipulation; }
+input,select,textarea { scroll-margin-block:90px 100px; }
+[hidden] { display:none!important; }
+
+.storage-notice { position:relative; z-index:90; display:flex; align-items:center; justify-content:center; gap:10px; flex-wrap:wrap; padding:12px max(16px,env(safe-area-inset-right)) 12px max(16px,env(safe-area-inset-left)); background:#fff0cf; color:#60420c; font:600 13px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+.storage-notice span { max-width:620px; }
+.storage-notice button { min-height:44px; border:1px solid #bf9b51; border-radius:8px; background:#fff9e9; color:inherit; padding:8px 12px; font:inherit; }
+.game-app .topbar { height:auto; min-height:76px; padding-top:env(safe-area-inset-top); padding-left:max(22px,env(safe-area-inset-left)); padding-right:max(22px,env(safe-area-inset-right)); }
+.game-app .game-shell { padding-bottom:calc(30px + env(safe-area-inset-bottom)); }
+.game-app .specialty-nav { padding-left:max(30px,env(safe-area-inset-left)); padding-right:max(30px,env(safe-area-inset-right)); }
+.game-app .game-stage,.game-app .game-shell,.game-app .game-layout,.game-app .skill-layout,.game-app .skill-board,.game-app .skill-side,.game-app .board-layout,.game-app .mission-head>div { min-width:0; }
+.game-app .board-scroll,.game-app .sg-board-scroll { max-width:100%; overscroll-behavior-x:contain; }
+.game-app .icon-btn,.game-app .dialog-head .icon-btn { min-width:44px; min-height:44px; }
+.game-app .world-switch,.game-app .text-btn,.game-app .subtle-btn,.game-app .board-phase button,.game-app .selected-task-remove,.game-app .sg-chip,.game-app .sg-cell-button,.game-app .sg-action { min-height:44px; }
+.game-app .world-switch { min-width:44px; }
+.game-app .level-dot,.game-app .level-dot.active { flex:0 0 44px; width:44px; min-width:44px; height:44px; font-size:12px; }
+.game-app .level-dots { min-width:0; overflow-x:auto; padding:4px 2px; scrollbar-width:none; overscroll-behavior-x:contain; }
+.game-app .level-dots::-webkit-scrollbar { display:none; }
+.game-app .level-count,.game-app .chapter-label { flex-shrink:0; }
+.game-app .sg-workbench input,.game-app .sg-workbench select,.game-app .sg-workbench textarea { min-height:44px; font-size:16px; }
+.game-app dialog { max-height:calc(100dvh - max(24px,env(safe-area-inset-top)) - max(24px,env(safe-area-inset-bottom))); }
+.game-app .dialog-content { max-height:calc(100dvh - 132px - env(safe-area-inset-top) - env(safe-area-inset-bottom)); overscroll-behavior:contain; }
+.game-app .menu-links { display:flex; justify-content:center; flex-wrap:wrap; gap:8px 20px; margin-top:14px; }
+.game-app .menu-links a { display:inline-flex; min-height:44px; align-items:center; color:#3f6984; text-decoration:underline; text-underline-offset:3px; font-weight:600; }
+.game-app .menu-items button small { margin-left:auto; }
+.game-app .menu-items .danger { color:#a04233; }
+.game-app .data-actions { margin-top:16px; }
+.game-app.fullscreen .specialty-nav,.game-app.fullscreen .level-track,.game-app.fullscreen .brandcopy small { display:none; }
+.game-app.fullscreen .game-shell { padding-top:16px; }
+.game-app .celebration { padding:max(16px,env(safe-area-inset-top)) max(16px,env(safe-area-inset-right)) max(16px,env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left)); }
+.game-app .win-card { max-height:calc(100dvh - max(32px,env(safe-area-inset-top)) - max(32px,env(safe-area-inset-bottom))); }
+
+.practice-app .topbar { height:auto; min-height:68px; padding-top:env(safe-area-inset-top); padding-right:max(22px,env(safe-area-inset-right)); }
+.practice-app .sidebar { padding-top:calc(28px + env(safe-area-inset-top)); padding-bottom:calc(22px + env(safe-area-inset-bottom)); padding-left:max(18px,env(safe-area-inset-left)); }
+.practice-app .content { padding-bottom:calc(45px + env(safe-area-inset-bottom)); }
+.practice-app .btn,.practice-app .btn.small,.practice-app .segmented button,.practice-app .link-btn,.practice-app .nav-btn { min-height:44px; }
+.practice-app .field input,.practice-app .field select,.practice-app .field textarea,.practice-app .context-select select,.practice-app #lesson-jump,.practice-app .calc input,.practice-app .review-identity input,.practice-app .review-identity select { font-size:16px; min-height:44px; max-width:100%; }
+.practice-app .app-main,.practice-app .content,.practice-app .work-layout,.practice-app .work-sheet,.practice-app .work-side,.practice-app .field,.practice-app .field-grid,.practice-app .intro-row>div,.practice-app .breadcrumbs { min-width:0; }
+.practice-app .table-wrap { max-width:100%; overscroll-behavior-x:contain; }
+.practice-app .breadcrumbs strong { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.practice-app .sidebar-links { display:flex; flex-wrap:wrap; gap:0 16px; margin:10px 0; }
+.practice-app .sidebar-links a { display:inline-flex; align-items:center; min-height:44px; color:#dbe8df; font-size:12px; }
+.practice-app .back-to-game { display:inline-flex; align-items:center; gap:8px; min-height:44px; color:var(--green); text-decoration:none; font-size:13px; font-weight:650; }
+.practice-app .sidebar .back-to-game { color:#ecf3de; margin-bottom:16px; }
+.practice-app dialog { max-height:calc(100dvh - max(24px,env(safe-area-inset-top)) - max(24px,env(safe-area-inset-bottom))); }
+.practice-app .modal-body { max-height:calc(100dvh - 140px - env(safe-area-inset-top) - env(safe-area-inset-bottom)); overscroll-behavior:contain; }
+.practice-app #toast { bottom:calc(16px + env(safe-area-inset-bottom)); }
+.practice-app.fullscreen .content { padding-top:calc(18px + env(safe-area-inset-top)); }
+
+@media(max-width:800px) {
+  .game-app .skill-side { bottom:calc(10px + env(safe-area-inset-bottom)); }
+}
+@media(max-width:700px) {
+  .game-app .topbar { min-height:68px; gap:8px; padding-left:max(12px,env(safe-area-inset-left)); padding-right:max(12px,env(safe-area-inset-right)); }
+  .game-app .header-right { gap:5px; }
+  .game-app .brandmark { width:32px; height:36px; }
+  .game-app .brandcopy { font-size:16px; }
+  .game-app .brandcopy small { display:none; }
+  .game-app .header-right .sound-control,.game-app .header-right .fullscreen-control,.game-app .score-pill { display:none; }
+  .game-app .specialty-nav { padding-left:max(12px,env(safe-area-inset-left)); padding-right:max(12px,env(safe-area-inset-right)); }
+  .game-app .specialty-tab { min-height:60px; }
+  .game-app .game-shell { padding-left:max(16px,env(safe-area-inset-left)); padding-right:max(16px,env(safe-area-inset-right)); }
+  .game-app .chapter-label { display:none; }
+  .game-app .level-track { gap:10px; }
+  .game-app .level-dots { gap:5px; }
+  .game-app .board-phase button { padding:8px 12px; }
+  .game-app .flight-half { min-height:36px; }
+  .game-app .sg-card { min-width:0; }
+  .game-app .sg-equation { flex-wrap:wrap; }
+}
+@media(max-width:420px) {
+  .game-app .brand { gap:7px; }
+  .game-app .brandcopy { max-width:80px; font-size:14px; line-height:1.15; }
+  .game-app .brandmark { display:none; }
+  .game-app .header-right { gap:4px; }
+  .game-app .world-switch { max-width:145px; padding:8px; }
+  .game-app .world-switch span { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .game-app .world-switch .world-chevron { display:none; }
+  .game-app .mission-head h1 { font-size:28px; }
+  .game-app .dialog-head { padding:14px 16px; }
+  .game-app .dialog-content { padding:18px 16px; }
+  .game-app .level-map { grid-template-columns:1fr; }
+}
+@media(max-width:760px) {
+  .practice-app .topbar { min-height:64px; padding-left:max(12px,env(safe-area-inset-left)); padding-right:max(12px,env(safe-area-inset-right)); }
+  .practice-app .sidebar { width:min(300px,88vw); }
+  .practice-app .content { padding-left:max(16px,env(safe-area-inset-left)); padding-right:max(16px,env(safe-area-inset-right)); }
+  .practice-app .top-actions .btn { min-height:44px; min-width:44px; }
+  .practice-app .breadcrumbs>span { display:none; }
+  .practice-app .lesson-top .toolbar { width:100%; min-width:0; }
+  .practice-app .lesson-top select { width:0; min-width:0; }
+  .practice-app .context-select select { max-width:170px; }
+  .practice-app .sheet-actions { position:static; }
+  .practice-app .settings-grid input[type=file] { max-width:100%; }
+}
+@media(max-width:520px) {
+  .practice-app .path-row { grid-template-columns:34px minmax(0,1fr) 44px; }
+  .practice-app .path-row .btn { min-width:44px; }
+  .practice-app .lesson-row { grid-template-columns:28px minmax(0,1fr); }
+  .practice-app .lesson-row>.btn { grid-column:2; justify-self:start; }
+  .practice-app .stats { grid-template-columns:repeat(3,minmax(0,1fr)); }
+  .practice-app .stat { min-width:0; overflow-wrap:anywhere; }
+  .practice-app .segmented { display:flex; flex-wrap:wrap; }
+  .practice-app .footer-nav { flex-wrap:wrap; }
+}
+@media(orientation:landscape) and (max-height:500px) {
+  .game-app .skill-side { position:static; }
+  .game-app .dialog-head { padding:8px 16px; }
+  .game-app .dialog-content { max-height:calc(100dvh - 100px - env(safe-area-inset-top) - env(safe-area-inset-bottom)); }
+}
+@media print {
+  .storage-notice,.sidebar-links,.back-to-game { display:none!important; }
+  .practice-app .modal-body { max-height:none; overflow:visible; }
+}

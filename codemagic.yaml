@@ -1,0 +1,75 @@
+# Version 22: every game asset is bundled. Workflows are started manually.
+# Confirm the existing Apple integration and provisional bundle ID for this app.
+# No workflow publishes automatically or submits an App Store review.
+workflows:
+  ios-simulator:
+    name: Force Multiplier - iPhone and iPad simulator check
+    instance_type: mac_mini_m2
+    max_build_duration: 60
+    environment:
+      xcode: latest
+      node: 22
+      cocoapods: 1.16.2
+    scripts:
+      - name: Check current Apple SDK
+        script: bash scripts/check-apple-tools.sh
+      - name: Install locked dependencies
+        script: npm ci
+      - name: Select build number
+        script: node scripts/set-build-number.mjs --offline
+      - name: Sync bundled game and native project
+        script: npm run ios:sync
+      - name: Validate game and native configuration
+        script: |
+          npm test
+          npm run verify
+      - name: Build and launch on iPhone and iPad
+        script: npm run ios:simulator
+    artifacts:
+      - artifacts/simulator/**
+      - ios/App/Podfile.lock
+      - build/simulator/Build/Products/Debug-iphonesimulator/App.app
+
+  ios-app-store:
+    name: Force Multiplier - signed App Store IPA
+    instance_type: mac_mini_m2
+    max_build_duration: 60
+    integrations:
+      app_store_connect: ten-minute-wins-apple
+    environment:
+      xcode: latest
+      node: 22
+      cocoapods: 1.16.2
+      ios_signing:
+        distribution_type: app_store
+        bundle_identifier: com.fredesser.forcemultiplier
+      # Set APP_STORE_APPLE_ID in Codemagic after creating/selecting the real app.
+      # APPLE_TEAM_ID is optional when xcode-project use-profiles configures it.
+    scripts:
+      - name: Check current Apple SDK
+        script: bash scripts/check-apple-tools.sh
+      - name: Verify Apple application selection
+        script: |
+          if [ -z "${APP_STORE_APPLE_ID:-}" ]; then
+            echo "Set APP_STORE_APPLE_ID to the numeric ID of the Force Multiplier app in App Store Connect." >&2
+            exit 1
+          fi
+      - name: Install locked dependencies
+        script: npm ci
+      - name: Choose a new Apple build number
+        script: node scripts/set-build-number.mjs
+      - name: Sync bundled game and native project
+        script: npm run ios:sync
+      - name: Validate game and native configuration
+        script: |
+          npm test
+          npm run verify
+      - name: Apply authorized distribution signing
+        script: xcode-project use-profiles
+      - name: Create signed IPA artifact
+        script: npm run ios:archive
+    artifacts:
+      - ios/App/build/ios/ipa/*.ipa
+      - ios/App/build/ios/xcarchive/*.xcarchive
+      - ios/App/Podfile.lock
+      - /tmp/xcodebuild_logs/*.log

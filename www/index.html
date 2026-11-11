@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#132c42">
+  <meta name="description" content="Five practical skills. Four playful worlds. Learn scheduling, analysis, documentation, database management and data integrity by playing.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Multiplier">
+  <title>Force Multiplier · Worlds</title>
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./icon-192.png">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./game.css">
+  <link rel="stylesheet" href="./skill-games.css">
+  <link rel="stylesheet" href="./mobile.css">
+  <script src="./native-bridge.js" defer></script>
+  <script src="./device-ui.js" defer></script>
+  <script src="./game-rules.js" defer></script>
+  <script src="./game-worlds.js" defer></script>
+  <script src="./pack-analysis.js" defer></script>
+  <script src="./pack-documentation.js" defer></script>
+  <script src="./pack-database.js" defer></script>
+  <script src="./pack-integrity.js" defer></script>
+  <script src="./game-backup.js" defer></script>
+  <script src="./game.js" defer></script>
+</head>
+<body class="game-app">
+  <div id="storage-notice" class="storage-notice" role="status" aria-live="polite" hidden><span id="storage-message"></span><button data-action="export-game">Export backup</button><button data-action="retry-save">Retry save</button></div>
+  <a class="skip-link" href="#play">Skip to game</a>
+  <div id="game"><div class="loading"><span>✦</span><h1>Force Multiplier</h1></div></div>
+  <div id="game-toast" role="status" aria-live="polite"></div>
+  <dialog id="game-dialog"><div id="dialog-body"></div></dialog>
+  <noscript>Enable JavaScript to play.</noscript>
+</body>
+</html>

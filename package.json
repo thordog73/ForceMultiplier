@@ -1,0 +1,28 @@
+{
+  "name": "force-multiplier-ios",
+  "version": "22.0.0",
+  "private": true,
+  "description": "An offline iPhone and iPad game for five practical skills.",
+  "engines": { "node": ">=22.0.0" },
+  "scripts": {
+    "build": "node scripts/build-native-bridge.mjs",
+    "test": "node scripts/run-tests.mjs",
+    "verify": "node scripts/verify-package.mjs",
+    "ios:sync": "npm run build && node scripts/check-web-bundle.mjs && cap sync ios && node scripts/configure-ios.mjs",
+    "ios:open": "cap open ios",
+    "ios:simulator": "bash scripts/build-simulator.sh",
+    "ios:archive": "bash scripts/build-archive.sh"
+  },
+  "dependencies": {
+    "@capacitor/core": "8.6.0",
+    "@capacitor/haptics": "8.0.2",
+    "@capacitor/ios": "8.6.0",
+    "@capacitor/preferences": "8.0.1"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "8.6.0",
+    "esbuild": "0.28.2",
+    "plist": "3.1.1",
+    "xcode": "4.0.0"
+  }
+}

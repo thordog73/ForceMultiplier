@@ -1,0 +1,61 @@
+{
+  "checked_on": "2026-11-11",
+  "scope": "Store text lengths, support-page structure, relative links, and source-level privacy inventory. No Xcode archive or native device test was performed by this preparation step.",
+  "metadata": {
+    "name_characters": 24,
+    "name_limit": 30,
+    "subtitle_characters": 18,
+    "subtitle_limit": 30,
+    "promotional_text_characters": 148,
+    "promotional_text_limit": 170,
+    "description_characters": 2198,
+    "description_limit": 4000,
+    "keywords_utf8_bytes": 95,
+    "keywords_limit": 100,
+    "all_limits_pass": true
+  },
+  "public_page_sources": {
+    "files": [
+      "www/about.html",
+      "www/privacy.html",
+      "www/support.html"
+    ],
+    "all_relative_links_resolve_in_source": true,
+    "unique_html_ids": true,
+    "each_has_one_title_and_h1": true,
+    "language_declared": "en",
+    "external_scripts_or_fonts": false,
+    "contact": "fredesser@yahoo.com",
+    "contact_verified_from_public_developer_site": true
+  },
+  "privacy_source_inventory": {
+    "capacitor_core": "8.6.0",
+    "capacitor_ios": "8.6.0",
+    "preferences": "8.0.1",
+    "haptics": "8.0.2",
+    "custom_plugin": "FMFiles: user-directed import/share/copy/print",
+    "privacy_label_recommendation": "Data Not Collected, subject to final archive and actual service-practice verification",
+    "tracking": false,
+    "live_ai_runtime": false,
+    "analytics_sdk": false
+  },
+  "not_claimed_complete": [
+    "Apple app record",
+    "Bundle registration",
+    "Signing configuration",
+    "Native compilation",
+    "Native device verification",
+    "Native App Store screenshots",
+    "App Store submission or approval"
+  ],
+  "public_page_deployment": {
+    "status": "succeeded",
+    "site_version": 5,
+    "verified_on": "2026-11-11",
+    "public_urls": [
+      "https://force-multiplier-v22.fredesser.chatgpt.site/support",
+      "https://force-multiplier-v22.fredesser.chatgpt.site/privacy",
+      "https://force-multiplier-v22.fredesser.chatgpt.site/about"
+    ]
+  }
+}

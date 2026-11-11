@@ -1,0 +1,73 @@
+{
+  "checked_on": "2026-11-11",
+  "purpose": "Primary sources used to prepare Force Multiplier App Store material; requirements must be rechecked when uploading.",
+  "sources": [
+    {
+      "id": "review-guidelines",
+      "url": "https://developer.apple.com/app-store/review/guidelines/",
+      "publisher": "Apple",
+      "relevant_sections": ["2.3 Accurate Metadata", "4.2 Minimum Functionality", "5.1.1 Data Collection and Storage"],
+      "finding": "Interactive app utility, accurate claims, and accessible privacy information remain review responsibilities. Source review is not Apple approval."
+    },
+    {
+      "id": "review-help",
+      "url": "https://developer.apple.com/app-store/review/",
+      "publisher": "Apple",
+      "finding": "Test submitted builds and provide functioning contact and privacy links."
+    },
+    {
+      "id": "privacy-details",
+      "url": "https://developer.apple.com/app-store/app-privacy-details/",
+      "publisher": "Apple",
+      "finding": "App privacy answers cover developer and integrated-partner collection. On-device-only processing and optional disclosure have specific treatment; review actual transmissions and support practices."
+    },
+    {
+      "id": "privacy-entry",
+      "url": "https://developer.apple.com/help/app-store-connect/manage-app-information/manage-app-privacy",
+      "publisher": "Apple",
+      "finding": "Use App Store Connect to provide and maintain the app's privacy answers."
+    },
+    {
+      "id": "age-rating",
+      "url": "https://developer.apple.com/help/app-store-connect/manage-app-information/set-an-app-age-rating",
+      "publisher": "Apple",
+      "finding": "The questionnaire determines regional ratings; selecting Made for Kids is a separate choice with continuing obligations."
+    },
+    {
+      "id": "screenshots",
+      "url": "https://developer.apple.com/help/app-store-connect/reference/app-information/screenshot-specifications",
+      "publisher": "Apple",
+      "finding": "Current required slots are medium Dynamic Island iPhone and 13-inch iPad for iPad support. One to ten PNG/JPEG images per device size; no alpha. Use the current live page, not older indexed 6.9-inch-only guidance."
+    },
+    {
+      "id": "sdk",
+      "url": "https://developer.apple.com/news/upcoming-requirements/?id=04282026a",
+      "publisher": "Apple",
+      "finding": "Since April 28, 2026, uploaded iOS/iPadOS apps must use Xcode 26 or later and the iOS/iPadOS 26 SDK."
+    },
+    {
+      "id": "app-information",
+      "url": "https://developer.apple.com/help/app-store-connect/reference/app-information/app-information",
+      "publisher": "Apple",
+      "finding": "Name and subtitle field limits and app-record metadata."
+    },
+    {
+      "id": "version-information",
+      "url": "https://developer.apple.com/help/app-store-connect/reference/app-information/platform-version-information",
+      "publisher": "Apple",
+      "finding": "Description, promotional text, keywords, and support fields; support URL should provide real contact details."
+    },
+    {
+      "id": "creator-listing",
+      "url": "https://apps.apple.com/ie/app/1600-standard/id6804462278",
+      "publisher": "Apple App Store",
+      "finding": "Public Fred Esser app listing supplies the developer website used to verify his already-published support email. It does not establish a Force Multiplier app record."
+    },
+    {
+      "id": "creator-public-contact",
+      "url": "https://1600standard.blogspot.com/2026/10/about-1600-standard.html",
+      "publisher": "Fred Esser",
+      "finding": "The App Store-linked developer page identifies Fred Esser and publishes fredesser@yahoo.com for questions or feedback."
+    }
+  ]
+}

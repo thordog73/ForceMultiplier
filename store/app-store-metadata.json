@@ -1,0 +1,31 @@
+{
+  "locale": "en-US",
+  "app_version_candidate": "22.0.0",
+  "build_number_candidate": null,
+  "minimum_ios_version": "15.4",
+  "name": "Force Multiplier: Skills",
+  "subtitle": "Play. Plan. Solve.",
+  "promotional_text": "Start with one small challenge. Build plans, spot patterns, fix records, and explore 55 levels across five practical skills and four playful worlds.",
+  "keywords": "scheduling,analysis,documentation,database,integrity,logic,puzzle,simulation,statistics,offline",
+  "primary_category_recommendation": "Education",
+  "secondary_category_recommendation": "Games",
+  "game_subcategory_recommendations": [
+    "Puzzle",
+    "Simulation"
+  ],
+  "copyright_candidate": "2026 Fred Esser",
+  "support_url": "https://force-multiplier-v22.fredesser.chatgpt.site/support",
+  "privacy_policy_url": "https://force-multiplier-v22.fredesser.chatgpt.site/privacy",
+  "marketing_url": "https://force-multiplier-v22.fredesser.chatgpt.site/",
+  "bundle_identifier_candidate": "com.fredesser.forcemultiplier",
+  "bundle_identifier_verified": false,
+  "app_store_apple_id": null,
+  "sku_candidate": "FM-SKILLS-IOS-2026",
+  "price": null,
+  "release_mode_recommendation": "Manual release after approval",
+  "public_support_contact": "fredesser@yahoo.com",
+  "public_support_contact_verified": true,
+  "public_support_contact_source": "https://1600standard.blogspot.com/2026/10/about-1600-standard.html",
+  "submission_status": "Source, metadata and public support/privacy pages prepared and verified; native compilation, signing, actual-device testing, screenshots and App Store Connect setup/upload remain.",
+  "public_urls_verified_on": "2026-11-11"
+}

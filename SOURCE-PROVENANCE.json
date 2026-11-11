@@ -1,0 +1,34 @@
+{
+  "app": "Force Multiplier",
+  "marketingVersion": "22.0.0",
+  "baseWebsite": "https://force-multiplier-v22.fredesser.chatgpt.site/",
+  "baseSiteProject": "appgprj_6af374a2a1a08191a49e8ce727e35e53",
+  "baseSiteVersion": 4,
+  "baseSourceCommit": "ac6d3c1c1ca634afefb9096498a42d430bb4323c",
+  "adaptationDate": "2026-11-11",
+  "creatorStatement": "Fred Esser describes this as a personally initiated project that he has shown to colleagues.",
+  "content": {
+    "scheduling": 13,
+    "analysis": 12,
+    "documentation": 10,
+    "databaseManagement": 10,
+    "dataIntegrity": 10,
+    "totalLevels": 55
+  },
+  "provisionalBundleIdentifier": "com.fredesser.forcemultiplier",
+  "bundleIdentifierConfirmedInAppleAccount": false,
+  "nativeBinaryCompiled": false,
+  "signedIPAProduced": false,
+  "appStoreSubmitted": false,
+  "notes": [
+    "The archived public source is the game foundation; App Store packaging and phone/tablet adaptations are developed in this separate project.",
+    "Source provenance and technical checks are not legal clearance or a guarantee of Apple approval.",
+    "The Maintenance Metrics Handbook is not bundled in the app.",
+    "Brand and display naming are not a trademark clearance opinion."
+  ],
+  "minimumIOSVersion": "15.4",
+  "sourceChecksPassed": true,
+  "companionSiteVersion": 5,
+  "companionSourceCommit": "c8b2a2045393437942d73563c931f7e692dfe6e3",
+  "publicSupportAndPrivacyVerified": true
+}

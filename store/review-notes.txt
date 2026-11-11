@@ -1,0 +1,20 @@
+Force Multiplier is a complete offline educational puzzle/simulation app, provided directly by its creator, Fred Esser. It bundles the exercises and game logic in the installed iPhone/iPad app; it does not require a website connection to fetch its core content.
+
+No account, demo credentials, purchase, subscription, special hardware, location access, or camera access is required. All five specialties and four worlds are available from the game menu.
+
+Suggested review path:
+1. Open the app. In Airline / Scheduling, tap six aircraft and launch the first wave, then tap four and launch the second wave.
+2. Open Menu > Choose a specialty. Try Analysis, Documentation, Database Management, or Data Integrity. Each starts with a small interactive task.
+3. Open Menu > Choose a level to inspect later challenges immediately. There is no required grind or purchase gate.
+4. Open Menu > Choose a world to switch among Airline, Bus Company, Cat Hugs, and Acorn Ops. Worlds change the context of the same underlying curriculum.
+5. In Scheduling, inspect later levels to place work on the checkerboard, account for cure time and resource constraints, then revise the plan after a disruption.
+6. Use a hint or working example to inspect the feedback. A shown example is labeled separately from independently completed work.
+7. Open Menu > Saved data to export or import a main-game backup, including stars and unfinished challenges. Reset all progress in that submenu clears both the game and practice workspace after confirmation.
+8. Open Menu > Practice workspace for the longer exercises, statistics lab, local work products, and its separate backup/restore controls in Settings. Entries and imported files are processed locally. Export, copy, print, and sharing occur only when the user chooses them. Workspace exports show a notes/names notice before the user chooses a destination.
+9. Open About, Privacy, or Help from the menu. These pages are bundled for offline access.
+
+There are 55 main-game levels: 13 Scheduling, 12 Analysis, 10 Documentation, 10 Database Management, and 10 Data Integrity. Scenarios use generated fictional data and simplified rules. Scores are game feedback, not a professional credential. The app is independent and is not an official government or airline training product.
+
+The app has no live AI service, chat feature, analytics SDK, advertising network, cloud learner account, or operational-database connection. Game saves and practice entries remain in the app's local storage, with native on-device backup. The system share sheet, document picker, clipboard, and print sheet are user-initiated.
+
+Any separately published "100 perspectives" review is explicitly AI-simulated design feedback, not 100 human user tests or a claim of validated learning effectiveness.
