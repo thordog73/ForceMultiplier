@@ -1,6 +1,6 @@
 # Version 22: every game asset is bundled. Workflows are started manually.
-# Confirm the existing Apple integration and provisional bundle ID for this app.
-# No workflow publishes automatically or submits an App Store review.
+# App Store Connect record: ForceMultiplierSimulator (6833361372).
+# A manually started ios-app-store build uploads to Apple without requesting review.
 workflows:
   ios-simulator:
     name: Force Multiplier - iPhone and iPad simulator check
@@ -31,7 +31,7 @@ workflows:
       - build/simulator/Build/Products/Debug-iphonesimulator/App.app
 
   ios-app-store:
-    name: Force Multiplier - signed App Store IPA
+    name: ForceMultiplierSimulator - App Store upload
     instance_type: mac_mini_m2
     max_build_duration: 60
     integrations:
@@ -40,10 +40,12 @@ workflows:
       xcode: latest
       node: 22
       cocoapods: 1.16.2
+      vars:
+        APP_STORE_APPLE_ID: "6833361372"
       ios_signing:
         distribution_type: app_store
         bundle_identifier: com.fredesser.forcemultiplier
-      # Set APP_STORE_APPLE_ID in Codemagic after creating/selecting the real app.
+      # Import this app's App Store profile and its matching certificate in Codemagic.
       # APPLE_TEAM_ID is optional when xcode-project use-profiles configures it.
     scripts:
       - name: Check current Apple SDK
@@ -73,3 +75,8 @@ workflows:
       - ios/App/build/ios/xcarchive/*.xcarchive
       - ios/App/Podfile.lock
       - /tmp/xcodebuild_logs/*.log
+    publishing:
+      app_store_connect:
+        auth: integration
+        submit_to_testflight: false
+        submit_to_app_store: false
