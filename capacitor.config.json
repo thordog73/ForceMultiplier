@@ -1,16 +1,1 @@
-{
-  "appId": "com.fredesser.forcemultiplier",
-  "appName": "Force Multiplier",
-  "webDir": "www",
-  "backgroundColor": "#132c42",
-  "loggingBehavior": "debug",
-  "ios": {
-    "scheme": "App",
-    "contentInset": "never",
-    "backgroundColor": "#132c42",
-    "scrollEnabled": true,
-    "allowsLinkPreview": false,
-    "webContentsDebuggingEnabled": false,
-    "preferredContentMode": "mobile"
-  }
-}
+{"appId":"com.fredesser.forcemultiplier","appName":"Force Multiplier","webDir":"dist","ios":{"contentInset":"automatic","preferredContentMode":"mobile","allowsLinkPreview":false},"server":{"iosScheme":"capacitor"}}
