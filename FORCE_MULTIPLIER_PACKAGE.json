@@ -1,0 +1,8 @@
+{
+  "app": "Force Multiplier Visual Simulations + Worlds",
+  "version": "22.4.1",
+  "sourceCommit": "ac6d3c1c1ca634afefb9096498a42d430bb4323c",
+  "sourceSiteVersion": 4,
+  "sourceSite": "https://force-multiplier-v22.fredesser.chatgpt.site",
+  "status": "one-button iOS TestFlight source candidate; focused scenario mode hides global navigation inside exercises; visual-first simulations; 100 hidden skills mapped beneath major work products; Scheduling progresses from 6-turn-4 to complex checkerboard work; direct Codemagic API start; TestFlight beta submission enabled; public App Review submission disabled"
+}

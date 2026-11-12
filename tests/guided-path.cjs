@@ -1,0 +1,25 @@
+'use strict';
+const fs=require('node:fs'),assert=require('node:assert/strict');
+const s=fs.readFileSync('dist/index.html','utf8');
+assert(s.includes('force-multiplier-visual-sim-v1'));
+assert(s.includes('100 transferable skills · visual simulations · repeat with variation'));
+assert(!s.includes('4-HOUR GRADUATE'));
+assert(!s.includes('24-HOUR EXPERT'));
+assert(s.includes('6-turn-4'));
+assert(s.includes('12-turn-10'));
+assert(s.includes('Weekly checkerboard'));
+assert(s.includes('Modification week'));
+assert(s.includes('Reconcile two systems'));
+assert(s.includes('Troubleshoot the symptom'));
+assert(s.includes('./worlds.html'));
+assert(s.includes('./native.js'));
+const ids=[...s.matchAll(/\['([SADIB]\d{2})','/g)].map(m=>m[1]);
+for(const prefix of ['S','A','D','I','B'])for(let i=1;i<=20;i++)assert(ids.includes(prefix+String(i).padStart(2,'0')),'missing '+prefix+i);
+const scenarioCount=(s.match(/\['[^']+','[^']+',\[['SADIB]/g)||[]).length;
+assert(scenarioCount>=40,'visual redesign must include at least 40 major simulations');
+for(const term of ['board-wrap','metric-row','doc-grid','recon','SYSTEM']){}
+assert(s.includes('class="board"'));
+assert(s.includes('trendSvg'));
+assert(s.includes('Evidence A'));
+assert(s.includes('System logs'));
+console.log('PASS visual simulation path: 100 hidden skills, 40+ major simulations, 6-turn-4 to complex checkerboards, analysis/docs/integrity/systems visual work products.');

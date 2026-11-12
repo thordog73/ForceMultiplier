@@ -1,0 +1,7 @@
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
+const config=JSON.parse(fs.readFileSync('capacitor.config.json'));assert.equal(config.webDir,'dist');assert(!config.server.url,'Remote server must not replace offline assets');assert.equal(config.appId,'com.fredesser.forcemultiplier');
+for(const file of ['index.html','worlds.html','courses.html','about.html','licenses.html']){const s=fs.readFileSync('dist/'+file,'utf8');for(const match of s.matchAll(/(?:src|href)="\.\/([^"#]+)(?:#[^"]*)?"/g))assert(fs.existsSync(path.join('dist',match[1])),file+' missing '+match[1]);}
+const project=fs.readFileSync('ios/App/App.xcodeproj/project.pbxproj','utf8');assert(project.includes('PrivacyInfo.xcprivacy in Resources'));assert(project.includes('MARKETING_VERSION = 22.4.1;'));
+assert(fs.readFileSync('ios/App/App/PrivacyInfo.xcprivacy','utf8').includes('C617.1'));
+const cm=fs.readFileSync('codemagic.yaml','utf8');assert(!cm.includes('submit_to_app_store: true'));assert(cm.includes('app_store_connect: ten-minute-wins-apple'));assert(cm.includes('APP_STORE_APPLE_ID: "6833361372"'));assert(cm.includes('submit_to_testflight: true'));assert(cm.includes('workflowId')===false);assert(cm.includes('npm run ios:prepare && npm run ios:verify'));assert(cm.indexOf('npm test && npm run check') < cm.indexOf('npm run ios:prepare && npm run ios:verify'));
+console.log('Offline assets, native project references, privacy manifest, TestFlight publishing and public-review gate passed.');
