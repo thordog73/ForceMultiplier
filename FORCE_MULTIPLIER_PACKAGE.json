@@ -1,0 +1,8 @@
+{
+  "app": "Force Multiplier 20-Level Visual Game + Worlds",
+  "version": "22.5.0",
+  "sourceCommit": "ac6d3c1c1ca634afefb9096498a42d430bb4323c",
+  "sourceSiteVersion": 4,
+  "sourceSite": "https://force-multiplier-v22.fredesser.chatgpt.site",
+  "status": "one-button iOS TestFlight source candidate; 5 functions \u00d7 20 sequential visual game levels; completed levels replayable to 10 variations; focused scenario mode; Scheduling executes animated launch/turn/week outcomes; 100 underlying skills mapped one-per-level; direct Codemagic API start; TestFlight beta submission enabled; public App Review submission disabled"
+}
