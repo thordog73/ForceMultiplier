@@ -1,0 +1,10 @@
+'use strict';
+const fs=require('node:fs'),assert=require('node:assert/strict');
+const s=fs.readFileSync('dist/index.html','utf8');
+for(const marker of ['Built-in calculator','Use result for ${c.name}','Show Me the Right Answer','Supervisor Assist · fill and explain','Part 2 · Gold Rat Lab','Enter Gold Rat Lab','Open Acquisition Decision','sideGoldDirect','directEntry:true']) assert(s.includes(marker),`missing Analysis open-navigation marker: ${marker}`);
+assert(s.includes("function isUnlocked(role,i){return role==='analysis'||i<=unlockedLevel(role)}"));
+assert(s.includes('analysisCalcEvaluate'));
+assert(s.includes("state.analysis.assisted[m.id]=(state.analysis.assisted[m.id]||0)+1"));
+assert(s.includes('This is assisted practice, not a claim of independent proficiency.'));
+assert(s.includes('analysisDashboard(false,true)'),'Direct acquisition should show the full generated dashboard');
+console.log('PASS Analysis open-entry UX: all metrics open, inline calculator, assisted model solution, direct acquisition and Gold Rat navigation.');

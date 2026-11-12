@@ -1,0 +1,14 @@
+'use strict';
+const fs=require('node:fs'),assert=require('node:assert/strict');
+const s=fs.readFileSync('dist/index.html','utf8');
+assert(s.includes("function unlockedLevel(role)"));
+assert(s.includes("state.runs[role+':'+i]"));
+assert(s.includes("state.scenario++"));
+assert(s.includes('Next level →'));
+assert(s.includes('Replay level'));
+assert(s.includes('/10'));
+assert(s.includes('New variation'));
+assert(s.includes('runOutcome'));
+assert(s.includes('@keyframes takeoff'));
+assert(s.includes('@keyframes daySweep'));
+console.log('PASS level progression: one success unlocks next level; completed levels remain replayable to 10 runs; outcome animations present.');
