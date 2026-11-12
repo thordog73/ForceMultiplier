@@ -1,0 +1,8 @@
+{
+  "app": "Force Multiplier 20-Level Visual Game + Worlds",
+  "version": "22.6.5",
+  "sourceCommit": "ac6d3c1c1ca634afefb9096498a42d430bb4323c",
+  "sourceSiteVersion": 4,
+  "sourceSite": "https://force-multiplier-v22.fredesser.chatgpt.site",
+  "status": "one-button iOS TestFlight source candidate; 22.6.5 adds global Show Me the Right Answer and unlimited same-skill re-simulation across all five functions and Worlds practice; assisted answers unlock continuation without independent skill credit; 22.6.4 commander questions and Actual Data Fishbone retained; 22.6.1 animation hardening retained; TestFlight beta submission enabled; public App Review submission disabled"
+}
