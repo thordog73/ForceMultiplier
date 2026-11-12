@@ -1,93 +1,61 @@
-# Force Multiplier — iPhone and iPad
+# Force Multiplier · iOS source candidate 22.3.4
 
-Version **22.0.0** packages the complete Force Multiplier game as an offline iOS app. It keeps the short, hands-on challenges, five specialties, four worlds, and separate practice workspace.
+This candidate keeps the **Worlds** game and adds the four-hour guided program as the default iOS experience. The guided path now uses three progressive Force Multiplier designations: 4-hour Graduate, 12-hour Advanced Graduate, and 24-hour Expert. The four-hour core budgets about 40 minutes per function plus a 40-minute integrated graduation challenge; later designations require repeated independent cases, transfer across worlds, and harder integrated challenges. These are program designations, not official Air Force qualifications or AMMOS equivalency. The retained Worlds game contains: 55 levels across Scheduling, Analysis, Documentation, Database Management and Data Integrity, plus the earlier specialty workspace. Source: public Site version 4, commit `ac6d3c1c1ca634afefb9096498a42d430bb4323c`. The live website has not been changed.
 
-## Start here
+## What is ready
 
-This folder is the **app source and build package**. The uploadable Apple file is the signed `.ipa` produced by the `ios-app-store` Codemagic workflow. A Mac is not required on your desk when Codemagic performs the build.
+- All web assets bundled locally in a Capacitor 8.6 iOS project. No network is required to play after installation.
+- Native share-sheet backup/export, complete game + workspace backup/restore, and scoped local-data deletion.
+- Visible privacy, fictional-training/no-endorsement/non-certification notices.
+- Original F× app icon, launch assets, iOS privacy manifest, no analytics/advertising SDK added.
+- Codemagic unsigned simulator-validation workflow and signed IPA/TestFlight workflow.
+- One-button Windows uploader already configured for `https://github.com/thordog73/ForceMultiplier.git`. It tests locally, prepares iOS, pushes a new release branch, and triggers the signed Codemagic/TestFlight workflow without force-pushing or changing the default branch.
 
-The game and configuration checks were run while preparing this package. No Xcode compilation, signed archive, TestFlight upload, App Store submission, or Apple approval is represented by this source folder. See `VALIDATION.md` for the precise checks completed.
+## The command
 
-### Route from Windows to the App Store
+Extract the ZIP fully, open the extracted `ForceMultiplier-iOS` folder, and **double-click `UPLOAD.cmd`**.
 
-1. Extract the ZIP into a normal folder. Install current Node.js 22 or later and Git if they are not already installed. Use your normal GitHub sign-in through Git; do not put a password or token in a command or repository URL.
-2. Create a new empty repository in your GitHub account. Keep this source private if you prefer. Copy that repository's ordinary HTTPS URL.
-3. Open a terminal in the extracted folder and run:
+That is the only command required. The uploader is already configured for:
 
-   ```bat
-   UPLOAD.cmd https://github.com/YOUR-ACCOUNT/YOUR-REPOSITORY.git
-   ```
+`https://github.com/thordog73/ForceMultiplier.git`
 
-   The helper initializes `main`, commits the source, and pushes it to the repository you specify. It never force-pushes or replaces a different existing remote. macOS/Linux users can run `sh UPLOAD.sh` with the same URL. You can also use GitHub Desktop or your usual Git workflow.
+It runs local dependency installation/tests/release checks/iOS preparation, pushes a unique `release/force-multiplier-...` branch, then starts the signed `ios-release` workflow directly through the Codemagic API. This does not depend on a GitHub webhook. When the configured Apple signing assets and the **ten-minute-wins-apple** App Store Connect integration are valid, Codemagic uploads the signed IPA to App Store Connect; after Apple processing it appears in TestFlight. Public App Review submission stays disabled.
 
-4. Add that repository to Codemagic and choose its `codemagic.yaml` configuration. Start **Force Multiplier - iPhone and iPad simulator check** (`ios-simulator`). It installs the locked dependencies, checks the game, builds the app, launches fresh simulators, and captures genuine iPhone/iPad images. Inspect the build artifacts and simulator results before proceeding.
-5. In your Apple Developer account and App Store Connect, select or create the Force Multiplier app. The current bundle identifier is **`com.fredesser.forcemultiplier`**. Its availability and ownership have not been checked in your Apple account. The App Store app record, signing profile, YAML signing selector, and app configuration must all use the same identifier.
-6. In Codemagic, connect the authorized distribution signing profile and set **`APP_STORE_APPLE_ID`** to this app's **numeric Apple ID**. The YAML refers to the existing integration name **`ten-minute-wins-apple`**; verify that it is the correct integration for your Apple team or replace that name. It contains no signing secrets.
-7. Start **Force Multiplier - signed App Store IPA** (`ios-app-store`). Download the `.ipa` from the successful build's artifacts. Upload it to App Store Connect using your normal authorized workflow or the optional upload-only Codemagic block in `NATIVE-BUILD.md` (works from Windows), test the processed build in TestFlight, and use the material in `store/` to prepare the store listing.
+## One-time setup
 
-The build workflows do not upload automatically, submit a review, or release the app. They make the build and its results available for you to inspect. The detailed commands and native test checklist are in `NATIVE-BUILD.md`.
+1. Install Node.js 22+ and Git for Windows from their official sites. Configure Git name/email and authenticate using Git's credential manager. No secrets belong in this ZIP or chat.
+2. Create an empty private repository at GitHub, GitLab or Bitbucket. Do not initialize it with a README. Alternatively use a repository already containing this package's marker. The uploader refuses an unrelated nonempty repository.
+3. Connect that repository in Codemagic and choose the YAML configuration workflow. The Windows uploader starts `ios-release` directly through Codemagic's API, so a repository webhook is not required. On the first run only, paste your Codemagic API token when prompted; it is encrypted for your Windows user. Builds can consume paid minutes; check your account limits before running.
+4. Run the command. Check Codemagic's actual result. A successful local push is not proof of a successful cloud build.
+5. For the `ios-release` workflow, provide your Apple Developer membership, App Store Connect app record, and Codemagic integration named **Force Multiplier App Store Connect**. Authorize signing/certificates/profiles in your own account. Provisional bundle ID is `com.fredesser.forcemultiplier`; confirm it belongs to you and is available before signing. Changing it requires updating both native project configurations, capacitor.config.json, and codemagic.yaml.
+6. Set build numbering above any previously uploaded build. The supplied workflow uses Codemagic's build number, which must be reconciled with an existing App Store record.
+7. The uploader starts `ios-release` automatically. That workflow creates the IPA and uploads it to TestFlight when signing and App Store Connect integration are valid. It does **not** submit the app for public App Store Review.
 
-## What is included
+PowerShell policy is respected; this launcher does not bypass execution policy. On a managed machine where scripts are blocked, ask your administrator or use the documented npm/Git steps manually. A failed upload clone is preserved for inspection; no force pushes are used.
 
-| Area | Included experience |
-| --- | --- |
-| Scheduling | 13 progressive levels, from six aircraft followed by four to inspections, modifications, curing, and a checkerboard |
-| Analysis | 12 levels covering eligible sets, rates, comparisons, averages, missing values, trends, spread, and interpretation |
-| Documentation | 10 levels about matching requirements, applicability, revision control, due dates, dependencies, and evidence |
-| Database Management | 10 levels about appropriate access, identity, account changes, troubleshooting, controlled changes, and recovery |
-| Data Integrity | 10 levels about source reconciliation, missing values, units, duplicates, links, time windows, and audit trails |
-| Worlds | Airline, Bus Company, Cat Hugs, and Acorn Ops; switch freely and retain separate progress |
-| Practice workspace | Longer exercises, statistics tools, work products, review notes, and separate backup/export/import |
-| iOS integration | Bundled offline content, durable local progress backup, optional haptics, native file sharing/import, copy, and print |
+## Release gates that remain
 
-The squirrel world's internal identifier remains `squirrel` so existing progress can be carried over. Its displayed name is **Acorn Ops**.
+- Xcode compilation, physical iPhone/iPad testing, VoiceOver, landscape/safe-area screenshots, native share/restore, offline cold launch, storage pressure and reinstall behavior have not been verified in this Linux environment.
+- No signed IPA, TestFlight build, App Store submission or Apple approval has been produced here.
+- Confirm personal/official-duty ownership and public-release authority. Resolve naming/marks, including the Secret Squirrel world. See `docs/LEGAL_AND_STORE_READINESS.md`.
+- Supply the seller's verified support contact/URL and public privacy-policy URL. The in-app candidate notice explicitly identifies these missing release items; replace that release-status paragraph with real publisher/support details before submission.
+- Verify App Store privacy answers and required-reason API declarations against the **resolved signed build**. Native Swift packages are resolved on macOS; retain their license notices and resolved versions. The included file-timestamp declaration follows Filesystem's guidance. Encryption declaration assumes only platform/standard transport encryption; revisit if encryption features change.
+- Review age rating, screenshots, metadata, export compliance and Apple minimum-functionality rules. Interactivity is substantial but approval is Apple's decision.
 
-The app uses fictional practice data and general concepts. It does not contain an uploaded military handbook, connect to operational systems, issue a job qualification, or claim a measured learning improvement. No account, advertising service, analytics SDK, or remote AI service is required to play.
+## Local checks and source editing
 
-## Build locally
+`npm ci`
 
-Node.js **22+** is required. Native compilation requires macOS with **Xcode 26+**, the iOS 26 SDK or later, and CocoaPods. The deployment target is **iOS/iPadOS 15.4+**; that is separate from the build SDK.
+`npm test`
 
-```sh
-npm ci
-npm run build
-npm test
-npm run ios:sync
-npm run verify
-npm run ios:open
-```
+`npm run check`
 
-`ios:sync` rebuilds the bundled JavaScript bridge, copies `www/` into the native project, applies deterministic Xcode settings, and installs native dependencies on macOS. Generated web copies, CocoaPods dependencies, and build products are intentionally excluded from version control. The complete editable web source and lockfile are included.
+`npm run ios:prepare`
 
-For a browser-only preview, serve `www/` with a local static server. Use a server rather than opening `index.html` as a file. Native iOS behavior must be checked in the built app; a browser preview cannot validate Apple's share sheet, signing, haptics, or app lifecycle.
+Edit the actual app under `dist/`, and native export/backup logic under `native-src/native.js`. `ios:prepare` bundles that bridge and copies current assets into the native project. Do not edit the generated `ios/App/App/public` copy. Keep source and lockfile together. Open `ios/App/App.xcodeproj` on a Mac for device work. Minimum iOS is 15; Capacitor 8 requires a compatible current Xcode/macOS toolchain (Codemagic uses latest).
 
-## Files you will use
+## Progress and portability
 
-| Path | Purpose |
-| --- | --- |
-| `codemagic.yaml` | Simulator and signed IPA workflows |
-| `capacitor.config.json` | Display name, bundle identifier, and local web directory |
-| `ios/` | Xcode project and native app shell |
-| `native/` | Swift bridge, progress backup logic, launch screen, and privacy manifest sources |
-| `www/` | Complete playable game and bundled Help, Privacy, and About pages |
-| `scripts/` | Build, configuration, versioning, simulator, and verification automation |
-| `tests/` | Curriculum, persistence, backup validation, and native configuration checks |
-| `store/` | Store copy, metadata, privacy/age-rating worksheet, review notes, and screenshot plan |
-| `SOURCE-PROVENANCE.json` | Starting website revision and accurate preparation/submission status |
-| `UPLOAD.cmd`, `UPLOAD.sh` | Source-upload helpers for your own GitHub repository |
+Browser and native app storage are separate. In a version containing this new About page, use **About, privacy & backups → Export all saved progress**, transfer the JSON, then restore it in the other installation. Existing live website users cannot export game tracks with the old workspace-only backup. No automatic migration from the unchanged live site is claimed. Uninstalling can erase local progress. Export files can contain reviewer names or notes you entered; share deliberately.
 
-## Progress and privacy
-
-The main game saves the current case, selected world/specialty, stars, and settings. The practice workspace stores its own work products and optional notes. On iOS, Preferences provides a local durable backup in addition to the web storage used by the game. Apple's device backup behavior depends on the user's settings.
-
-Use **Menu → Saved data** for game backups and **Settings** inside the practice workspace for its separate backups. The reset action explains that it clears both areas. A backup file can contain user-entered work; the user chooses whether and where to share it. There is no automatic cloud sync.
-
-## Release material
-
-Use `store/submission-guide.md` as the release worksheet and `store/app-store-metadata.json` as the source for listing fields. The proposed listing name is **Force Multiplier: Skills**; the device icon label is **Force Multiplier**. Name availability, price, countries, private review contact, and account declarations are selected in App Store Connect.
-
-Actual screenshots must come from the compiled native app. The simulator workflow produces real captures once it runs successfully. Browser layout checks supplied during preparation are not App Store screenshots.
-
-Public Help, Privacy, and About pages are also bundled locally so they open without a connection. Keep the public pages and the shipped app consistent when making future changes.
-
-Public pages verified for this release: [Help](https://force-multiplier-v22.fredesser.chatgpt.site/support), [Privacy](https://force-multiplier-v22.fredesser.chatgpt.site/privacy), and [About](https://force-multiplier-v22.fredesser.chatgpt.site/about).
+`SOURCE_README.md` preserves the original app's detailed behavior and limitations. `reviews/` contains the prior explicitly simulated panel, not human trial evidence. `docs/TEST_REPORT.md` records what was actually tested in this packaging pass.
