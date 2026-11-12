@@ -1,0 +1,8 @@
+{
+  "app": "Force Multiplier 20-Level Visual Game + Worlds",
+  "version": "22.7.0",
+  "sourceCommit": "ac6d3c1c1ca634afefb9096498a42d430bb4323c",
+  "sourceSiteVersion": 4,
+  "sourceSite": "https://force-multiplier-v22.fredesser.chatgpt.site",
+  "status": "one-button iOS TestFlight source candidate; 22.7.0 refocuses Scheduling on FHP \u2192 long-range \u2192 monthly \u2192 weekly \u2192 Phase flow, adds visible red/green modification planning with a single 24-hour cure rule, makes wrong answers revisable, exposes all Analysis rates as direct-entry cards with an on-demand calculator and application-first Statistical Analysis Lab, and opens Documentation with an aircraft modification rollout plus a fictional incomplete-modification exception exercise; 22.6.5 universal Show Me/unlimited re-simulation, 22.6.4 Actual Data Fishbone, and 22.6.1 animation hardening retained; TestFlight beta submission enabled; public App Review submission disabled"
+}

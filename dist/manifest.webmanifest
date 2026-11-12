@@ -1,0 +1,16 @@
+{
+  "id":"/",
+  "name":"Force Multiplier · Worlds",
+  "short_name":"Multiplier",
+  "description":"Five practical skills. Four playful worlds. Learn the fundamentals by playing.",
+  "start_url":"./",
+  "scope":"./",
+  "display":"standalone",
+  "background_color":"#edf3f6",
+  "theme_color":"#132c42",
+  "icons":[
+    {"src":"./icon-192.png","sizes":"192x192","type":"image/png","purpose":"any"},
+    {"src":"./icon-512.png","sizes":"512x512","type":"image/png","purpose":"any"},
+    {"src":"./icon-maskable.png","sizes":"512x512","type":"image/png","purpose":"maskable"}
+  ]
+}
