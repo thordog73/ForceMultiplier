@@ -1,0 +1,8 @@
+{
+  "app": "Force Multiplier 20-Level Visual Game + Worlds",
+  "version": "22.6.4",
+  "sourceCommit": "ac6d3c1c1ca634afefb9096498a42d430bb4323c",
+  "sourceSiteVersion": 4,
+  "sourceSite": "https://force-multiplier-v22.fredesser.chatgpt.site",
+  "status": "one-button iOS TestFlight source candidate; 22.6.4 adds organic commander questions to all 20 Analysis metrics and optional local-session CSV/paste data through the 13-test Gold Rat Fishbone; 22.6.3 Fishbone construction and answer-cue hardening retained; 22.6.2 open entry/calculator/Supervisor Assist retained; 22.6.1 animation hardening retained; TestFlight beta submission enabled; public App Review submission disabled"
+}
