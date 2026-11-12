@@ -1,6 +1,6 @@
 'use strict';
 const assert=require('node:assert/strict');
-const pack=require('../www/pack-documentation.js');
+const pack=require('../dist/pack-documentation.js');
 const cp=x=>JSON.parse(JSON.stringify(x));
 let assertions=0;
 const yes=(v,msg)=>{assert.ok(v,msg);assertions++;};
