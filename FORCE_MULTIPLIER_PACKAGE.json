@@ -1,0 +1,8 @@
+{
+  "app": "Force Multiplier \u00b7 Mobile Zoom / Stress-Hardened",
+  "version": "22.8.9",
+  "sourceCommit": "8147dc48d7192f6ce6a02fde4358900fd8119942",
+  "sourceSiteVersion": 4,
+  "sourceSite": "https://force-multiplier-v22.fredesser.chatgpt.site",
+  "status": "one-button iOS TestFlight source candidate; stress-hardened mobile zoom/pinch recovery, iOS form auto-zoom prevention, startup-order/module-scope fixes, 44px touch targets on dense mobile controls, long-run navigation testing; retains universal feedback, skip-ahead, Phase run-in, Improvement Laboratory, Big Boss Reports, and prior 22.8.8 work"
+}
