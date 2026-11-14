@@ -1,0 +1,11 @@
+const assert=require('node:assert/strict');
+const M=require('../dist/fm2290-model.js');
+assert.equal(M.SCHED_SKILLS.length,7);
+assert.equal(M.METRICS.length,20);
+assert.equal(Object.keys(M.DOC_TERMS).length,10);
+assert.equal(Object.keys(M.INTEGRITY_FIELDS).length,10);
+let e=M.validateLineup({selected:['A1','A2','A3','A4','A5','A6'],turn:['A1','A2','A3','A4'],needFirst:6,needTurn:4,items:Array.from({length:6},(_,i)=>({id:'A'+(i+1),status:'FMC'}))});assert.deepEqual(e,[]);
+e=M.validateLineup({selected:['A1','A2','A3','A4','A5','A6'],turn:['A1','A2','A3','A4'],needFirst:6,needTurn:4,items:Array.from({length:10},(_,i)=>({id:'A'+(i+1),status:'FMC'})),requireId:'A10'});assert(e.length>0);
+const model=M.docModel();assert.equal(Object.keys(model.red).length,24);assert.equal(model.red.A001,1);assert.equal(model.green.A001,3);assert.equal(model.red.A024,24);assert.equal(model.green.A024,26);assert.equal(M.docStages(24,26,28),'c');assert.deepEqual(M.docValidate(model.red,model.green),[]);
+const systems=M.paretoSystems(4);assert.equal(systems.length,40);assert(systems[0].hours>=systems[1].hours);const r=M.pearson([1,2,3,4],[2,4,6,8]);assert(Math.abs(r-1)<1e-10);
+console.log('PASS 22.9.0 model: scheduling, documentation, analysis and terminology primitives.');
