@@ -1,6 +1,6 @@
 'use strict';
 const assert=require('node:assert/strict');
-const pack=require('../www/pack-analysis.js');
+const pack=require('../dist/pack-analysis.js');
 const clone=x=>JSON.parse(JSON.stringify(x));
 let checked=0;
 function expect(ok,message){assert.ok(ok,message);checked++;}
