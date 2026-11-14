@@ -1,0 +1,8 @@
+{
+  "app": "Force Multiplier \u00b7 Enterprise / Airline Maintenance Management Simulator",
+  "version": "22.8.24",
+  "sourceCommit": "derived-from-22.8.23-stable-documentation-page-22.8.24",
+  "sourceSiteVersion": 4,
+  "sourceSite": "https://force-multiplier-v22.fredesser.chatgpt.site",
+  "status": "Stable single-page Documentation navigation with native anchors; 24-aircraft modification planner and Documentation terms always rendered; visible build badge; prior Scheduling, Analysis, Data Integrity, DBM, mobile hardening, universal feedback, and App Store build-number verification retained"
+}
