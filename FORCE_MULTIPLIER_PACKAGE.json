@@ -1,0 +1,8 @@
+{
+  "app": "Force Multiplier \u00b7 Enterprise / Airline Maintenance Management Simulator",
+  "version": "22.8.13",
+  "sourceCommit": "derived-from-22.8.12-curriculum-first-22.8.13",
+  "sourceSiteVersion": 4,
+  "sourceSite": "https://force-multiplier-v22.fredesser.chatgpt.site",
+  "status": "curriculum-first iOS TestFlight source candidate; 20-skill maps now expose what each function teaches before the existing games, with Learn More, direct samples, sticky in-game objectives, all prior 100-repetition campaigns, mobile hardening, universal feedback, enterprise/airline language, and automatic App Store build-number verification retained"
+}
