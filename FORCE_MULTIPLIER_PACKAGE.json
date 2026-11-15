@@ -1,0 +1,9 @@
+{
+  "app": "Force Multiplier \u00b7 Enterprise / Airline Maintenance Management Simulator",
+  "version": "22.9.4",
+  "sourceCommit": "clean-22.9.4-documentation-downtime",
+  "sourceSiteVersion": 4,
+  "sourceSite": "https://force-multiplier-v22.fredesser.chatgpt.site",
+  "status": "Clean offline five-function app; adds learner-built RED/GREEN cure optimization with weekday downtime and weekend curing. Keeps all earlier Scheduling, Analysis, Documentation sandbox, Data Integrity and DBM exercises and TestFlight protections.",
+  "release": "22.9.4 \u00b7 Documentation downtime recovery"
+}
