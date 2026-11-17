@@ -1,93 +1,51 @@
-# Force Multiplier — iPhone and iPad
+# Force Multiplier 22.9.7
 
-Version **22.0.0** packages the complete Force Multiplier game as an offline iOS app. It keeps the short, hands-on challenges, five specialties, four worlds, and separate practice workspace.
+Offline maintenance-management learning simulator for Scheduling, Analysis, Documentation, Data Integrity, and Database & Systems Management.
 
-## Start here
+## 22.9.7 · Improvement Laboratory — Which Test and Why?
 
-This folder is the **app source and build package**. The uploadable Apple file is the signed `.ipa` produced by the `ios-app-store` Codemagic workflow. A Mac is not required on your desk when Codemagic performs the build.
+**Retains every existing v22.9.6 game, statistic calculator, Analysis investigation, and 90-day capstone.** Adds a dedicated offline, phone-first Improvement Laboratory accessible from Block Academy home and the original Analysis home. The existing trainers are unchanged; the new laboratory is an optional instructional layer.
 
-The game and configuration checks were run while preparing this package. No Xcode compilation, signed archive, TestFlight upload, App Store submission, or Apple approval is represented by this source folder. See `VALIDATION.md` for the precise checks completed.
+- 15 progressively guided hypothetical cases: trends, Pearson/Spearman correlation, independent pooled/Welch and paired t-tests, one-mean Z-test, two-proportion Z-test, ANOVA, Mann–Whitney U, Kruskal–Wallis H, both chi-square tests, variance F-test, and Cochran's C.
+- For each case, select a test block, identify a population-level H₀, interpret an explicitly *illustrative* p-value at prespecified α = 0.05, then read what the result does and does not establish.
+- Field guide supplies question, use case, null hypothesis, assumptions and cautions for every test. Wrong answers explain the issue; no timer or lives. Finishing exercises never grants official certification.
+- These new sample p-values are **fictional examples, not calculated from actual input records**. For real numerical calculations and investigations, use the unchanged original Analysis interface, which still includes trends, correlation, differences, Fishbone, and the improvement cycle. No external service is used.
+- Local practice progress has its own storage key, separate from the original trainer and Block Academy.
 
-### Route from Windows to the App Store
+## 22.9.6 · Revenge of the Nonner — Block Academy (PLAYABLE)
 
-1. Extract the ZIP into a normal folder. Install current Node.js 22 or later and Git if they are not already installed. Use your normal GitHub sign-in through Git; do not put a password or token in a command or repository URL.
-2. Create a new empty repository in your GitHub account. Keep this source private if you prefer. Copy that repository's ordinary HTTPS URL.
-3. Open a terminal in the extracted folder and run:
+A fully offline, phone-first puzzle campaign now opens from the original Scheduling home screen, the five-discipline header, and the 90-day capstone header. **No timer**. Large draggable blocks, touch-friendly slots, and one-tap placement allow practice on small iPhones without a horizontal spreadsheet. The original simulator and its 90-day engine remain intact.
 
-   ```bat
-   UPLOAD.cmd https://github.com/YOUR-ACCOUNT/YOUR-REPOSITORY.git
-   ```
+Seven playable missions cover all five core disciplines:
 
-   The helper initializes `main`, commits the source, and pushes it to the repository you specify. It never force-pushes or replaces a different existing remote. macOS/Linux users can run `sh UPLOAD.sh` with the same URL. You can also use GitHub Desktop or your usual Git workflow.
+1. **6-Turn-4:** move six fictional FMC aircraft into the departure door; assign four turns from those six.
+2. **Work Around NMC:** distinguish FMC, aging-green FMC, inspected hangar queen, NMCM, NMCS, NMCB, Phase, Depot and PFR/MOD blocks; avoid unavailable aircraft.
+3. **Fix the Phase Flow:** route three suitable aircraft to fly, a due aircraft to Phase, and two unavailable/near-due aircraft to Hold.
+4. **Recover Flying Days:** compare the original two-cure modification plan, then drag R1/R2 (PFR), G1/G2 (PBG), and one passive 24-hour cure into a two-week board. Validation uses the unchanged v22.9.4 approved-combined-cure model; a Saturday cure saves 3–4 modeled flying weekdays.
+5. **Analysis Rate Builder:** drag actual numerator/denominator definitions and choose calculated answers for all **19** metrics already defined in the simulator, with multiple synthetic variations.
+6. **Data Integrity — Find the Bad Record:** side-by-side source/record comparison, flag three mismatches, then choose an evidence-based corrective action.
+7. **Database & Systems — Permission Patrol:** side-by-side authorized/actual permissions, flag three mismatches, then verify authorization and select a controlled remediation.
 
-4. Add that repository to Codemagic and choose its `codemagic.yaml` configuration. Start **Force Multiplier - iPhone and iPad simulator check** (`ios-simulator`). It installs the locked dependencies, checks the game, builds the app, launches fresh simulators, and captures genuine iPhone/iPad images. Inspect the build artifacts and simulator results before proceeding.
-5. In your Apple Developer account and App Store Connect, select or create the Force Multiplier app. The current bundle identifier is **`com.fredesser.forcemultiplier`**. Its availability and ownership have not been checked in your Apple account. The App Store app record, signing profile, YAML signing selector, and app configuration must all use the same identifier.
-6. In Codemagic, connect the authorized distribution signing profile and set **`APP_STORE_APPLE_ID`** to this app's **numeric Apple ID**. The YAML refers to the existing integration name **`ten-minute-wins-apple`**; verify that it is the correct integration for your Apple team or replace that name. It contains no signing secrets.
-7. Start **Force Multiplier - signed App Store IPA** (`ios-app-store`). Download the `.ipa` from the successful build's artifacts. Upload it to App Store Connect using your normal authorized workflow or the optional upload-only Codemagic block in `NATIVE-BUILD.md` (works from Windows), test the processed build in TestFlight, and use the material in `store/` to prepare the store listing.
+Includes five discipline-specific flashcard decks drawn from the existing Scheduling, Documentation, Analysis and Data Integrity dictionaries, plus Database Management terminology, offline persisted practice progress, hints, assisted solutions (no proficiency credit), repeat variations, optional sounds, and the running **NON-NONNER / NONNER STATUS PENDING** joke. A game completion is practice credit, **not a real occupational qualification**. Legacy training and 90-day capstone links are one tap away.
 
-The build workflows do not upload automatically, submit a review, or release the app. They make the build and its results available for you to inspect. The detailed commands and native test checklist are in `NATIVE-BUILD.md`.
+All data, records and characters in the new puzzles are synthetic. No network API or copyrighted game artwork is used. No changes have been pushed to GitHub or Codemagic.
 
-## What is included
+## 22.9.5 · Revenge of the Nonner mobile capstone
 
-| Area | Included experience |
-| --- | --- |
-| Scheduling | 13 progressive levels, from six aircraft followed by four to inspections, modifications, curing, and a checkerboard |
-| Analysis | 12 levels covering eligible sets, rates, comparisons, averages, missing values, trends, spread, and interpretation |
-| Documentation | 10 levels about matching requirements, applicability, revision control, due dates, dependencies, and evidence |
-| Database Management | 10 levels about appropriate access, identity, account changes, troubleshooting, controlled changes, and recovery |
-| Data Integrity | 10 levels about source reconciliation, missing values, units, duplicates, links, time windows, and audit trails |
-| Worlds | Airline, Bus Company, Cat Hugs, and Acorn Ops; switch freely and retain separate progress |
-| Practice workspace | Longer exercises, statistics tools, work products, review notes, and separate backup/export/import |
-| iOS integration | Bundled offline content, durable local progress backup, optional haptics, native file sharing/import, copy, and print |
+- Replaces the default 90-day Scheduling Capstone screen with a phone-first playable scheduler: flying door, 12 first-wave slots, 10 turn slots, 24 synthetic aircraft tiles, touchscreen drag and drop, visible bottom drop tray, and tap-to-place fallback. Existing capstone engine still runs 90 days and scores Phase Flow, utilization, hangar-queen decisions, and shortfalls.
+- Officer challenge “ADD MORE JETS TO THE SCHEDULE!” appears at eight simulated campaign checkpoints. The player can accept two extra departures when 14 aircraft are available, or defend the 12-Turn-10 baseline. Accepting changes requirements to 14-Turn-10 and charges six additional modeled flying hours; the aircraft accrue hours and can enter Phase earlier. A history-based Maintenance Death Spiral watch indicator models increased risk, not a guaranteed failure.
+- Color tile legend: FMC green (lightens with idle days), HQ white with green border after 30 simulated idle days, NMCM red, NMCS yellow, NMCB orange, DEPOT black, PHASE purple, modification PFR/PBG/CURE white with dark outline. Readiness events are fabricated and the types of NMC are pedagogical labels; they do not encode real-world unit data.
+- Starts as NON-NONNER. Graduation remains separate from the joke: NONNER STATUS is still locked. Practice lives provide feedback but do not block progression. Reduced-motion CSS is respected, and audio can be disabled.
+- Preserves a Classic Board toggle and the entire legacy Scheduling, Documentation, Analysis, Data Integrity and Database & Systems simulator. No external runtime libraries were added to the offline game.
 
-The squirrel world's internal identifier remains `squirrel` so existing progress can be carried over. Its displayed name is **Acorn Ops**.
+## 22.9.4
 
-The app uses fictional practice data and general concepts. It does not contain an uploaded military handbook, connect to operational systems, issue a job qualification, or claim a measured learning improvement. No account, advertising service, analytics SDK, or remote AI service is required to play.
+Documentation now includes **Recover Flying Days**, a separate learner-edited two-week modification-repair challenge. The original 24-aircraft sandbox remains unchanged. A bad plan contains RED → cure → idle gap → GREEN → cure; users combine the work under the scenario's approved single-cure assumption and move the 24-hour cure to Saturday. The app checks weekends, task order, cure timing, earliest return to flying, and modeled weekday downtime savings. Three flawed starting plans rotate with New Variation.
 
-## Build locally
+## 22.9.3
 
-Node.js **22+** is required. Native compilation requires macOS with **Xcode 26+**, the iOS 26 SDK or later, and CocoaPods. The deployment target is **iOS/iPadOS 15.4+**; that is separate from the build SDK.
+Scheduling now ends with a **90-Day Fleet Scheduling Capstone**. The learner inherits 24 aircraft and executes a 12-Turn-10 every day for 90 days while managing Phase Flow, NMC aircraft, hangar-queen/utilization risk, flying-hour output, and generic planned UNAVAILABLE periods. Scheduling intentionally does not explain every planned unavailable reason; Documentation later teaches the underlying controlled work.
 
-```sh
-npm ci
-npm run build
-npm test
-npm run ios:sync
-npm run verify
-npm run ios:open
-```
+The capstone records daily decisions, Phase entries, utilization mistakes, clustered Phase entries, shortfalls, modeled flying hours, and an overall fleet-management score.
 
-`ios:sync` rebuilds the bundled JavaScript bridge, copies `www/` into the native project, applies deterministic Xcode settings, and installs native dependencies on macOS. Generated web copies, CocoaPods dependencies, and build products are intentionally excluded from version control. The complete editable web source and lockfile are included.
-
-For a browser-only preview, serve `www/` with a local static server. Use a server rather than opening `index.html` as a file. Native iOS behavior must be checked in the built app; a browser preview cannot validate Apple's share sheet, signing, haptics, or app lifecycle.
-
-## Files you will use
-
-| Path | Purpose |
-| --- | --- |
-| `codemagic.yaml` | Simulator and signed IPA workflows |
-| `capacitor.config.json` | Display name, bundle identifier, and local web directory |
-| `ios/` | Xcode project and native app shell |
-| `native/` | Swift bridge, progress backup logic, launch screen, and privacy manifest sources |
-| `www/` | Complete playable game and bundled Help, Privacy, and About pages |
-| `scripts/` | Build, configuration, versioning, simulator, and verification automation |
-| `tests/` | Curriculum, persistence, backup validation, and native configuration checks |
-| `store/` | Store copy, metadata, privacy/age-rating worksheet, review notes, and screenshot plan |
-| `SOURCE-PROVENANCE.json` | Starting website revision and accurate preparation/submission status |
-| `UPLOAD.cmd`, `UPLOAD.sh` | Source-upload helpers for your own GitHub repository |
-
-## Progress and privacy
-
-The main game saves the current case, selected world/specialty, stars, and settings. The practice workspace stores its own work products and optional notes. On iOS, Preferences provides a local durable backup in addition to the web storage used by the game. Apple's device backup behavior depends on the user's settings.
-
-Use **Menu → Saved data** for game backups and **Settings** inside the practice workspace for its separate backups. The reset action explains that it clears both areas. A backup file can contain user-entered work; the user chooses whether and where to share it. There is no automatic cloud sync.
-
-## Release material
-
-Use `store/submission-guide.md` as the release worksheet and `store/app-store-metadata.json` as the source for listing fields. The proposed listing name is **Force Multiplier: Skills**; the device icon label is **Force Multiplier**. Name availability, price, countries, private review contact, and account declarations are selected in App Store Connect.
-
-Actual screenshots must come from the compiled native app. The simulator workflow produces real captures once it runs successfully. Browser layout checks supplied during preparation are not App Store screenshots.
-
-Public Help, Privacy, and About pages are also bundled locally so they open without a connection. Keep the public pages and the shipped app consistent when making future changes.
-
-Public pages verified for this release: [Help](https://force-multiplier-v22.fredesser.chatgpt.site/support), [Privacy](https://force-multiplier-v22.fredesser.chatgpt.site/privacy), and [About](https://force-multiplier-v22.fredesser.chatgpt.site/about).
+The clean 22.9.x single-router/single-render architecture is preserved.
