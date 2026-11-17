@@ -1,82 +1,131 @@
-# Version 22: every game asset is bundled. Workflows are started manually.
-# App Store Connect record: ForceMultiplierSimulator (6833361372).
-# A manually started ios-app-store build uploads to Apple without requesting review.
 workflows:
-  ios-simulator:
-    name: Force Multiplier - iPhone and iPad simulator check
+  ios-validate:
+    name: Force Multiplier — unsigned iOS validation
     instance_type: mac_mini_m2
-    max_build_duration: 60
+    max_build_duration: 30
     environment:
       xcode: latest
       node: 22
-      cocoapods: 1.16.2
     scripts:
-      - name: Check current Apple SDK
-        script: bash scripts/check-apple-tools.sh
       - name: Install locked dependencies
         script: npm ci
-      - name: Select build number
-        script: node scripts/set-build-number.mjs --offline
-      - name: Sync bundled game and native project
-        script: npm run ios:sync
-      - name: Validate game and native configuration
+      - name: Source regression and release checks
+        script: npm test && npm run check
+      - name: Bundle offline app, synchronize native plugins and verify generated assets
+        script: npm run ios:prepare && npm run ios:verify
+      - name: Compile for iOS Simulator (not signed or device-tested)
         script: |
-          npm test
-          npm run verify
-      - name: Build and launch on iPhone and iPad
-        script: npm run ios:simulator
+          xcodebuild -resolvePackageDependencies -project ios/App/App.xcodeproj -scheme App
+          xcodebuild -project ios/App/App.xcodeproj -scheme App -configuration Debug -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' -derivedDataPath build CODE_SIGNING_ALLOWED=NO build
+          cd build/Build/Products/Debug-iphonesimulator
+          zip -r "$CM_BUILD_DIR/ForceMultiplier-Simulator.zip" App.app
     artifacts:
-      - artifacts/simulator/**
-      - ios/App/Podfile.lock
-      - build/simulator/Build/Products/Debug-iphonesimulator/App.app
-
-  ios-app-store:
-    name: ForceMultiplierSimulator - App Store upload
+      - ForceMultiplier-Simulator.zip
+      - build/Logs/**
+  ios-release:
+    name: Force Multiplier — signed IPA + TestFlight
     instance_type: mac_mini_m2
-    max_build_duration: 60
+    max_build_duration: 45
     integrations:
       app_store_connect: ten-minute-wins-apple
     environment:
       xcode: latest
       node: 22
-      cocoapods: 1.16.2
-      vars:
-        APP_STORE_APPLE_ID: "6833361372"
       ios_signing:
         distribution_type: app_store
         bundle_identifier: com.fredesser.forcemultiplier
-      # Import this app's App Store profile and its matching certificate in Codemagic.
-      # APPLE_TEAM_ID is optional when xcode-project use-profiles configures it.
+      vars:
+        XCODE_PROJECT: ios/App/App.xcodeproj
+        XCODE_SCHEME: App
+        APP_STORE_APPLE_ID: "6833361372"
     scripts:
-      - name: Check current Apple SDK
-        script: bash scripts/check-apple-tools.sh
-      - name: Verify Apple application selection
-        script: |
-          if [ -z "${APP_STORE_APPLE_ID:-}" ]; then
-            echo "Set APP_STORE_APPLE_ID to the numeric ID of the Force Multiplier app in App Store Connect." >&2
-            exit 1
-          fi
       - name: Install locked dependencies
         script: npm ci
-      - name: Choose a new Apple build number
-        script: node scripts/set-build-number.mjs
-      - name: Sync bundled game and native project
-        script: npm run ios:sync
-      - name: Validate game and native configuration
-        script: |
-          npm test
-          npm run verify
-      - name: Apply authorized distribution signing
+      - name: Source regression and release checks
+        script: npm test && npm run check
+      - name: Bundle offline app, synchronize native plugins and verify generated assets
+        script: npm run ios:prepare && npm run ios:verify
+      - name: Apply authorized signing profiles
         script: xcode-project use-profiles
-      - name: Create signed IPA artifact
-        script: npm run ios:archive
+      - name: Set next unused App Store Connect build number
+        script: |
+          #!/bin/bash
+          set -euo pipefail
+
+          echo "Reading the latest build number from App Store Connect..."
+          TF_LATEST=""
+          STORE_LATEST=""
+
+          if TF_LATEST="$(app-store-connect get-latest-testflight-build-number "$APP_STORE_APPLE_ID" --platform IOS)"; then
+            echo "Latest TestFlight build reported by App Store Connect: $TF_LATEST"
+          else
+            echo "WARNING: TestFlight build-number lookup failed." >&2
+            TF_LATEST=""
+          fi
+
+          if STORE_LATEST="$(app-store-connect get-latest-app-store-build-number "$APP_STORE_APPLE_ID" --platform IOS)"; then
+            echo "Latest App Store build reported by App Store Connect: $STORE_LATEST"
+          else
+            echo "WARNING: App Store build-number lookup failed." >&2
+            STORE_LATEST=""
+          fi
+
+          CANDIDATES=""
+          if echo "$TF_LATEST" | grep -Eq '^[0-9]+$'; then CANDIDATES="$CANDIDATES $TF_LATEST"; fi
+          if echo "$STORE_LATEST" | grep -Eq '^[0-9]+$'; then CANDIDATES="$CANDIDATES $STORE_LATEST"; fi
+
+          if [ -z "$(printf '%s' "$CANDIDATES" | tr -d '[:space:]')" ]; then
+            echo "ERROR: Could not obtain a numeric build number from App Store Connect." >&2
+            echo "The workflow will stop here instead of silently falling back to build 1." >&2
+            exit 1
+          fi
+
+          LATEST=0
+          for N in $CANDIDATES; do
+            if [ "$N" -gt "$LATEST" ]; then LATEST="$N"; fi
+          done
+          NEXT=$((LATEST + 1))
+          echo "Using next App Store Connect build number: $NEXT"
+
+          cd "$CM_BUILD_DIR/ios/App"
+          agvtool new-version -all "$NEXT"
+
+          PROJECT_VERSION="$(grep -m1 'CURRENT_PROJECT_VERSION = ' App.xcodeproj/project.pbxproj | sed -E 's/.*= ([0-9]+);/\1/')"
+          if [ "$PROJECT_VERSION" != "$NEXT" ]; then
+            echo "ERROR: Xcode project build number is $PROJECT_VERSION, expected $NEXT." >&2
+            exit 1
+          fi
+          echo "Verified Xcode CURRENT_PROJECT_VERSION=$PROJECT_VERSION"
+          echo "NEXT_BUILD_NUMBER=$NEXT" >> "$CM_ENV"
+      - name: Create signed App Store IPA artifact
+        script: xcode-project build-ipa --project "$XCODE_PROJECT" --scheme "$XCODE_SCHEME"
+      - name: Verify IPA build number before publishing
+        script: |
+          set -euo pipefail
+          IPA="$(find build/ios/ipa -name '*.ipa' -type f | head -n 1)"
+          if [ -z "$IPA" ]; then
+            echo "ERROR: Signed IPA was not found." >&2
+            exit 1
+          fi
+          TMP_IPA="$(mktemp -d)"
+          unzip -q "$IPA" -d "$TMP_IPA"
+          PLIST="$(find "$TMP_IPA/Payload" -maxdepth 2 -name Info.plist -type f | head -n 1)"
+          BUILT_NUMBER="$(/usr/libexec/PlistBuddy -c 'Print :CFBundleVersion' "$PLIST")"
+          BUILT_VERSION="$(/usr/libexec/PlistBuddy -c 'Print :CFBundleShortVersionString' "$PLIST")"
+          echo "Built IPA version: $BUILT_VERSION ($BUILT_NUMBER)"
+          if [ "$BUILT_NUMBER" != "$NEXT_BUILD_NUMBER" ]; then
+            echo "ERROR: IPA build number $BUILT_NUMBER does not match expected $NEXT_BUILD_NUMBER." >&2
+            exit 1
+          fi
+          echo "Verified IPA build number is unique candidate $NEXT_BUILD_NUMBER before publishing."
     artifacts:
-      - ios/App/build/ios/ipa/*.ipa
-      - ios/App/build/ios/xcarchive/*.xcarchive
-      - ios/App/Podfile.lock
+      - build/ios/ipa/*.ipa
       - /tmp/xcodebuild_logs/*.log
     publishing:
       app_store_connect:
         auth: integration
-        submit_to_testflight: false
+        submit_to_testflight: true
         submit_to_app_store: false
+# The Windows uploader starts ios-release directly through the Codemagic API.
+# Webhook triggering is intentionally disabled to prevent duplicate builds.
+# Public App Review submission remains disabled.
