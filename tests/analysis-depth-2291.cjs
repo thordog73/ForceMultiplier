@@ -1,0 +1,16 @@
+const assert=require('node:assert/strict');
+const M=require('../dist/fm2290-model.js');
+const strong=M.welchT([121,117,115,124,119,122,116,120,118,123],[63,59,62,58,66,60,61,64,57,65]);
+assert(strong.p<.001,'Welch example should detect a strong difference');
+const rank=M.mannWhitney([98,105,110,91,120,113,102,107,96,118],[72,78,69,75,81,74,70,77,73,79]);
+assert(rank.p<.01,'Mann-Whitney example should detect a strong difference');
+const flat=M.welchT([90,96,88,93,91,94,89,95,92,90],[89,94,91,90,93,92,88,96,91,89]);
+assert(flat.p>.05,'close-shift example should not show a clear difference');
+const corr=M.pearsonTest([1,2,3,4,5,6,7,8],[12,16,23,29,34,43,49,58]);assert(corr.p<.001&&corr.r>.95);
+const noCorr=M.pearsonTest([1,2,3,4,5,6,7,8],[30,24,33,26,31,28,34,29]);assert(noCorr.p>.05);
+const profiles=Array.from({length:6},(_,i)=>M.improvementProfile(i+1));
+assert.deepEqual(profiles.map(x=>x.type),['better','same','worse','delayed','type1','type2']);
+assert.deepEqual(profiles.map(x=>x.action),['standardize','reopen','reopen','standardize','verify','verify']);
+const ui=require('node:fs').readFileSync('dist/fm2290.js','utf8');
+for(const marker of ['Actual calculation:','Welch two-sample t test','Mann–Whitney U test','End-of-cycle decision','Verify the source data first']) assert(ui.includes(marker),marker+' missing');
+console.log('PASS 22.9.1 Analysis depth: real tests + six Big Boss outcomes.');

@@ -1,0 +1,9 @@
+{
+  "app": "Force Multiplier · Enterprise / Airline Maintenance Management Simulator",
+  "version": "22.11.0",
+  "sourceCommit": "local-build-22.11.0",
+  "sourceSiteVersion": 4,
+  "sourceSite": "https://force-multiplier-v22.fredesser.chatgpt.site",
+  "status": "Local source release for GitHub/Codemagic; existing five disciplines, 24-aircraft/90-day Scheduling capstone, TestFlight workflow, and original training retained. Device signing/upload not yet performed.",
+  "release": "22.11.0 · vertical aircraft blocks, phase flow, 90 sliding puzzles and weekday launch doors"
+}
