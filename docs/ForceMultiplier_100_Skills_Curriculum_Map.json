@@ -1,0 +1,2123 @@
+{
+  "scheduling": {
+    "name": "Scheduling",
+    "tag": "Turn requirements into a feasible flying and maintenance plan.",
+    "icon": "▦",
+    "color": "#62ceef",
+    "arc": "Requirements → Checkerboard → Flying lineup → Phase & inspections → Recovery → Approval",
+    "mission": 1,
+    "level": "Plan the work; protect the fleet",
+    "modules": [
+      {
+        "id": "checkerboard",
+        "title": "Master the Checkerboard",
+        "ids": [
+          "S01",
+          "S02",
+          "S06",
+          "S08",
+          "S09"
+        ],
+        "kicker": "Build the master picture",
+        "outcome": "Learn how a checkerboard compresses flying, inspections, modifications, parts, resources and risk into one shared plan.",
+        "why": "A checkerboard is not a colorful calendar. It is a feasible agreement between mission demand and maintenance capacity.",
+        "steps": [
+          "Convert annual, monthly and weekly flying requirements into daily demand and required availability.",
+          "Mark known downtime, overdue or approaching inspections, Phase windows, depot moves, NMC status, manpower, parts and facilities.",
+          "Find usable maintenance opportunities; group work that can share access, downtime or setup without violating instructions.",
+          "Condense compatible PFR and PBG work so a common cure happens once only when authorized. Preserve two workdays per task and a full 24-hour cure.",
+          "Keep a spare and buffers; flag conflicts, document assumptions, and get the agreed schedule approved."
+        ],
+        "scenario": "An aircraft needs PFR and PBG. The separate plan inserts a cure between jobs; the combined approved plan places both two-day jobs together and completes one final cure. The checkerboard makes the difference visible.",
+        "question": "What makes maintenance consolidation a valid scheduling improvement?",
+        "answers": [
+          "Putting every job in one cell regardless of instructions",
+          "Combining compatible work after verifying parts, capacity, precedence and authorized cure rules",
+          "Removing the cure so the aircraft flies sooner"
+        ],
+        "answer": 1,
+        "answerWhy": "The goal is less avoidable downtime, not skipping required work.",
+        "advanced": "scheduling:skill7",
+        "mission": 1,
+        "skills": [
+          {
+            "id": "S01",
+            "name": "Translate requirements across planning horizons",
+            "proof": "Convert annual, quarterly, monthly, or weekly requirements into daily demand; reconcile the detailed schedule with required output rather than treating each planning period as a separate skill."
+          },
+          {
+            "id": "S02",
+            "name": "Establish the planning picture and constraints",
+            "proof": "Verify availability, requirements, source dates, and estimates; distinguish confirmed facts, assumptions, mandatory limits, and negotiable preferences before allocating work."
+          },
+          {
+            "id": "S06",
+            "name": "Build an integrated schedule",
+            "proof": "Build a checkerboard showing flying, reserve, maintenance, and unavailable periods; synchronize people, aircraft, tools, space, and capacity without conflicting assignments."
+          },
+          {
+            "id": "S08",
+            "name": "Find and use genuine scheduling opportunities",
+            "proof": "Inspect idle windows and holes; fit eligible work after checking duration, dependencies, capability, and resources, and recognize when a gap must remain unfilled."
+          },
+          {
+            "id": "S09",
+            "name": "Combine compatible work and reduce setup",
+            "proof": "Compare bundles and sequences that reduce repeated access, setup, changeovers, downtime, or cure only when supplied instructions permit; preserve every requirement and verify the actual time or capacity saved."
+          }
+        ]
+      },
+      {
+        "id": "daily",
+        "title": "Build the Daily Flying Lineup",
+        "ids": [
+          "S03",
+          "S04"
+        ],
+        "kicker": "6-Turn-4 to 12-Turn-10",
+        "outcome": "Choose only capable aircraft and protect a meaningful spare while meeting first-wave and turn requirements.",
+        "why": "Flying plans must match actual mission capability, not just the number of green boxes.",
+        "steps": [
+          "Read the aircraft-by-aircraft status and configuration; identify required mission/turn capability.",
+          "Select six FMC first-wave aircraft; choose four of those aircraft for turns.",
+          "For larger requirements, schedule 12 first-wave aircraft plus ten turns and protect the designated spare.",
+          "Recheck the lineup after an aircraft abort, NMC change or priority mission."
+        ],
+        "scenario": "Six flyable aircraft can produce a 6-Turn-4; a red or Phase aircraft cannot be used merely to make the count six.",
+        "question": "For a 6-Turn-4, where must the four turn aircraft come from?",
+        "answers": [
+          "Any four aircraft including down aircraft",
+          "Four of the six aircraft selected for the first wave",
+          "Four additional aircraft from a depot pool"
+        ],
+        "answer": 1,
+        "answerWhy": "A turn is a second flight by aircraft that flew earlier in the period.",
+        "advanced": "scheduling:skill1",
+        "mission": 1,
+        "skills": [
+          {
+            "id": "S03",
+            "name": "Match capable resources to the assignment",
+            "proof": "Select six eligible first-go aircraft and four feasible turn aircraft in a 6-turn-4 exercise; satisfy capability, configuration, turnaround, usage, and support constraints, preserving scarce capabilities for work that needs them."
+          },
+          {
+            "id": "S04",
+            "name": "Plan spares and contingencies",
+            "proof": "Select an eligible spare or capacity margin, test credible duration and arrival delays, and place buffers or contingencies without double-counting resources or concealing a shortfall."
+          }
+        ]
+      },
+      {
+        "id": "phase",
+        "title": "Control Phase Flow and Hangar Queen Risk",
+        "ids": [
+          "S05",
+          "S15"
+        ],
+        "kicker": "Balance fleet usage",
+        "outcome": "Use remaining hours, flying rate and idle days to stagger inspections without creating avoidable hangar queens.",
+        "why": "Scheduling today changes future Phase entries and future fleet health.",
+        "steps": [
+          "Read hours remaining to Phase for every eligible aircraft and anticipate use in the next period.",
+          "Estimate expected hours burned by first-wave and turn decisions; identify clusters approaching the limit.",
+          "Balance low-hour and high-hour aircraft and protect the aircraft approaching 30 days without flying.",
+          "Explain the capacity effect if two aircraft become due together."
+        ],
+        "scenario": "A01 is near Phase; A05 has abundant hours. Overusing A01 may make two aircraft require the dock during the same week. Overusing only A05 may leave another aircraft idle for 30 days.",
+        "question": "What is the better way to manage a tightly clustered Phase Flow?",
+        "answers": [
+          "Always fly the aircraft closest to Phase",
+          "Ignore utilization until an aircraft is due",
+          "Use projected hours and inspection capacity to distribute upcoming entries"
+        ],
+        "answer": 2,
+        "answerWhy": "Phase Flow is a forecast you actively influence through scheduled usage.",
+        "advanced": "scheduling:skill4",
+        "mission": 3,
+        "skills": [
+          {
+            "id": "S05",
+            "name": "Manage utilization and prevent prolonged inactivity",
+            "proof": "Track use and time since last use; rotate eligible aircraft or plan recovery before the supplied non-use threshold, avoiding a hangar queen while preserving mission capability and required reserves."
+          },
+          {
+            "id": "S15",
+            "name": "Balance utilization and recurring workload",
+            "proof": "Build and fix phase flow by projecting hours, cycles, and due points against dock capacity; rebalance permitted utilization or inspection entries. Apply the same cumulative-use logic to other allowances and inventory."
+          }
+        ]
+      },
+      {
+        "id": "planned",
+        "title": "Plan Inspections, Parts, Modifications and Cure",
+        "ids": [
+          "S07",
+          "S10",
+          "S11",
+          "S12",
+          "S13"
+        ],
+        "kicker": "Protect required work",
+        "outcome": "Convert planned and due maintenance into sequenced, resourced downtime that can be executed.",
+        "why": "A theoretically open hangar slot is not available unless the required people, parts, facilities and instructions are ready.",
+        "steps": [
+          "Identify inspection, TCI, TCTO and modification due windows and the correct operating-hour or calendar clock.",
+          "Check prerequisite parts, qualified labor, tools, dock capacity and work sequence.",
+          "Place work before the due point; combine related jobs when approved, including necessary curing and reassembly.",
+          "Commit planned downtime only after checking readiness; maintain a record of why it was scheduled."
+        ],
+        "scenario": "An inspection is due Friday, but a required part arrives Thursday. A Tuesday start that depends on that part is not executable. Stage the part before committing work.",
+        "question": "Which condition justifies locking a modification into the schedule?",
+        "answers": [
+          "The date looks open on the chart",
+          "Required work, prerequisites, resources and authorized timing have been verified",
+          "The aircraft has been idle for one day"
+        ],
+        "answer": 1,
+        "answerWhy": "A checkerboard must reflect executable work, not wishful scheduling.",
+        "advanced": "doc:home",
+        "mission": 4,
+        "skills": [
+          {
+            "id": "S07",
+            "name": "Sequence work using the correct clocks and deadlines",
+            "proof": "Work backward through prerequisites, execution, staffed calendars, elapsed waiting, cure, and verification; calculate feasible start and finish times, the latest feasible start, and remaining scheduling margin."
+          },
+          {
+            "id": "S10",
+            "name": "Plan modifications and other one-time work",
+            "proof": "Build a modification schedule across affected aircraft; establish applicability, prerequisites, parts readiness, staffing, facilities, duration, cure, deadlines, and return-to-service conditions."
+          },
+          {
+            "id": "S11",
+            "name": "Plan inspections and other recurring work",
+            "proof": "Forecast inspection or renewal due points from verified dates or usage; assign feasible slots within permitted windows and smooth clustered demand while maintaining operational coverage."
+          },
+          {
+            "id": "S12",
+            "name": "Request and stage parts and materials",
+            "proof": "Identify required modification parts and quantities, calculate need-by dates, submit or route the authorized order, track delivery evidence, and update readiness assumptions when estimates change."
+          },
+          {
+            "id": "S13",
+            "name": "Commit downtime when prerequisites are ready",
+            "proof": "Check parts, information, approvals, personnel, facilities, and predecessor work before starting; stage missing prerequisites or explain a justified early commitment under the supplied constraints."
+          }
+        ]
+      },
+      {
+        "id": "capacity",
+        "title": "Protect Capacity, Spares and Dependencies",
+        "ids": [
+          "S14",
+          "S16"
+        ],
+        "kicker": "Do not overload the hangar",
+        "outcome": "Make tradeoffs among flying, maintenance and recovery when capacity is limited.",
+        "why": "A schedule that ignores labor, docks or critical resources is infeasible even if it looks attractive.",
+        "steps": [
+          "Map bottlenecks: inspection docks, specialist labor, tools, parts, facility restrictions and shared assets.",
+          "Preserve required reserves, dependencies and protected windows; identify donor/recovery effects when an aircraft is unavailable.",
+          "Quantify the mission impact of moving work and offer choices when demand exceeds capacity."
+        ],
+        "scenario": "Three aircraft need Phase but only one dock is available. Placing all three in the same week creates a conflict; scheduling must stagger demand or elevate the shortfall.",
+        "question": "What should you do if three Phase inspections compete for one dock?",
+        "answers": [
+          "Show all three as confirmed and assume extra capacity",
+          "Stagger feasible work, report the risk and elevate any unmet requirement",
+          "Move all due dates without authority"
+        ],
+        "answer": 1,
+        "answerWhy": "Capacity constraints are planning facts, not optional warnings.",
+        "advanced": "scheduling:skill8",
+        "mission": 3,
+        "skills": [
+          {
+            "id": "S14",
+            "name": "Plan use and recovery of unavailable resources",
+            "proof": "In a cann-bird case with multiple parts delays, compare keeping, recovering, or using an eligible donor; assess total capability, required authority, added work, parts dependencies, and the donor recovery plan."
+          },
+          {
+            "id": "S16",
+            "name": "Protect bottlenecks and make capacity tradeoffs",
+            "proof": "Identify the resource limiting output; compare feasible allocations against stated priorities and report the system-wide gain, unmet demand, displaced work, and consequences."
+          }
+        ]
+      },
+      {
+        "id": "recover",
+        "title": "Recover a Disrupted Schedule and Run the Meeting",
+        "ids": [
+          "S17",
+          "S18"
+        ],
+        "kicker": "Change the plan deliberately",
+        "outcome": "Replan after a late part, breakdown, revised mission or resource shortfall, and coordinate the decision.",
+        "why": "The best scheduler is both proactive and responsive; a valid plan needs controlled revisions.",
+        "steps": [
+          "Identify exactly what changed: ETIC, part arrival, mission demand, manpower or aircraft status.",
+          "Recompute what can fly, what can be maintained and what must move; distinguish feasible from desired output.",
+          "Coordinate with Production, Operations, MOC and specialists; capture alternatives, owners and due actions."
+        ],
+        "scenario": "On Wednesday, the spare becomes NMCM and a VIP sortie is added. Rebuild the lineup without using the red aircraft and brief the remaining risk.",
+        "question": "Which meeting result demonstrates good scheduling?",
+        "answers": [
+          "A slide deck with no decision or owner",
+          "A revised feasible plan with actions, owners and documented risks",
+          "A schedule that quietly hides the shortfall"
+        ],
+        "answer": 1,
+        "answerWhy": "Successful coordination produces executable decisions and traceable actions.",
+        "advanced": "scheduling:skill8",
+        "mission": 2,
+        "skills": [
+          {
+            "id": "S17",
+            "name": "Recover a disrupted schedule",
+            "proof": "After an outage, late part, changed requirement, or duration overrun, trace dependencies, test contingencies, restore feasibility, and communicate necessary changes while preserving unaffected commitments."
+          },
+          {
+            "id": "S18",
+            "name": "Run a scheduling meeting that produces decisions",
+            "proof": "Prepare the plan and unresolved issues, reconcile stakeholder requirements, surface conflicts, record decisions and tradeoffs, and assign owners, deadlines, and follow-up actions."
+          }
+        ]
+      },
+      {
+        "id": "control",
+        "title": "Approve, Execute and Reconcile the Schedule",
+        "ids": [
+          "S19",
+          "S20"
+        ],
+        "kicker": "Close the loop",
+        "outcome": "Publish and protect the approved version, track actual execution and feed differences into the next plan.",
+        "why": "The plan is a controlled decision record; actual results must be reconciled rather than merely marked green.",
+        "steps": [
+          "Record the approver, current schedule version and controlled changes.",
+          "Reconcile sorties, flying hours, aircraft utilization and maintenance completion against plan.",
+          "Explain variances, emerging risks, and what the next cycle must change."
+        ],
+        "scenario": "The schedule projected 20 sorties but only 16 flew. The scheduler must identify the causes, carry forward the consequences, and update future assumptions.",
+        "question": "What evidence belongs in the schedule closeout?",
+        "answers": [
+          "Only the original target",
+          "Actual execution, deviations, causes and a revised forecast",
+          "An unverified promise that tomorrow will improve"
+        ],
+        "answer": 1,
+        "answerWhy": "A useful schedule survives contact with reality because its variance and corrective actions are visible.",
+        "advanced": "scheduling:skill8",
+        "mission": 1,
+        "skills": [
+          {
+            "id": "S19",
+            "name": "Obtain approval and control the approved schedule",
+            "proof": "Present the feasible schedule and unresolved exceptions to the designated authority; verify signatures and version, publish the approved schedule, and route subsequent changes through the required approval process."
+          },
+          {
+            "id": "S20",
+            "name": "Reconcile execution and improve the next plan",
+            "proof": "Compare delivered output, actual duration, usage, and downtime with the approved plan; investigate differences, retain unresolved explanations, and carry justified corrections into the next planning cycle."
+          }
+        ]
+      }
+    ],
+    "skills": [
+      {
+        "id": "S01",
+        "name": "Translate requirements across planning horizons",
+        "proof": "Convert annual, quarterly, monthly, or weekly requirements into daily demand; reconcile the detailed schedule with required output rather than treating each planning period as a separate skill."
+      },
+      {
+        "id": "S02",
+        "name": "Establish the planning picture and constraints",
+        "proof": "Verify availability, requirements, source dates, and estimates; distinguish confirmed facts, assumptions, mandatory limits, and negotiable preferences before allocating work."
+      },
+      {
+        "id": "S03",
+        "name": "Match capable resources to the assignment",
+        "proof": "Select six eligible first-go aircraft and four feasible turn aircraft in a 6-turn-4 exercise; satisfy capability, configuration, turnaround, usage, and support constraints, preserving scarce capabilities for work that needs them."
+      },
+      {
+        "id": "S04",
+        "name": "Plan spares and contingencies",
+        "proof": "Select an eligible spare or capacity margin, test credible duration and arrival delays, and place buffers or contingencies without double-counting resources or concealing a shortfall."
+      },
+      {
+        "id": "S05",
+        "name": "Manage utilization and prevent prolonged inactivity",
+        "proof": "Track use and time since last use; rotate eligible aircraft or plan recovery before the supplied non-use threshold, avoiding a hangar queen while preserving mission capability and required reserves."
+      },
+      {
+        "id": "S06",
+        "name": "Build an integrated schedule",
+        "proof": "Build a checkerboard showing flying, reserve, maintenance, and unavailable periods; synchronize people, aircraft, tools, space, and capacity without conflicting assignments."
+      },
+      {
+        "id": "S07",
+        "name": "Sequence work using the correct clocks and deadlines",
+        "proof": "Work backward through prerequisites, execution, staffed calendars, elapsed waiting, cure, and verification; calculate feasible start and finish times, the latest feasible start, and remaining scheduling margin."
+      },
+      {
+        "id": "S08",
+        "name": "Find and use genuine scheduling opportunities",
+        "proof": "Inspect idle windows and holes; fit eligible work after checking duration, dependencies, capability, and resources, and recognize when a gap must remain unfilled."
+      },
+      {
+        "id": "S09",
+        "name": "Combine compatible work and reduce setup",
+        "proof": "Compare bundles and sequences that reduce repeated access, setup, changeovers, downtime, or cure only when supplied instructions permit; preserve every requirement and verify the actual time or capacity saved."
+      },
+      {
+        "id": "S10",
+        "name": "Plan modifications and other one-time work",
+        "proof": "Build a modification schedule across affected aircraft; establish applicability, prerequisites, parts readiness, staffing, facilities, duration, cure, deadlines, and return-to-service conditions."
+      },
+      {
+        "id": "S11",
+        "name": "Plan inspections and other recurring work",
+        "proof": "Forecast inspection or renewal due points from verified dates or usage; assign feasible slots within permitted windows and smooth clustered demand while maintaining operational coverage."
+      },
+      {
+        "id": "S12",
+        "name": "Request and stage parts and materials",
+        "proof": "Identify required modification parts and quantities, calculate need-by dates, submit or route the authorized order, track delivery evidence, and update readiness assumptions when estimates change."
+      },
+      {
+        "id": "S13",
+        "name": "Commit downtime when prerequisites are ready",
+        "proof": "Check parts, information, approvals, personnel, facilities, and predecessor work before starting; stage missing prerequisites or explain a justified early commitment under the supplied constraints."
+      },
+      {
+        "id": "S14",
+        "name": "Plan use and recovery of unavailable resources",
+        "proof": "In a cann-bird case with multiple parts delays, compare keeping, recovering, or using an eligible donor; assess total capability, required authority, added work, parts dependencies, and the donor recovery plan."
+      },
+      {
+        "id": "S15",
+        "name": "Balance utilization and recurring workload",
+        "proof": "Build and fix phase flow by projecting hours, cycles, and due points against dock capacity; rebalance permitted utilization or inspection entries. Apply the same cumulative-use logic to other allowances and inventory."
+      },
+      {
+        "id": "S16",
+        "name": "Protect bottlenecks and make capacity tradeoffs",
+        "proof": "Identify the resource limiting output; compare feasible allocations against stated priorities and report the system-wide gain, unmet demand, displaced work, and consequences."
+      },
+      {
+        "id": "S17",
+        "name": "Recover a disrupted schedule",
+        "proof": "After an outage, late part, changed requirement, or duration overrun, trace dependencies, test contingencies, restore feasibility, and communicate necessary changes while preserving unaffected commitments."
+      },
+      {
+        "id": "S18",
+        "name": "Run a scheduling meeting that produces decisions",
+        "proof": "Prepare the plan and unresolved issues, reconcile stakeholder requirements, surface conflicts, record decisions and tradeoffs, and assign owners, deadlines, and follow-up actions."
+      },
+      {
+        "id": "S19",
+        "name": "Obtain approval and control the approved schedule",
+        "proof": "Present the feasible schedule and unresolved exceptions to the designated authority; verify signatures and version, publish the approved schedule, and route subsequent changes through the required approval process."
+      },
+      {
+        "id": "S20",
+        "name": "Reconcile execution and improve the next plan",
+        "proof": "Compare delivered output, actual duration, usage, and downtime with the approved plan; investigate differences, retain unresolved explanations, and carry justified corrections into the next planning cycle."
+      }
+    ],
+    "id": "scheduling"
+  },
+  "analysis": {
+    "name": "Analysis",
+    "tag": "Turn credible numbers into decisions commanders can use.",
+    "icon": "▥",
+    "color": "#e3bc75",
+    "arc": "Ask → Validate → Calculate → Compare → Investigate → Recommend → Verify",
+    "mission": 5,
+    "level": "Question the number; explain the meaning",
+    "modules": [
+      {
+        "id": "question",
+        "title": "Ask the Right Question",
+        "ids": [
+          "A01",
+          "A02"
+        ],
+        "kicker": "Define the decision",
+        "outcome": "Turn a vague leadership request into a specific decision, population, period, comparison and evidence plan.",
+        "why": "The right answer to the wrong question is not useful analysis.",
+        "steps": [
+          "Identify the commander’s intended decision and credible alternatives.",
+          "Define the assets, dates, events and exclusions that answer that question.",
+          "Ask which records or operational participants can validate the data."
+        ],
+        "scenario": "A commander asks why rates fell. Before calculating, identify whether the rate is for one AMU, the wing, the last month, or a different fleet.",
+        "question": "What should the analyst clarify first?",
+        "answers": [
+          "Which chart color leadership prefers",
+          "The decision, population, period and source",
+          "How many slides to make"
+        ],
+        "answer": 1,
+        "answerWhy": "Scope determines which data and denominator belong in the analysis.",
+        "advanced": "analysis:home",
+        "mission": 5,
+        "skills": [
+          {
+            "id": "A01",
+            "name": "Frame the decision",
+            "proof": "Translate a request into a decision, responsible audience, relevant alternatives, and the evidence needed to distinguish them."
+          },
+          {
+            "id": "A02",
+            "name": "Define the population and evidence coverage",
+            "proof": "Establish the population, period, and exclusions; identify missing cases, selection effects, or reporting gaps that limit the conclusion."
+          }
+        ]
+      },
+      {
+        "id": "rates",
+        "title": "Build the Right Metric and Denominator",
+        "ids": [
+          "A03",
+          "A04",
+          "A05"
+        ],
+        "kicker": "Calculate and verify",
+        "outcome": "Use the correct numerator, denominator, multiplier and aggregation method.",
+        "why": "A polished briefing with the wrong denominator is misleading.",
+        "steps": [
+          "Identify count versus rate; use approved definitions and compatible units.",
+          "Compute break rate from qualifying breaks and flights; fix rate from quick repairs and qualifying breaks; repeat rate from repeats and PRDs; CANN rate from cann actions and flights.",
+          "Roll up by summing appropriate numerators and denominators, not by blindly averaging percentages.",
+          "Reconcile daily, weekly and monthly reports to the underlying source."
+        ],
+        "scenario": "If 2 of 10 breaks were fixed in eight hours, the modeled 8-hour fix rate is 20%, not 2 divided by total sorties.",
+        "question": "What is the denominator of 8-hour fix rate?",
+        "answers": [
+          "Total sorties",
+          "Qualifying breaks",
+          "Possessed aircraft"
+        ],
+        "answer": 1,
+        "answerWhy": "The numerator counts breaks fixed within the interval; the denominator counts qualifying breaks.",
+        "advanced": "analysis:metric",
+        "mission": 5,
+        "skills": [
+          {
+            "id": "A03",
+            "name": "Define and calculate the right metric",
+            "proof": "Recognize measurement type and meaning; specify numerator, eligible denominator, exposure, units, and approved formula. Distinguish a status snapshot from activity accumulated during a period."
+          },
+          {
+            "id": "A04",
+            "name": "Aggregate and roll up correctly",
+            "proof": "Pool eligible counts or apply justified weights; produce valid group and period summaries without averaging incompatible percentages or double-counting overlapping periods."
+          },
+          {
+            "id": "A05",
+            "name": "Produce and reconcile recurring reports",
+            "proof": "Provide daily, weekly, monthly, and annual numbers with consistent definitions and cutoffs; reconcile source detail with published totals and explain late entries, revisions, or unresolved differences."
+          }
+        ]
+      },
+      {
+        "id": "compare",
+        "title": "Make Fair Comparisons",
+        "ids": [
+          "A06",
+          "A07"
+        ],
+        "kicker": "Control for context",
+        "outcome": "Distinguish shifts in fleet mix, exposure and distributions from changes in real performance.",
+        "why": "A difference may come from who and what was included rather than a process improvement.",
+        "steps": [
+          "Compare similar populations, aircraft types, time periods and missions.",
+          "Inspect outliers, spread, zeros, and missing values before summarizing.",
+          "Make assumptions explicit and use rates or exposure-adjusted values when necessary."
+        ],
+        "scenario": "A squadron with twice as many flights may have more breaks but a better break rate. Compare on consistent exposure.",
+        "question": "Which comparison is fairer?",
+        "answers": [
+          "Raw break counts without flight totals",
+          "Breaks per comparable sorties with scope defined",
+          "Comparing a weekly count to a yearly rate"
+        ],
+        "answer": 1,
+        "answerWhy": "Denominators and operational context protect against misleading rankings.",
+        "advanced": "analysis:sim3",
+        "mission": 5,
+        "skills": [
+          {
+            "id": "A06",
+            "name": "Make comparable comparisons",
+            "proof": "Check definitions, periods, exposure, workloads, and populations; repair or qualify a comparison whose basis differs."
+          },
+          {
+            "id": "A07",
+            "name": "Inspect the distribution",
+            "proof": "Examine spread, tails, and unusual cases; recognize when an average conceals an operationally important concentration or delay."
+          }
+        ]
+      },
+      {
+        "id": "trends",
+        "title": "Understand Trends, Baselines and Signals",
+        "ids": [
+          "A08",
+          "A09",
+          "A10"
+        ],
+        "kicker": "See beyond one bad month",
+        "outcome": "Build meaningful baselines and distinguish trends, shifts and random noise.",
+        "why": "One isolated spike is not automatically a trend or a cause.",
+        "steps": [
+          "Plot comparable measures over time and mark changes in definition.",
+          "Set an evidence-based baseline or candidate standard from valid historical data.",
+          "Look for sustained patterns and ask whether the signal is operationally meaningful."
+        ],
+        "scenario": "Three worsening months and one isolated spike are different patterns. The analyst should investigate sustained signals without declaring causation.",
+        "question": "Which is stronger evidence of a sustained change?",
+        "answers": [
+          "One unusual dot",
+          "Repeated movement in the same direction across comparable periods",
+          "A chart with a dramatic title"
+        ],
+        "answer": 1,
+        "answerWhy": "Patterns across time need context and validation.",
+        "advanced": "analysis:sim2",
+        "mission": 5,
+        "skills": [
+          {
+            "id": "A08",
+            "name": "Read change over time",
+            "proof": "Examine trends, persistence, recurring cycles, and workload changes; distinguish a sustained pattern from an isolated period."
+          },
+          {
+            "id": "A09",
+            "name": "Establish historical baselines and propose standards",
+            "proof": "Use representative historical data to establish a baseline and propose a defensible benchmark or performance standard; explain limitations and distinguish observed performance, proposed targets, and authorized requirements."
+          },
+          {
+            "id": "A10",
+            "name": "Evaluate apparent signals",
+            "proof": "Monitor variation against an appropriate baseline and stated decision rule; identify results requiring investigation without treating the signal as an established cause."
+          }
+        ]
+      },
+      {
+        "id": "drivers",
+        "title": "Identify Drivers and Test Hypotheses",
+        "ids": [
+          "A11",
+          "A12",
+          "A13"
+        ],
+        "kicker": "Build an investigation",
+        "outcome": "Use Pareto, fishbone and multiple explanations to target what can be tested.",
+        "why": "A plausible story is not yet an evidence-supported root cause.",
+        "steps": [
+          "Locate which subsystems, aircraft or causes account for the observed burden.",
+          "Separate verified facts from hypotheses and alternatives.",
+          "Use a fishbone and plan a test that could falsify the favored explanation."
+        ],
+        "scenario": "A rate worsens after a schedule change. Ask whether the change caused the difference or a simultaneous part shortage did.",
+        "question": "Which statement is defensible?",
+        "answers": [
+          "The new schedule definitely caused the rate change",
+          "A schedule change may be one candidate; test other drivers and evidence",
+          "The correlation automatically proves causation"
+        ],
+        "answer": 1,
+        "answerWhy": "A root cause claim needs an evidence path beyond timing alone.",
+        "advanced": "analysis:sim4",
+        "mission": 5,
+        "skills": [
+          {
+            "id": "A11",
+            "name": "Identify and report contributing drivers",
+            "proof": "Separate relevant groups and quantify their contributions to lost time, changed output, or other results; report concentrations and case-mix changes while distinguishing measured contributors from suspected causes."
+          },
+          {
+            "id": "A12",
+            "name": "Present evidence honestly",
+            "proof": "Choose suitable displays with clear populations, periods, units, denominators, labels, and scales; make the important comparison understandable without distortion."
+          },
+          {
+            "id": "A13",
+            "name": "Develop testable explanations",
+            "proof": "Distinguish association from cause, consider alternatives, and use a fishbone or similar investigation structure; turn suspected causes into predictions and identify evidence that could support or contradict them."
+          }
+        ]
+      },
+      {
+        "id": "stats",
+        "title": "Use Statistics and Communicate Uncertainty",
+        "ids": [
+          "A14",
+          "A15",
+          "A16"
+        ],
+        "kicker": "Interpret, not decorate",
+        "outcome": "Choose an appropriate analytical test, explain its limitations and separate significance from operational importance.",
+        "why": "Statistical significance, practical importance and causation are different questions.",
+        "steps": [
+          "Recognize nominal, ordinal, interval and ratio measures.",
+          "Choose an appropriate difference or association test given the question, distribution and sample.",
+          "Interpret confidence, effect size, limitations and p-value without claiming certainty."
+        ],
+        "scenario": "A small improvement can be statistically detectable but operationally trivial; a large estimated effect can be uncertain with few observations.",
+        "question": "What does a low p-value establish by itself?",
+        "answers": [
+          "That the proposed cause is proven",
+          "That the observed result is unusual under the stated null model, not why it occurred",
+          "That the difference saves money"
+        ],
+        "answer": 1,
+        "answerWhy": "Tie the result back to operations; report uncertainty.",
+        "advanced": "analysis:sim3test",
+        "mission": 5,
+        "skills": [
+          {
+            "id": "A14",
+            "name": "Select and interpret analytical tests",
+            "proof": "Select a comparison or hypothesis test appropriate to the question, check its assumptions, and explain what its result establishes without treating it as proof."
+          },
+          {
+            "id": "A15",
+            "name": "Express uncertainty",
+            "proof": "Communicate defensible ranges, limited samples, uncertain estimates, and evidence gaps; identify what additional information would materially improve the decision."
+          },
+          {
+            "id": "A16",
+            "name": "Judge operational importance and set priorities",
+            "proof": "Translate differences into operational consequences; distinguish statistical significance from practical importance and rank improvement opportunities by impact, frequency, and controllability."
+          }
+        ]
+      },
+      {
+        "id": "brief",
+        "title": "Advise Leadership and Verify the Result",
+        "ids": [
+          "A17",
+          "A18",
+          "A19",
+          "A20"
+        ],
+        "kicker": "Turn findings into action",
+        "outcome": "Project capability, compare alternatives, defend a recommendation, and revisit outcomes.",
+        "why": "A useful analyst gives leadership an evidence-based choice, not an unexplained dashboard.",
+        "steps": [
+          "Forecast fleet capability against flying or maintenance requirements and stress-test assumptions.",
+          "Compare countermeasures, costs, opportunities and adverse consequences.",
+          "Brief the decision, confidence, risks and sources; check whether action improved the result."
+        ],
+        "scenario": "A proposed change saves maintenance hours but increases missed sorties. Leadership needs the net effect and tradeoffs.",
+        "question": "What makes a defensible command recommendation?",
+        "answers": [
+          "A single positive metric",
+          "A source-backed option, alternatives, costs, uncertainty, and follow-up measure",
+          "A colorful chart and no caveats"
+        ],
+        "answer": 1,
+        "answerWhy": "Accountability includes testing the result of the recommendation.",
+        "advanced": "analysis:sim6",
+        "mission": 5,
+        "skills": [
+          {
+            "id": "A17",
+            "name": "Assess and project capability against requirements",
+            "proof": "Prepare an annual capability assessment using resources, anticipated availability, limiting constraints, and explicit assumptions; estimate feasible output, identify requirement gaps, and present plausible scenarios."
+          },
+          {
+            "id": "A18",
+            "name": "Compare options and test sensitivity",
+            "proof": "Compare proposed actions and tradeoffs; determine whether the preferred action changes when important assumptions, constraints, or estimates change."
+          },
+          {
+            "id": "A19",
+            "name": "Brief results and defend recommendations",
+            "proof": "Prepare and defend a health-of-fleet or equivalent briefing that connects current condition, output, trends, drivers, uncertainty, forecast risks, and required decisions using traceable evidence."
+          },
+          {
+            "id": "A20",
+            "name": "Verify the result of action",
+            "proof": "Define success before acting; compare subsequent evidence on a valid basis and revise the recommendation when results or assumptions change."
+          }
+        ]
+      }
+    ],
+    "skills": [
+      {
+        "id": "A01",
+        "name": "Frame the decision",
+        "proof": "Translate a request into a decision, responsible audience, relevant alternatives, and the evidence needed to distinguish them."
+      },
+      {
+        "id": "A02",
+        "name": "Define the population and evidence coverage",
+        "proof": "Establish the population, period, and exclusions; identify missing cases, selection effects, or reporting gaps that limit the conclusion."
+      },
+      {
+        "id": "A03",
+        "name": "Define and calculate the right metric",
+        "proof": "Recognize measurement type and meaning; specify numerator, eligible denominator, exposure, units, and approved formula. Distinguish a status snapshot from activity accumulated during a period."
+      },
+      {
+        "id": "A04",
+        "name": "Aggregate and roll up correctly",
+        "proof": "Pool eligible counts or apply justified weights; produce valid group and period summaries without averaging incompatible percentages or double-counting overlapping periods."
+      },
+      {
+        "id": "A05",
+        "name": "Produce and reconcile recurring reports",
+        "proof": "Provide daily, weekly, monthly, and annual numbers with consistent definitions and cutoffs; reconcile source detail with published totals and explain late entries, revisions, or unresolved differences."
+      },
+      {
+        "id": "A06",
+        "name": "Make comparable comparisons",
+        "proof": "Check definitions, periods, exposure, workloads, and populations; repair or qualify a comparison whose basis differs."
+      },
+      {
+        "id": "A07",
+        "name": "Inspect the distribution",
+        "proof": "Examine spread, tails, and unusual cases; recognize when an average conceals an operationally important concentration or delay."
+      },
+      {
+        "id": "A08",
+        "name": "Read change over time",
+        "proof": "Examine trends, persistence, recurring cycles, and workload changes; distinguish a sustained pattern from an isolated period."
+      },
+      {
+        "id": "A09",
+        "name": "Establish historical baselines and propose standards",
+        "proof": "Use representative historical data to establish a baseline and propose a defensible benchmark or performance standard; explain limitations and distinguish observed performance, proposed targets, and authorized requirements."
+      },
+      {
+        "id": "A10",
+        "name": "Evaluate apparent signals",
+        "proof": "Monitor variation against an appropriate baseline and stated decision rule; identify results requiring investigation without treating the signal as an established cause."
+      },
+      {
+        "id": "A11",
+        "name": "Identify and report contributing drivers",
+        "proof": "Separate relevant groups and quantify their contributions to lost time, changed output, or other results; report concentrations and case-mix changes while distinguishing measured contributors from suspected causes."
+      },
+      {
+        "id": "A12",
+        "name": "Present evidence honestly",
+        "proof": "Choose suitable displays with clear populations, periods, units, denominators, labels, and scales; make the important comparison understandable without distortion."
+      },
+      {
+        "id": "A13",
+        "name": "Develop testable explanations",
+        "proof": "Distinguish association from cause, consider alternatives, and use a fishbone or similar investigation structure; turn suspected causes into predictions and identify evidence that could support or contradict them."
+      },
+      {
+        "id": "A14",
+        "name": "Select and interpret analytical tests",
+        "proof": "Select a comparison or hypothesis test appropriate to the question, check its assumptions, and explain what its result establishes without treating it as proof."
+      },
+      {
+        "id": "A15",
+        "name": "Express uncertainty",
+        "proof": "Communicate defensible ranges, limited samples, uncertain estimates, and evidence gaps; identify what additional information would materially improve the decision."
+      },
+      {
+        "id": "A16",
+        "name": "Judge operational importance and set priorities",
+        "proof": "Translate differences into operational consequences; distinguish statistical significance from practical importance and rank improvement opportunities by impact, frequency, and controllability."
+      },
+      {
+        "id": "A17",
+        "name": "Assess and project capability against requirements",
+        "proof": "Prepare an annual capability assessment using resources, anticipated availability, limiting constraints, and explicit assumptions; estimate feasible output, identify requirement gaps, and present plausible scenarios."
+      },
+      {
+        "id": "A18",
+        "name": "Compare options and test sensitivity",
+        "proof": "Compare proposed actions and tradeoffs; determine whether the preferred action changes when important assumptions, constraints, or estimates change."
+      },
+      {
+        "id": "A19",
+        "name": "Brief results and defend recommendations",
+        "proof": "Prepare and defend a health-of-fleet or equivalent briefing that connects current condition, output, trends, drivers, uncertainty, forecast risks, and required decisions using traceable evidence."
+      },
+      {
+        "id": "A20",
+        "name": "Verify the result of action",
+        "proof": "Define success before acting; compare subsequent evidence on a valid basis and revise the recommendation when results or assumptions change."
+      }
+    ],
+    "id": "analysis"
+  },
+  "documentation": {
+    "name": "Documentation",
+    "tag": "Make requirements, applicability and completion evidence trustworthy.",
+    "icon": "▤",
+    "color": "#bd9afa",
+    "arc": "Source → Applicability → JML → Forecast → Work → Evidence → Closeout",
+    "mission": 4,
+    "level": "Prove what is due, done and still open",
+    "modules": [
+      {
+        "id": "authority",
+        "title": "Find and Apply the Controlling Requirement",
+        "ids": [
+          "D01",
+          "D02",
+          "D03"
+        ],
+        "kicker": "Requirement first",
+        "outcome": "Find the current governing instruction and determine which aircraft, component or period it actually covers.",
+        "why": "Applying an obsolete or inapplicable rule can be just as damaging as omitting a real requirement.",
+        "steps": [
+          "Find approved instructions and confirm revision, applicability and local supplements.",
+          "Translate the text into trigger, asset, due point, action and proof.",
+          "Check configuration, serial range, date and exceptions before loading work."
+        ],
+        "scenario": "A technical order applies to a specific configuration. Do not load it against the entire fleet because the name looks similar.",
+        "question": "Which is the right first move?",
+        "answers": [
+          "Copy last month’s requirement without checking",
+          "Verify controlling source, revision and affected configuration",
+          "Declare every aircraft affected"
+        ],
+        "answer": 1,
+        "answerWhy": "Applicability precedes scheduling and closeout.",
+        "advanced": "doc:term",
+        "mission": 4,
+        "skills": [
+          {
+            "id": "D01",
+            "name": "Find the governing reference",
+            "proof": "Select the authoritative current instruction; recognize an obsolete, unofficial, or inapplicable substitute."
+          },
+          {
+            "id": "D02",
+            "name": "Extract an actionable requirement",
+            "proof": "Translate prose into an action, trigger, deadline, responsible role, and evidence requirement."
+          },
+          {
+            "id": "D03",
+            "name": "Determine applicability",
+            "proof": "Explain why an obligation applies or does not apply to the particular person, asset, configuration, or reporting period."
+          }
+        ]
+      },
+      {
+        "id": "forecast",
+        "title": "Forecast Inspections and Due Points",
+        "ids": [
+          "D04",
+          "D05",
+          "D06"
+        ],
+        "kicker": "Keep obligations visible",
+        "outcome": "Compute recurring due points, prerequisites and warning windows before they become missed requirements.",
+        "why": "The scheduling office relies on correct due forecasts to protect aircraft availability.",
+        "steps": [
+          "Choose the correct calendar, flight-hour, cycle or event-based clock.",
+          "Use approved last accomplishment and interval to calculate the next due point.",
+          "Check prerequisites, parts, tools and qualification needs before asking Scheduling for downtime."
+        ],
+        "scenario": "An inspection due in 42 flying hours may be due next week for a high-use aircraft but much later for a reserve aircraft.",
+        "question": "What drives a usage-based due date?",
+        "answers": [
+          "Calendar date alone",
+          "Remaining use divided by forecast utilization, adjusted to approved rules",
+          "Whichever week is emptiest"
+        ],
+        "answer": 1,
+        "answerWhy": "Requirements supply the due limit; forecasting projects when the limit will be reached.",
+        "advanced": "doc:inspection",
+        "mission": 4,
+        "skills": [
+          {
+            "id": "D04",
+            "name": "Establish the due point",
+            "proof": "Calculate the deadline from the correct trigger, units, calendar, and authorized rule."
+          },
+          {
+            "id": "D05",
+            "name": "Manage recurrence",
+            "proof": "Calculate the next obligation from the correct verified accomplishment or other anchor specified in the governing rule."
+          },
+          {
+            "id": "D06",
+            "name": "Recognize prerequisites",
+            "proof": "Keep a dependent action open when the required predecessor or supporting evidence has not been established."
+          }
+        ]
+      },
+      {
+        "id": "jml",
+        "title": "Master the Job Master List and Work Control",
+        "ids": [
+          "D07",
+          "D08",
+          "D09"
+        ],
+        "kicker": "Load, verify and trace",
+        "outcome": "Translate requirements into controlled records and ensure each entry has the correct asset, evidence expectation and routing.",
+        "why": "A JML record is useful only if it corresponds to a real applicable obligation and can be audited.",
+        "steps": [
+          "Identify the correct JML entry or work-control record and detect missing, duplicate or obsolete entries.",
+          "Check asset applicability, revision, due point, open status and responsible organization.",
+          "Define what completion evidence will actually prove accomplishment; route issues to the right authority."
+        ],
+        "scenario": "A JML says a task was accomplished, but the evidence is for another aircraft. The JML cannot be trusted until the mismatch is resolved.",
+        "question": "What makes a JML entry defensible?",
+        "answers": [
+          "A green status alone",
+          "A verified obligation with matching asset, revision, due point, workflow and evidence",
+          "A copied record without source"
+        ],
+        "answer": 1,
+        "answerWhy": "A matching, traceable source is essential for controlled maintenance records.",
+        "advanced": "doc:home",
+        "mission": 4,
+        "skills": [
+          {
+            "id": "D07",
+            "name": "Route work correctly",
+            "proof": "Identify who performs, approves, verifies, and owns follow-up; preserve the distinction among those responsibilities."
+          },
+          {
+            "id": "D08",
+            "name": "Define acceptable evidence",
+            "proof": "State what would establish completion before accepting a checkbox, signature, attachment, or status label."
+          },
+          {
+            "id": "D09",
+            "name": "Match evidence to the obligation",
+            "proof": "Verify the person or asset, requirement, version, period, and scope; detect evidence that belongs to a different obligation."
+          }
+        ]
+      },
+      {
+        "id": "closeout",
+        "title": "Control Completion, Partial Work and Open Items",
+        "ids": [
+          "D10",
+          "D11",
+          "D12",
+          "D13"
+        ],
+        "kicker": "Do not close work by assumption",
+        "outcome": "Distinguish planned, started, deferred, accomplished, verified and closed states.",
+        "why": "A task is not complete just because someone moved a block into a green cell.",
+        "steps": [
+          "Distinguish a request, scheduled work, actual execution, verified accomplishment and authorized closeout.",
+          "Evaluate records and supporting evidence, including partial work and continuing restrictions.",
+          "Escalate incomplete or unsupported records instead of marking everything finished."
+        ],
+        "scenario": "A maintenance event was scheduled for Friday and appears on the plan, but no completion evidence exists. Keep it open.",
+        "question": "When may a requirement be marked complete?",
+        "answers": [
+          "When a future slot is reserved",
+          "Only after verified accomplishment evidence and proper closeout authority",
+          "When the aircraft returns from the hangar"
+        ],
+        "answer": 1,
+        "answerWhy": "Completion is an evidence-based decision, not a calendar transition.",
+        "advanced": "doc:home",
+        "mission": 4,
+        "skills": [
+          {
+            "id": "D10",
+            "name": "Distinguish workflow states",
+            "proof": "Keep requested, scheduled, approved, performed, verified, and closed states separate when the exercise requires them."
+          },
+          {
+            "id": "D11",
+            "name": "Verify closeout",
+            "proof": "Check the required completion details and authorized sign-off against the stated evidence standard before reporting completion."
+          },
+          {
+            "id": "D12",
+            "name": "Handle partial accomplishment",
+            "proof": "Close supported portions while keeping unfinished obligations and their remaining requirements visible."
+          },
+          {
+            "id": "D13",
+            "name": "Control unresolved work",
+            "proof": "Assign missing evidence or unfinished actions an owner, next action, due date, and recheck point."
+          }
+        ]
+      },
+      {
+        "id": "changes",
+        "title": "Manage Exceptions and Changing Requirements",
+        "ids": [
+          "D14",
+          "D15"
+        ],
+        "kicker": "Treat exceptions carefully",
+        "outcome": "Apply valid exceptions and new revisions without creating invisible compliance gaps.",
+        "why": "Exceptions are not blanket permissions to ignore requirements.",
+        "steps": [
+          "Check exception authority, scope, effective date and duration.",
+          "Determine what changed under a revision and which records must be updated or superseded.",
+          "Record unresolved conflicts and identify the approving authority."
+        ],
+        "scenario": "A new revision changes applicability effective next month. Only the affected assets and periods should be reevaluated.",
+        "question": "What makes an exception valid?",
+        "answers": [
+          "Any supervisor verbally prefers it",
+          "Documented approval within the right scope and period",
+          "A missing part by itself"
+        ],
+        "answer": 1,
+        "answerWhy": "An exception requires specific authority and traceability.",
+        "advanced": "doc:term",
+        "mission": 4,
+        "skills": [
+          {
+            "id": "D14",
+            "name": "Handle exceptions",
+            "proof": "Recognize when a waiver or extension needs an authorized decision; record its scope, conditions, and expiration."
+          },
+          {
+            "id": "D15",
+            "name": "Assess requirement changes",
+            "proof": "Identify the records affected by changed guidance and apply the supplied effective-date and transition rules."
+          }
+        ]
+      },
+      {
+        "id": "records",
+        "title": "Preserve Document Versions and History",
+        "ids": [
+          "D16",
+          "D17",
+          "D18"
+        ],
+        "kicker": "Keep the receipts",
+        "outcome": "Correct records transparently and preserve the history necessary to understand a decision.",
+        "why": "Deleting the original entry may hide why a schedule or requirement was changed.",
+        "steps": [
+          "Identify controlled current copies and retain required history.",
+          "Make corrections with before-and-after values, reason, authorizing basis and supporting evidence.",
+          "Transfer continuing obligations with the aircraft or organization."
+        ],
+        "scenario": "A record incorrectly says an inspection was completed. Correct it with preserved history; do not overwrite the past silently.",
+        "question": "Which correction is auditable?",
+        "answers": [
+          "Overwrite the original without trace",
+          "Retain original, source evidence, correction, reason and authority",
+          "Erase the entry and recreate it without history"
+        ],
+        "answer": 1,
+        "answerWhy": "A controlled correction must be traceable and reversible where required.",
+        "advanced": "doc:home",
+        "mission": 4,
+        "skills": [
+          {
+            "id": "D16",
+            "name": "Control document versions",
+            "proof": "Identify the controlled record and resolve obsolete or conflicting copies while preserving required history."
+          },
+          {
+            "id": "D17",
+            "name": "Amend records transparently",
+            "proof": "Preserve the original entry, correction, reason, authority, and supporting evidence when a record must be amended."
+          },
+          {
+            "id": "D18",
+            "name": "Preserve history through transfers",
+            "proof": "Carry outstanding obligations and relevant accomplishment history when a person or asset changes organizations or locations."
+          }
+        ]
+      },
+      {
+        "id": "handoff",
+        "title": "Handover, Retention and Inspection Readiness",
+        "ids": [
+          "D19",
+          "D20"
+        ],
+        "kicker": "Make continuity usable",
+        "outcome": "Prepare a defensible handover and apply retention or hold rules to ongoing documentation.",
+        "why": "A new Airman should inherit a reliable picture of due work and outstanding uncertainty.",
+        "steps": [
+          "Assemble open requirements, completed evidence, pending exceptions, due dates and owners.",
+          "Keep current records available and apply approved retention rules and holds.",
+          "Explain unresolved issues and the next action, rather than passing on an ambiguous green dashboard."
+        ],
+        "scenario": "A transferring aircraft carries an unresolved TCTO and inspection history; both must appear in the handover.",
+        "question": "What must the handover include?",
+        "answers": [
+          "Only the aircraft identifier",
+          "Open requirements, history, evidence, approvals and follow-up owners",
+          "Only a statement that the records look good"
+        ],
+        "answer": 1,
+        "answerWhy": "Continuity must preserve obligations and decisions, not just file names.",
+        "advanced": "doc:home",
+        "mission": 4,
+        "skills": [
+          {
+            "id": "D19",
+            "name": "Produce a usable handover",
+            "proof": "Assemble a retrievable package showing status, evidence, open issues, and continuing responsibilities."
+          },
+          {
+            "id": "D20",
+            "name": "Apply retention and holds",
+            "proof": "Retain, freeze, archive, or dispose of records according to the supplied authorized rules and any applicable hold."
+          }
+        ]
+      }
+    ],
+    "skills": [
+      {
+        "id": "D01",
+        "name": "Find the governing reference",
+        "proof": "Select the authoritative current instruction; recognize an obsolete, unofficial, or inapplicable substitute."
+      },
+      {
+        "id": "D02",
+        "name": "Extract an actionable requirement",
+        "proof": "Translate prose into an action, trigger, deadline, responsible role, and evidence requirement."
+      },
+      {
+        "id": "D03",
+        "name": "Determine applicability",
+        "proof": "Explain why an obligation applies or does not apply to the particular person, asset, configuration, or reporting period."
+      },
+      {
+        "id": "D04",
+        "name": "Establish the due point",
+        "proof": "Calculate the deadline from the correct trigger, units, calendar, and authorized rule."
+      },
+      {
+        "id": "D05",
+        "name": "Manage recurrence",
+        "proof": "Calculate the next obligation from the correct verified accomplishment or other anchor specified in the governing rule."
+      },
+      {
+        "id": "D06",
+        "name": "Recognize prerequisites",
+        "proof": "Keep a dependent action open when the required predecessor or supporting evidence has not been established."
+      },
+      {
+        "id": "D07",
+        "name": "Route work correctly",
+        "proof": "Identify who performs, approves, verifies, and owns follow-up; preserve the distinction among those responsibilities."
+      },
+      {
+        "id": "D08",
+        "name": "Define acceptable evidence",
+        "proof": "State what would establish completion before accepting a checkbox, signature, attachment, or status label."
+      },
+      {
+        "id": "D09",
+        "name": "Match evidence to the obligation",
+        "proof": "Verify the person or asset, requirement, version, period, and scope; detect evidence that belongs to a different obligation."
+      },
+      {
+        "id": "D10",
+        "name": "Distinguish workflow states",
+        "proof": "Keep requested, scheduled, approved, performed, verified, and closed states separate when the exercise requires them."
+      },
+      {
+        "id": "D11",
+        "name": "Verify closeout",
+        "proof": "Check the required completion details and authorized sign-off against the stated evidence standard before reporting completion."
+      },
+      {
+        "id": "D12",
+        "name": "Handle partial accomplishment",
+        "proof": "Close supported portions while keeping unfinished obligations and their remaining requirements visible."
+      },
+      {
+        "id": "D13",
+        "name": "Control unresolved work",
+        "proof": "Assign missing evidence or unfinished actions an owner, next action, due date, and recheck point."
+      },
+      {
+        "id": "D14",
+        "name": "Handle exceptions",
+        "proof": "Recognize when a waiver or extension needs an authorized decision; record its scope, conditions, and expiration."
+      },
+      {
+        "id": "D15",
+        "name": "Assess requirement changes",
+        "proof": "Identify the records affected by changed guidance and apply the supplied effective-date and transition rules."
+      },
+      {
+        "id": "D16",
+        "name": "Control document versions",
+        "proof": "Identify the controlled record and resolve obsolete or conflicting copies while preserving required history."
+      },
+      {
+        "id": "D17",
+        "name": "Amend records transparently",
+        "proof": "Preserve the original entry, correction, reason, authority, and supporting evidence when a record must be amended."
+      },
+      {
+        "id": "D18",
+        "name": "Preserve history through transfers",
+        "proof": "Carry outstanding obligations and relevant accomplishment history when a person or asset changes organizations or locations."
+      },
+      {
+        "id": "D19",
+        "name": "Produce a usable handover",
+        "proof": "Assemble a retrievable package showing status, evidence, open issues, and continuing responsibilities."
+      },
+      {
+        "id": "D20",
+        "name": "Apply retention and holds",
+        "proof": "Retain, freeze, archive, or dispose of records according to the supplied authorized rules and any applicable hold."
+      }
+    ],
+    "id": "documentation"
+  },
+  "integrity": {
+    "name": "Data Integrity",
+    "tag": "Find the difference between what happened and what the system says.",
+    "icon": "◈",
+    "color": "#87dcba",
+    "arc": "Authority → Identity → Compare → Investigate → Correct → Verify → Prevent",
+    "mission": 6,
+    "level": "Trust records only when the evidence agrees",
+    "modules": [
+      {
+        "id": "authority",
+        "title": "Identify the Source of Truth",
+        "ids": [
+          "I01",
+          "I02",
+          "I03"
+        ],
+        "kicker": "Know which record wins",
+        "outcome": "Identify authoritative source, stable record identity and matching population/period before comparing fields.",
+        "why": "Two records can disagree without one being wrong if they refer to different events or times.",
+        "steps": [
+          "Identify the approved source for each field and its effective date.",
+          "Match stable aircraft, person or event identifiers instead of relying on a name.",
+          "Align report scope, unit and time period."
+        ],
+        "scenario": "A technician’s reported action and system entry look different; first confirm they refer to the same work event.",
+        "question": "Which comparison is safe?",
+        "answers": [
+          "Two records with matching display names only",
+          "The same event identity, correct source authority and aligned period",
+          "Any two rows showing the same date"
+        ],
+        "answer": 1,
+        "answerWhy": "Correct matching is the prerequisite for reliable corrections.",
+        "advanced": "integrity:skill2",
+        "mission": 6,
+        "skills": [
+          {
+            "id": "I01",
+            "name": "Establish source authority",
+            "proof": "Identify the authoritative source for each field, including the applicable version and effective date."
+          },
+          {
+            "id": "I02",
+            "name": "Establish record identity",
+            "proof": "Use stable identifiers for people, equipment, and events; investigate ambiguous identities instead of relying on matching names."
+          },
+          {
+            "id": "I03",
+            "name": "Align scope and timing",
+            "proof": "Confirm that extracts cover the intended population and compatible dates before treating their differences as errors."
+          }
+        ]
+      },
+      {
+        "id": "normalize",
+        "title": "Validate Structure, Units and Mapping",
+        "ids": [
+          "I04",
+          "I05",
+          "I06",
+          "I07"
+        ],
+        "kicker": "Clean without inventing",
+        "outcome": "Recognize format and unit problems while preserving the original operational meaning.",
+        "why": "A conversion, code mapping or timestamp shift can create false readiness information.",
+        "steps": [
+          "Validate field formats, units, times and allowed codes.",
+          "Normalize only with documented rules and retain original values.",
+          "Identify inconsistent source-to-system code mappings."
+        ],
+        "scenario": "An inspection duration is recorded in minutes in one source and hours in another. Convert correctly before comparing.",
+        "question": "What is proper normalization?",
+        "answers": [
+          "Change numbers until totals match",
+          "Apply a documented conversion while retaining the original meaning",
+          "Drop inconvenient records"
+        ],
+        "answer": 1,
+        "answerWhy": "Normalization must not alter the facts.",
+        "advanced": "integrity:skill3",
+        "mission": 6,
+        "skills": [
+          {
+            "id": "I04",
+            "name": "Normalize without changing meaning",
+            "proof": "Resolve harmless formatting differences while preserving original values and distinctions that carry meaning."
+          },
+          {
+            "id": "I05",
+            "name": "Validate field structure",
+            "proof": "Check required fields, data types, lengths, and permitted ranges against the supplied data rules."
+          },
+          {
+            "id": "I06",
+            "name": "Reconcile units and dates",
+            "proof": "Detect incompatible units, date formats, time zones, or scales; convert using explicit rules."
+          },
+          {
+            "id": "I07",
+            "name": "Validate codes and mappings",
+            "proof": "Check current reference values and identify obsolete, unmapped, or incorrectly translated codes."
+          }
+        ]
+      },
+      {
+        "id": "duplicates",
+        "title": "Handle Missing, Duplicate and Related Records",
+        "ids": [
+          "I08",
+          "I09",
+          "I10"
+        ],
+        "kicker": "Do not erase real events",
+        "outcome": "Separate genuine duplicate rows from legitimate repeated actions and preserve relationships.",
+        "why": "An apparent duplicate can be a valid second event, while a blank field can be an unknown rather than zero.",
+        "steps": [
+          "Distinguish missing, not applicable, zero and not recorded.",
+          "Investigate repeated records using event identity and evidence.",
+          "Check relational keys and parent-child record logic."
+        ],
+        "scenario": "Two valves were replaced on separate dates. Similar text does not make the second work record a duplicate.",
+        "question": "What should happen to two similar work records?",
+        "answers": [
+          "Automatically delete one",
+          "Compare event identifiers, timestamps and source evidence",
+          "Set one to zero without explanation"
+        ],
+        "answer": 1,
+        "answerWhy": "Data cleaning must respect the events that actually occurred.",
+        "advanced": "integrity:skill6",
+        "mission": 6,
+        "skills": [
+          {
+            "id": "I08",
+            "name": "Preserve missing-value meaning",
+            "proof": "Distinguish zero, unknown, not applicable, and not yet reported; retain uncertainty where evidence is absent."
+          },
+          {
+            "id": "I09",
+            "name": "Distinguish duplicates from repeated events",
+            "proof": "Use event identity and context to separate duplicate entries from legitimate recurring activity."
+          },
+          {
+            "id": "I10",
+            "name": "Respect relationship structure",
+            "proof": "Recognize one-to-one and one-to-many relationships; preserve intended matches while preventing unintended duplication, omission, or double-counting."
+          }
+        ]
+      },
+      {
+        "id": "reconcile",
+        "title": "Compare Records and Find the Real Mismatch",
+        "ids": [
+          "I11",
+          "I12",
+          "I13"
+        ],
+        "kicker": "Audit both directions",
+        "outcome": "Detect missing reference links, inconsistent attributes and one-sided membership.",
+        "why": "A green report total can hide one wrong attribute on an otherwise matching record.",
+        "steps": [
+          "Check for orphan references and one-sided missing records.",
+          "Compare matching records field by field against the approved source.",
+          "Flag every discrepancy before deciding which can be corrected."
+        ],
+        "scenario": "Source says “replaced valve” while the system says “inspected valve.” That is a material mismatch even if total maintenance hours agree.",
+        "question": "Which row needs attention?",
+        "answers": [
+          "Only records with unequal totals",
+          "Any material field mismatch supported by source evidence",
+          "Every matching record regardless of evidence"
+        ],
+        "answer": 1,
+        "answerWhy": "Record-level verification is needed even after summary totals match.",
+        "advanced": "integrity:skill4",
+        "mission": 6,
+        "skills": [
+          {
+            "id": "I11",
+            "name": "Detect broken references",
+            "proof": "Find records pointing to nonexistent or incorrect people, assets, organizations, or parent transactions."
+          },
+          {
+            "id": "I12",
+            "name": "Reconcile membership both ways",
+            "proof": "Identify required records absent from the actual set and unexpected records present in it; investigate before deciding a correction."
+          },
+          {
+            "id": "I13",
+            "name": "Reconcile matched attributes",
+            "proof": "After identity matches, check the relevant dates, roles, permissions, quantities, and statuses for agreement with evidence."
+          }
+        ]
+      },
+      {
+        "id": "logic",
+        "title": "Check Status Logic, Timing and Totals",
+        "ids": [
+          "I14",
+          "I15"
+        ],
+        "kicker": "Find contradictions",
+        "outcome": "Validate chronology, allowed status transitions and independent control totals.",
+        "why": "Impossible event ordering can create false maintenance availability.",
+        "steps": [
+          "Check start/stop time order and event/status logic.",
+          "Reconcile counts, sums and subtotals to independent controls.",
+          "Explain discrepancies rather than forcing totals to agree."
+        ],
+        "scenario": "A work record has a stop time earlier than its start time without an overnight explanation; investigate instead of approving.",
+        "question": "Which action is appropriate?",
+        "answers": [
+          "Assume system timestamps are always correct",
+          "Investigate inconsistent time order and supporting evidence",
+          "Delete the start time"
+        ],
+        "answer": 1,
+        "answerWhy": "Totals and plausible chronology are complementary checks.",
+        "advanced": "integrity:skill7",
+        "mission": 6,
+        "skills": [
+          {
+            "id": "I14",
+            "name": "Check event and status logic",
+            "proof": "Detect impossible or unsupported sequences, including completion before a required prerequisite under the supplied rules."
+          },
+          {
+            "id": "I15",
+            "name": "Reconcile independent totals",
+            "proof": "Compare counts, sums, and subtotals against control records; explain differences without forcing agreement."
+          }
+        ]
+      },
+      {
+        "id": "correct",
+        "title": "Correct With Evidence and Verify Impact",
+        "ids": [
+          "I16",
+          "I17",
+          "I18"
+        ],
+        "kicker": "Fix the right thing",
+        "outcome": "Preserve provenance and apply only authorized changes, then verify downstream decisions.",
+        "why": "An upstream correction can change readiness reports, trends and scheduling decisions.",
+        "steps": [
+          "Preserve original value, source, correction authority and reason.",
+          "Apply scoped corrections based on real evidence, not a guess.",
+          "Recompute affected reports and interfaces to confirm the fix propagated."
+        ],
+        "scenario": "One bad status record distorted a daily MC rate. Correct the record, then recalculate affected reports and advise users.",
+        "question": "What completes a controlled correction?",
+        "answers": [
+          "Only making the field green",
+          "Documented before/after correction and downstream verification",
+          "Deleting the original source"
+        ],
+        "answer": 1,
+        "answerWhy": "The test is whether the records and resulting decisions are now trustworthy.",
+        "advanced": "integrity:skill8",
+        "mission": 6,
+        "skills": [
+          {
+            "id": "I16",
+            "name": "Preserve provenance",
+            "proof": "Retain source and transformation history sufficient to explain where each reported value came from."
+          },
+          {
+            "id": "I17",
+            "name": "Make controlled corrections",
+            "proof": "Verify evidence and authority, preserve the original value, apply the scoped correction, and retain a recoverable change record."
+          },
+          {
+            "id": "I18",
+            "name": "Verify downstream correction",
+            "proof": "Confirm that affected reports, interfaces, and dependent records reflect the verified correction."
+          }
+        ]
+      },
+      {
+        "id": "prevent",
+        "title": "Manage Unresolved Cases and Prevent Recurrence",
+        "ids": [
+          "I19",
+          "I20"
+        ],
+        "kicker": "Fix the process",
+        "outcome": "Escalate ambiguous evidence and build validation controls against recurring defects.",
+        "why": "Some disagreements cannot be resolved responsibly by the analyst alone.",
+        "steps": [
+          "Assign unresolved cases an owner and seek additional evidence or authority.",
+          "Identify recurring patterns and propose source validation rules or training fixes.",
+          "Retest controls on new examples and monitor whether the defect returns."
+        ],
+        "scenario": "If two current sources conflict and neither has demonstrated precedence, hold the correction and elevate.",
+        "question": "What should an investigator do with conflicting authoritative evidence?",
+        "answers": [
+          "Invent the most likely value",
+          "Hold the case, document the conflict and request authorized resolution",
+          "Pick the newest screen color"
+        ],
+        "answer": 1,
+        "answerWhy": "Uncertainty is a legitimate finding that requires follow-up.",
+        "advanced": "integrity:skill10",
+        "mission": 6,
+        "skills": [
+          {
+            "id": "I19",
+            "name": "Manage unresolved exceptions",
+            "proof": "Keep unresolved discrepancies, including conflicting current sources, with an owner and follow-up; obtain the needed evidence or authorized decision instead of inventing a value."
+          },
+          {
+            "id": "I20",
+            "name": "Prevent recurring errors",
+            "proof": "Turn recurring defects into appropriate validation or reconciliation controls and demonstrate that those controls catch the intended problem."
+          }
+        ]
+      }
+    ],
+    "skills": [
+      {
+        "id": "I01",
+        "name": "Establish source authority",
+        "proof": "Identify the authoritative source for each field, including the applicable version and effective date."
+      },
+      {
+        "id": "I02",
+        "name": "Establish record identity",
+        "proof": "Use stable identifiers for people, equipment, and events; investigate ambiguous identities instead of relying on matching names."
+      },
+      {
+        "id": "I03",
+        "name": "Align scope and timing",
+        "proof": "Confirm that extracts cover the intended population and compatible dates before treating their differences as errors."
+      },
+      {
+        "id": "I04",
+        "name": "Normalize without changing meaning",
+        "proof": "Resolve harmless formatting differences while preserving original values and distinctions that carry meaning."
+      },
+      {
+        "id": "I05",
+        "name": "Validate field structure",
+        "proof": "Check required fields, data types, lengths, and permitted ranges against the supplied data rules."
+      },
+      {
+        "id": "I06",
+        "name": "Reconcile units and dates",
+        "proof": "Detect incompatible units, date formats, time zones, or scales; convert using explicit rules."
+      },
+      {
+        "id": "I07",
+        "name": "Validate codes and mappings",
+        "proof": "Check current reference values and identify obsolete, unmapped, or incorrectly translated codes."
+      },
+      {
+        "id": "I08",
+        "name": "Preserve missing-value meaning",
+        "proof": "Distinguish zero, unknown, not applicable, and not yet reported; retain uncertainty where evidence is absent."
+      },
+      {
+        "id": "I09",
+        "name": "Distinguish duplicates from repeated events",
+        "proof": "Use event identity and context to separate duplicate entries from legitimate recurring activity."
+      },
+      {
+        "id": "I10",
+        "name": "Respect relationship structure",
+        "proof": "Recognize one-to-one and one-to-many relationships; preserve intended matches while preventing unintended duplication, omission, or double-counting."
+      },
+      {
+        "id": "I11",
+        "name": "Detect broken references",
+        "proof": "Find records pointing to nonexistent or incorrect people, assets, organizations, or parent transactions."
+      },
+      {
+        "id": "I12",
+        "name": "Reconcile membership both ways",
+        "proof": "Identify required records absent from the actual set and unexpected records present in it; investigate before deciding a correction."
+      },
+      {
+        "id": "I13",
+        "name": "Reconcile matched attributes",
+        "proof": "After identity matches, check the relevant dates, roles, permissions, quantities, and statuses for agreement with evidence."
+      },
+      {
+        "id": "I14",
+        "name": "Check event and status logic",
+        "proof": "Detect impossible or unsupported sequences, including completion before a required prerequisite under the supplied rules."
+      },
+      {
+        "id": "I15",
+        "name": "Reconcile independent totals",
+        "proof": "Compare counts, sums, and subtotals against control records; explain differences without forcing agreement."
+      },
+      {
+        "id": "I16",
+        "name": "Preserve provenance",
+        "proof": "Retain source and transformation history sufficient to explain where each reported value came from."
+      },
+      {
+        "id": "I17",
+        "name": "Make controlled corrections",
+        "proof": "Verify evidence and authority, preserve the original value, apply the scoped correction, and retain a recoverable change record."
+      },
+      {
+        "id": "I18",
+        "name": "Verify downstream correction",
+        "proof": "Confirm that affected reports, interfaces, and dependent records reflect the verified correction."
+      },
+      {
+        "id": "I19",
+        "name": "Manage unresolved exceptions",
+        "proof": "Keep unresolved discrepancies, including conflicting current sources, with an owner and follow-up; obtain the needed evidence or authorized decision instead of inventing a value."
+      },
+      {
+        "id": "I20",
+        "name": "Prevent recurring errors",
+        "proof": "Turn recurring defects into appropriate validation or reconciliation controls and demonstrate that those controls catch the intended problem."
+      }
+    ],
+    "id": "integrity"
+  },
+  "dbm": {
+    "name": "Database Management",
+    "tag": "Protect access and keep the information system reliable.",
+    "icon": "▣",
+    "color": "#ffa978",
+    "arc": "Workflow → Configuration → Access → Diagnose → Restore → Verify",
+    "mission": 7,
+    "level": "Keep workflows working and changes auditable",
+    "modules": [
+      {
+        "id": "workflow",
+        "title": "Understand the System and Its Workflows",
+        "ids": [
+          "B01",
+          "B02",
+          "B03"
+        ],
+        "kicker": "Map the flow of information",
+        "outcome": "Identify users, records, relationships, reference data and outputs before changing configuration.",
+        "why": "A database is only valuable when the supported real-world work remains correct.",
+        "steps": [
+          "Define the user problem, expected workflow and acceptance condition.",
+          "Map key fields, identifiers, relationships and approved reference settings.",
+          "Check how a configuration change affects reports and downstream systems."
+        ],
+        "scenario": "A shop asks for a new unit code. Confirm the allowed reference values and affected data exchange before adding it.",
+        "question": "What must a database manager know first?",
+        "answers": [
+          "Only where the save button is",
+          "The approved workflow, data relationships and expected result",
+          "The user’s preferred background color"
+        ],
+        "answer": 1,
+        "answerWhy": "Configuration exists to support verifiable workflows.",
+        "advanced": "dbm:skill3",
+        "mission": 7,
+        "skills": [
+          {
+            "id": "B01",
+            "name": "Define the supported workflow",
+            "proof": "Translate an approved business need into users, inputs, operations, outputs, and observable acceptance conditions."
+          },
+          {
+            "id": "B02",
+            "name": "Structure information for the workflow",
+            "proof": "Define necessary entities, identifiers, fields, relationships, and permitted values without needlessly duplicating the same fact."
+          },
+          {
+            "id": "B03",
+            "name": "Maintain reference configuration",
+            "proof": "Apply approved changes to organizational units, resource categories, codes, or settings and verify the affected workflows."
+          }
+        ]
+      },
+      {
+        "id": "access",
+        "title": "Grant and Review the Right Access",
+        "ids": [
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08"
+        ],
+        "kicker": "Least privilege",
+        "outcome": "Grant approved role and scope, review effective permissions and revoke access as duties change.",
+        "why": "A working user account is not automatically an authorized user account.",
+        "steps": [
+          "Verify request, approving authority, required role and exact scope.",
+          "Grant only necessary permissions and test the intended user task.",
+          "Review effective access periodically and remove permissions after departure or reassignment."
+        ],
+        "scenario": "A user needs edit rights to records in one unit. Do not grant global admin permissions because they are easier to assign.",
+        "question": "Which access change is safest?",
+        "answers": [
+          "Copy a supervisor’s admin privileges",
+          "Apply approved minimum role and unit scope, then test",
+          "Grant edit permissions to everyone"
+        ],
+        "answer": 1,
+        "answerWhy": "Least privilege must be verified in the actual workflow.",
+        "advanced": "dbm:skill1",
+        "mission": 7,
+        "skills": [
+          {
+            "id": "B04",
+            "name": "Translate duties into permissions",
+            "proof": "Build a role and scope matrix that permits approved work without unnecessary access."
+          },
+          {
+            "id": "B05",
+            "name": "Provision authorized access",
+            "proof": "Link the correct identity, approved request, account, and permission scope; perform or route the action within assigned authority."
+          },
+          {
+            "id": "B06",
+            "name": "Manage account lifecycle changes",
+            "proof": "Update access for arrivals, changed duties, departures, and expirations without accumulating obsolete permissions."
+          },
+          {
+            "id": "B07",
+            "name": "Review effective access",
+            "proof": "Compare actual permissions, including supplied group inheritance, with current approvals and investigate discrepancies."
+          },
+          {
+            "id": "B08",
+            "name": "Test access behavior",
+            "proof": "Verify that an authorized task succeeds and a specified unauthorized action remains restricted."
+          }
+        ]
+      },
+      {
+        "id": "troubleshoot",
+        "title": "Diagnose the Failing Layer",
+        "ids": [
+          "B09",
+          "B10",
+          "B11"
+        ],
+        "kicker": "Do not guess the fix",
+        "outcome": "Distinguish filters, authorization, source data, configuration and interface failures.",
+        "why": "A missing record does not automatically mean a database outage.",
+        "steps": [
+          "Reproduce the user task and expected output.",
+          "Check report filters and view scope, then data presence and permission.",
+          "Examine interface logs, error states and recent changes to locate the failing layer."
+        ],
+        "scenario": "Three users report missing data: one filtered it out, one lacks approved scope, and one has a rejected transfer. They need different solutions.",
+        "question": "What is the correct first response?",
+        "answers": [
+          "Restart every server",
+          "Reproduce the complaint and isolate the failing layer",
+          "Give all users admin access"
+        ],
+        "answer": 1,
+        "answerWhy": "Diagnosis should be evidence-led and scoped.",
+        "advanced": "dbm:skill3",
+        "mission": 7,
+        "skills": [
+          {
+            "id": "B09",
+            "name": "Locate the failing layer",
+            "proof": "Use evidence to distinguish identity, permission, configuration, interface, application, or underlying service problems."
+          },
+          {
+            "id": "B10",
+            "name": "Diagnose misleading views",
+            "proof": "Check filters, periods, scope, refresh state, and report settings before treating absent output as absent data."
+          },
+          {
+            "id": "B11",
+            "name": "Reconstruct an incident",
+            "proof": "Correlate timestamps, transaction identifiers, logs, and user actions into a supported sequence of events."
+          }
+        ]
+      },
+      {
+        "id": "interface",
+        "title": "Control Imports and Repair Interface Failures",
+        "ids": [
+          "B12",
+          "B13"
+        ],
+        "kicker": "Avoid duplicate recovery",
+        "outcome": "Validate incoming records, isolate rejects, repair mappings and replay only failed transactions.",
+        "why": "Careless replay can duplicate records and alter readiness reports.",
+        "steps": [
+          "Identify which transactions were accepted, rejected or partially processed.",
+          "Correct mappings, formats or permissions through approved change control.",
+          "Retry only the failed scope and reconcile downstream outcomes."
+        ],
+        "scenario": "A nightly feed accepted 98 of 100 rows. Replaying all 100 risks duplicating the 98 successful transactions.",
+        "question": "Which retry is appropriate?",
+        "answers": [
+          "Replay all accepted and rejected records",
+          "Repair the cause and replay only the rejected entries after validation",
+          "Ignore missing records"
+        ],
+        "answer": 1,
+        "answerWhy": "Controlled replay protects uniqueness and history.",
+        "advanced": "dbm:skill4",
+        "mission": 7,
+        "skills": [
+          {
+            "id": "B12",
+            "name": "Control imports",
+            "proof": "Validate structure and mappings, stage the import, inspect rejections, and reconcile records that were only partly accepted."
+          },
+          {
+            "id": "B13",
+            "name": "Recover interface failures",
+            "proof": "Identify rejected or delayed transfers, correct the supported cause, and verify delivery without duplication."
+          }
+        ]
+      },
+      {
+        "id": "change",
+        "title": "Control Changes, Backups and Rollback",
+        "ids": [
+          "B14",
+          "B15"
+        ],
+        "kicker": "Protect recoverability",
+        "outcome": "Test authorized configuration changes and verify backup or rollback effectiveness.",
+        "why": "A successful configuration save is not proof the affected workflow still operates.",
+        "steps": [
+          "Identify affected settings, users and downstream interfaces.",
+          "Back up and test in a controlled environment when applicable.",
+          "Implement with approval, verify workflow, and preserve rollback/evidence."
+        ],
+        "scenario": "A configuration update passes a superficial status check but breaks a downstream report. The change must be corrected or rolled back.",
+        "question": "What proves a successful change?",
+        "answers": [
+          "A green success toast",
+          "Verified records and affected workflows after change",
+          "That no user complained yet"
+        ],
+        "answer": 1,
+        "answerWhy": "Test the business outcome as well as the technical status.",
+        "advanced": "dbm:skill5",
+        "mission": 7,
+        "skills": [
+          {
+            "id": "B14",
+            "name": "Control configuration changes",
+            "proof": "Assess affected workflows, obtain required authorization, test a scoped change, and preserve the previous configuration."
+          },
+          {
+            "id": "B15",
+            "name": "Verify restoration and rollback",
+            "proof": "Demonstrate that a backup or rollback restores the required records, configuration, and usable workflow."
+          }
+        ]
+      },
+      {
+        "id": "continuity",
+        "title": "Keep Service Working Through Disruptions",
+        "ids": [
+          "B16",
+          "B17",
+          "B18"
+        ],
+        "kicker": "Recover safely",
+        "outcome": "Preserve transactions, controlled backlogs and alerting during outages or delayed interfaces.",
+        "why": "A rushed recovery can lose work or create duplicates.",
+        "steps": [
+          "Follow approved continuity procedures while recording pending transactions.",
+          "Reconcile recovery backlog with committed records and outputs.",
+          "Monitor recurring jobs, stale exports, failed controls and abnormal queues."
+        ],
+        "scenario": "During an outage, work continues through an approved contingency log. On restoration, prevent double entry and verify all backlog actions.",
+        "question": "Which recovery method is defensible?",
+        "answers": [
+          "Import the backlog without checks",
+          "Reconcile pending and committed transactions before processing",
+          "Delete the outage log"
+        ],
+        "answer": 1,
+        "answerWhy": "Continuity includes integrity, not just availability.",
+        "advanced": "dbm:skill6",
+        "mission": 7,
+        "skills": [
+          {
+            "id": "B16",
+            "name": "Maintain service during outages",
+            "proof": "Apply the supplied continuity process while preserving transaction identity, timing, ownership, and required controls."
+          },
+          {
+            "id": "B17",
+            "name": "Reconcile the recovery backlog",
+            "proof": "Resume incomplete work without repeating committed transactions; verify that recovered records and outputs are correct."
+          },
+          {
+            "id": "B18",
+            "name": "Monitor recurring system work",
+            "proof": "Detect missed jobs, stale exports, failed checks, and abnormal queues; route a useful alert to the responsible owner."
+          }
+        ]
+      },
+      {
+        "id": "close",
+        "title": "Escalate and Verify Incident Resolution",
+        "ids": [
+          "B19",
+          "B20"
+        ],
+        "kicker": "Prove it works",
+        "outcome": "Create a useful incident handoff, rerun the user task and record evidence of restored operation.",
+        "why": "Closing a ticket because the server is green can leave the user unable to do their job.",
+        "steps": [
+          "Provide reproducible steps, error details, affected scope and business impact.",
+          "Request specific authorized assistance with the evidence attached.",
+          "Rerun the original user workflow and verify correct data/output before closure."
+        ],
+        "scenario": "An import failure is fixed, but the user’s report remains empty because a filter is still wrong. Keep troubleshooting.",
+        "question": "What closes the incident properly?",
+        "answers": [
+          "Any healthy server dashboard",
+          "The affected user task succeeds with verified records and no unresolved blocker",
+          "The analyst stops receiving emails"
+        ],
+        "answer": 1,
+        "answerWhy": "The user-facing outcome and record correctness are the final check.",
+        "advanced": "dbm:skill7",
+        "mission": 7,
+        "skills": [
+          {
+            "id": "B19",
+            "name": "Escalate with usable evidence",
+            "proof": "Provide reproducible steps, operational impact, relevant diagnostics, attempted actions, and the precise assistance required."
+          },
+          {
+            "id": "B20",
+            "name": "Verify incident closure",
+            "proof": "Re-run the affected user task and check records and outputs; document any remaining issues or monitoring."
+          }
+        ]
+      }
+    ],
+    "skills": [
+      {
+        "id": "B01",
+        "name": "Define the supported workflow",
+        "proof": "Translate an approved business need into users, inputs, operations, outputs, and observable acceptance conditions."
+      },
+      {
+        "id": "B02",
+        "name": "Structure information for the workflow",
+        "proof": "Define necessary entities, identifiers, fields, relationships, and permitted values without needlessly duplicating the same fact."
+      },
+      {
+        "id": "B03",
+        "name": "Maintain reference configuration",
+        "proof": "Apply approved changes to organizational units, resource categories, codes, or settings and verify the affected workflows."
+      },
+      {
+        "id": "B04",
+        "name": "Translate duties into permissions",
+        "proof": "Build a role and scope matrix that permits approved work without unnecessary access."
+      },
+      {
+        "id": "B05",
+        "name": "Provision authorized access",
+        "proof": "Link the correct identity, approved request, account, and permission scope; perform or route the action within assigned authority."
+      },
+      {
+        "id": "B06",
+        "name": "Manage account lifecycle changes",
+        "proof": "Update access for arrivals, changed duties, departures, and expirations without accumulating obsolete permissions."
+      },
+      {
+        "id": "B07",
+        "name": "Review effective access",
+        "proof": "Compare actual permissions, including supplied group inheritance, with current approvals and investigate discrepancies."
+      },
+      {
+        "id": "B08",
+        "name": "Test access behavior",
+        "proof": "Verify that an authorized task succeeds and a specified unauthorized action remains restricted."
+      },
+      {
+        "id": "B09",
+        "name": "Locate the failing layer",
+        "proof": "Use evidence to distinguish identity, permission, configuration, interface, application, or underlying service problems."
+      },
+      {
+        "id": "B10",
+        "name": "Diagnose misleading views",
+        "proof": "Check filters, periods, scope, refresh state, and report settings before treating absent output as absent data."
+      },
+      {
+        "id": "B11",
+        "name": "Reconstruct an incident",
+        "proof": "Correlate timestamps, transaction identifiers, logs, and user actions into a supported sequence of events."
+      },
+      {
+        "id": "B12",
+        "name": "Control imports",
+        "proof": "Validate structure and mappings, stage the import, inspect rejections, and reconcile records that were only partly accepted."
+      },
+      {
+        "id": "B13",
+        "name": "Recover interface failures",
+        "proof": "Identify rejected or delayed transfers, correct the supported cause, and verify delivery without duplication."
+      },
+      {
+        "id": "B14",
+        "name": "Control configuration changes",
+        "proof": "Assess affected workflows, obtain required authorization, test a scoped change, and preserve the previous configuration."
+      },
+      {
+        "id": "B15",
+        "name": "Verify restoration and rollback",
+        "proof": "Demonstrate that a backup or rollback restores the required records, configuration, and usable workflow."
+      },
+      {
+        "id": "B16",
+        "name": "Maintain service during outages",
+        "proof": "Apply the supplied continuity process while preserving transaction identity, timing, ownership, and required controls."
+      },
+      {
+        "id": "B17",
+        "name": "Reconcile the recovery backlog",
+        "proof": "Resume incomplete work without repeating committed transactions; verify that recovered records and outputs are correct."
+      },
+      {
+        "id": "B18",
+        "name": "Monitor recurring system work",
+        "proof": "Detect missed jobs, stale exports, failed checks, and abnormal queues; route a useful alert to the responsible owner."
+      },
+      {
+        "id": "B19",
+        "name": "Escalate with usable evidence",
+        "proof": "Provide reproducible steps, operational impact, relevant diagnostics, attempted actions, and the precise assistance required."
+      },
+      {
+        "id": "B20",
+        "name": "Verify incident closure",
+        "proof": "Re-run the affected user task and check records and outputs; document any remaining issues or monitoring."
+      }
+    ],
+    "id": "dbm"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "app": "Force Multiplier \u00b7 Enterprise / Airline Maintenance Management Simulator",
+  "version": "22.14.0",
+  "sourceCommit": "local-build-22.14.0",
+  "sourceSiteVersion": null,
+  "sourceSite": null,
+  "status": "Local source release for GitHub/Codemagic; existing five disciplines, 24-aircraft/90-day Scheduling capstone, TestFlight workflow, and original training retained. Device signing/upload not yet performed.",
+  "release": "22.14.0 \u00b7 References library: nine MAJCOMs, ANG and departmental guidance; public indexed supplements, iPhone PDF save/share and current-catalog lookup."
+}

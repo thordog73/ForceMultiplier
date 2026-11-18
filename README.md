@@ -1,93 +1,35 @@
-# Force Multiplier — iPhone and iPad
+# Force Multiplier 22.14.0 — Teaching Inside Every Exercise
 
-Version **22.0.0** packages the complete Force Multiplier game as an offline iOS app. It keeps the short, hands-on challenges, five specialties, four worlds, and separate practice workspace.
+This is the complete GitHub / Codemagic source for **Force Multiplier: Revenge of the Nonner**, based on 22.13.1. The five specialties, 35 fundamentals, 100 observable skills, original 72-task work map, Block Academy (630 practice repetitions + 90 sliding puzzles), advanced trainers, 90-day scheduling capstone, and nine-MAJCOM Reference Library remain included.
 
-## Start here
+## New in 22.14.0
 
-This folder is the **app source and build package**. The uploadable Apple file is the signed `.ipa` produced by the `ios-app-store` Codemagic workflow. A Mac is not required on your desk when Codemagic performs the build.
+The five-step learning loop is now embedded in all 35 fundamentals:
+1. **Show Me:** plain-English purpose, outcomes and interactive visual examples—wrong / right / constraint.
+2. **Help Me:** the actual underlying task steps and performance habit.
+3. **Let Me Try:** learner works the supplied scenario while comparing decision examples.
+4. **Challenge Me:** three progressively different knowledge checks, including an unexpected status/source/authorization problem.
+5. **Prove I Can Do It:** a changed-condition case linked to the working simulator; learner records the decision, evidence, unresolved risk and briefing for instructor review.
 
-The game and configuration checks were run while preparing this package. No Xcode compilation, signed archive, TestFlight upload, App Store submission, or Apple approval is represented by this source folder. See `VALIDATION.md` for the precise checks completed.
+The task map's 72 documented MXMGR tasks also open these visual comparisons. An expandable **Teach this skill** panel is now available inside Block Academy, the sliding puzzles, flashcards, Scheduling, Analysis, Documentation, Data Integrity and Database Management. The panel teaches the corresponding fundamental without abandoning the exercise. Its Challenge / Prove mode temporarily blocks model-answer and hint buttons; help remains available by explicitly switching to Help Me.
 
-### Route from Windows to the App Store
+### Example: Master the Checkerboard
+The lesson displays a seven-day aircraft checkerboard and allows the learner to compare fragmented maintenance, a permitted combined PFR → PBG → CURE sequence, and a case in which work cannot be consolidated. Training assumptions are labeled as illustrative; actual completion, cure timing, maintenance authorization and return-to-service rules must come from current controlling technical data.
 
-1. Extract the ZIP into a normal folder. Install current Node.js 22 or later and Git if they are not already installed. Use your normal GitHub sign-in through Git; do not put a password or token in a command or repository URL.
-2. Create a new empty repository in your GitHub account. Keep this source private if you prefer. Copy that repository's ordinary HTTPS URL.
-3. Open a terminal in the extracted folder and run:
+### Evidence and limitations
+- Work records are saved in local app/browser storage. The new independent-work text is **not automatically graded** and no occupational qualification is conferred.
+- The three new checks are scenario-based decision questions, not three validated independent task performances. Advanced simulator exercises still supply the deeper work products.
+- Instructor, CFETP/STS, and real-world OJT verification are still required. FLUX workshop materials and the supplied 100 Skills Working Draft are proposals, not an approved training standard.
+- The Reference Library is not a live publication feed. Public e-Publishing PDFs require internet; verify current editions, MAJCOM supplements and local applicability.
 
-   ```bat
-   UPLOAD.cmd https://github.com/YOUR-ACCOUNT/YOUR-REPOSITORY.git
-   ```
+## How to preview
+Open the included `ForceMultiplier_22_14_0_Offline_Preview.html` directly, or serve the `dist/` folder as a local static website. The standalone preview inlines the actual source scripts and style sheets so it works without a server. Its data and gameplay are the same as this project.
 
-   The helper initializes `main`, commits the source, and pushes it to the repository you specify. It never force-pushes or replaces a different existing remote. macOS/Linux users can run `sh UPLOAD.sh` with the same URL. You can also use GitHub Desktop or your usual Git workflow.
+## How to upload
+1. On Windows, extract this ZIP to a new folder.
+2. Run `UPLOAD.cmd`. It pushes the source to a new GitHub branch and starts the configured Codemagic `ios-release` workflow.
+3. Watch Codemagic for the signed IPA and TestFlight upload. Retrying an older commit will not include this release.
 
-4. Add that repository to Codemagic and choose its `codemagic.yaml` configuration. Start **Force Multiplier - iPhone and iPad simulator check** (`ios-simulator`). It installs the locked dependencies, checks the game, builds the app, launches fresh simulators, and captures genuine iPhone/iPad images. Inspect the build artifacts and simulator results before proceeding.
-5. In your Apple Developer account and App Store Connect, select or create the Force Multiplier app. The current bundle identifier is **`com.fredesser.forcemultiplier`**. Its availability and ownership have not been checked in your Apple account. The App Store app record, signing profile, YAML signing selector, and app configuration must all use the same identifier.
-6. In Codemagic, connect the authorized distribution signing profile and set **`APP_STORE_APPLE_ID`** to this app's **numeric Apple ID**. The YAML refers to the existing integration name **`ten-minute-wins-apple`**; verify that it is the correct integration for your Apple team or replace that name. It contains no signing secrets.
-7. Start **Force Multiplier - signed App Store IPA** (`ios-app-store`). Download the `.ipa` from the successful build's artifacts. Upload it to App Store Connect using your normal authorized workflow or the optional upload-only Codemagic block in `NATIVE-BUILD.md` (works from Windows), test the processed build in TestFlight, and use the material in `store/` to prepare the store listing.
+For local verification: `npm ci && npm test && npm run check && npm run ios:prepare && npm run ios:verify`.
 
-The build workflows do not upload automatically, submit a review, or release the app. They make the build and its results available for you to inspect. The detailed commands and native test checklist are in `NATIVE-BUILD.md`.
-
-## What is included
-
-| Area | Included experience |
-| --- | --- |
-| Scheduling | 13 progressive levels, from six aircraft followed by four to inspections, modifications, curing, and a checkerboard |
-| Analysis | 12 levels covering eligible sets, rates, comparisons, averages, missing values, trends, spread, and interpretation |
-| Documentation | 10 levels about matching requirements, applicability, revision control, due dates, dependencies, and evidence |
-| Database Management | 10 levels about appropriate access, identity, account changes, troubleshooting, controlled changes, and recovery |
-| Data Integrity | 10 levels about source reconciliation, missing values, units, duplicates, links, time windows, and audit trails |
-| Worlds | Airline, Bus Company, Cat Hugs, and Acorn Ops; switch freely and retain separate progress |
-| Practice workspace | Longer exercises, statistics tools, work products, review notes, and separate backup/export/import |
-| iOS integration | Bundled offline content, durable local progress backup, optional haptics, native file sharing/import, copy, and print |
-
-The squirrel world's internal identifier remains `squirrel` so existing progress can be carried over. Its displayed name is **Acorn Ops**.
-
-The app uses fictional practice data and general concepts. It does not contain an uploaded military handbook, connect to operational systems, issue a job qualification, or claim a measured learning improvement. No account, advertising service, analytics SDK, or remote AI service is required to play.
-
-## Build locally
-
-Node.js **22+** is required. Native compilation requires macOS with **Xcode 26+**, the iOS 26 SDK or later, and CocoaPods. The deployment target is **iOS/iPadOS 15.4+**; that is separate from the build SDK.
-
-```sh
-npm ci
-npm run build
-npm test
-npm run ios:sync
-npm run verify
-npm run ios:open
-```
-
-`ios:sync` rebuilds the bundled JavaScript bridge, copies `www/` into the native project, applies deterministic Xcode settings, and installs native dependencies on macOS. Generated web copies, CocoaPods dependencies, and build products are intentionally excluded from version control. The complete editable web source and lockfile are included.
-
-For a browser-only preview, serve `www/` with a local static server. Use a server rather than opening `index.html` as a file. Native iOS behavior must be checked in the built app; a browser preview cannot validate Apple's share sheet, signing, haptics, or app lifecycle.
-
-## Files you will use
-
-| Path | Purpose |
-| --- | --- |
-| `codemagic.yaml` | Simulator and signed IPA workflows |
-| `capacitor.config.json` | Display name, bundle identifier, and local web directory |
-| `ios/` | Xcode project and native app shell |
-| `native/` | Swift bridge, progress backup logic, launch screen, and privacy manifest sources |
-| `www/` | Complete playable game and bundled Help, Privacy, and About pages |
-| `scripts/` | Build, configuration, versioning, simulator, and verification automation |
-| `tests/` | Curriculum, persistence, backup validation, and native configuration checks |
-| `store/` | Store copy, metadata, privacy/age-rating worksheet, review notes, and screenshot plan |
-| `SOURCE-PROVENANCE.json` | Starting website revision and accurate preparation/submission status |
-| `UPLOAD.cmd`, `UPLOAD.sh` | Source-upload helpers for your own GitHub repository |
-
-## Progress and privacy
-
-The main game saves the current case, selected world/specialty, stars, and settings. The practice workspace stores its own work products and optional notes. On iOS, Preferences provides a local durable backup in addition to the web storage used by the game. Apple's device backup behavior depends on the user's settings.
-
-Use **Menu → Saved data** for game backups and **Settings** inside the practice workspace for its separate backups. The reset action explains that it clears both areas. A backup file can contain user-entered work; the user chooses whether and where to share it. There is no automatic cloud sync.
-
-## Release material
-
-Use `store/submission-guide.md` as the release worksheet and `store/app-store-metadata.json` as the source for listing fields. The proposed listing name is **Force Multiplier: Skills**; the device icon label is **Force Multiplier**. Name availability, price, countries, private review contact, and account declarations are selected in App Store Connect.
-
-Actual screenshots must come from the compiled native app. The simulator workflow produces real captures once it runs successfully. Browser layout checks supplied during preparation are not App Store screenshots.
-
-Public Help, Privacy, and About pages are also bundled locally so they open without a connection. Keep the public pages and the shipped app consistent when making future changes.
-
-Public pages verified for this release: [Help](https://force-multiplier-v22.fredesser.chatgpt.site/support), [Privacy](https://force-multiplier-v22.fredesser.chatgpt.site/privacy), and [About](https://force-multiplier-v22.fredesser.chatgpt.site/about).
+**QA:** Original regression suite plus new 35-lesson / 72-task / coach tests passed; Chromium desktop and 390px phone interaction checks passed with zero page-script errors and no horizontal overflow. The generated iOS asset directory passed its source verification. A Mac Xcode compile, signed IPA, and real TestFlight device evaluation are **not** yet verified.
