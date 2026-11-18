@@ -1,0 +1,9 @@
+{
+  "app": "Force Multiplier · Enterprise / Airline Maintenance Management Simulator",
+  "version": "22.13.0",
+  "sourceCommit": "local-build-22.13.0",
+  "sourceSiteVersion": null,
+  "sourceSite": null,
+  "status": "Local source release for GitHub/Codemagic; existing five disciplines, 24-aircraft/90-day Scheduling capstone, TestFlight workflow, and original training retained. Device signing/upload not yet performed.",
+  "release": "22.13.0 · Front-facing task map: 72 image-based tasks, 12 FLUX-derived proposals, task-specific fundamentals and practice navigation."
+}
