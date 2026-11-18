@@ -1,0 +1,11 @@
+const fs=require('node:fs');const assert=require('node:assert');
+const html=fs.readFileSync('dist/index.html','utf8');
+assert(html.includes("inScenario:false"),'default state must start outside a scenario');
+assert(html.includes("state.inScenario=true"),'scenario selection must enter focused mode');
+assert(html.includes("state.inScenario=false"),'exit control must leave focused mode');
+assert(html.includes("body.scenario-focus .appbar"),'focused mode must hide global app bar');
+assert(html.includes("body.scenario-focus .side"),'focused mode must hide scenario navigation');
+assert(html.includes("body.scenario-focus .footer"),'focused mode must hide global footer');
+assert(html.includes('id="exitScenario"'),'focused mode must provide an Exit Scenario control');
+assert(html.includes("document.body.classList.toggle('scenario-focus',!!state.inScenario)"),'render must toggle focused scenario mode');
+console.log('PASS scenario focus: global navigation hidden inside exercises; exit control retained.');
