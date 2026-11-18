@@ -1,0 +1,9 @@
+{
+  "app": "Force Multiplier \u2014 Revenge of the Nonner",
+  "version": "22.15.0",
+  "sourceCommit": "local-build-22.15.0",
+  "sourceSiteVersion": null,
+  "sourceSite": null,
+  "status": "Local source release for GitHub/Codemagic; existing five disciplines, 24-aircraft/90-day Scheduling capstone, TestFlight workflow, and original training retained. Device signing/upload not yet performed.",
+  "release": "22.15.0 \u00b7 Learner references removed; 35 fundamentals and 72 task-specific visuals; fixed dialog scroll retention and task-specific knowledge checks."
+}
