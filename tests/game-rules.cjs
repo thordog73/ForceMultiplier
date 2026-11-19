@@ -1,7 +1,7 @@
 'use strict';
 
 const assert = require('node:assert/strict');
-const G = require('../www/game-rules.js');
+const G = require('../dist/game-rules.js');
 const clone = value => JSON.parse(JSON.stringify(value));
 let assertions = 0;
 function check(value, message) { assertions++; assert.ok(value, message); }
