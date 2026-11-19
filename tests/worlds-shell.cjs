@@ -2,7 +2,7 @@
 // This is a DOM-free shell integration test. It drives the actual event listeners
 // and reads only the application's persisted public progress format.
 const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict'),path=require('node:path');
-const dist=path.join(__dirname,'../www');
+const dist=path.join(__dirname,'../dist');
 const Flight=require(path.join(dist,'game-rules.js'));
 const Worlds=require(path.join(dist,'game-worlds.js'));
 const packs=Object.fromEntries(['analysis','documentation','database','integrity'].map(id=>[id,require(path.join(dist,'pack-'+id+'.js'))]));
@@ -189,3 +189,30 @@ for(const [skill,level] of [['analysis',5],['analysis',9],['analysis',11],['anal
 }
 
 console.log('PASS: worlds shell migration, independent progress, routing/reload, all packs, Undo, assistance, demo status, revisions and carry-over; '+assertions+' assertions.');
+
+// Malformed pack saves must never strand the learner at startup. Preserve the
+// original whole profile and recover only the affected current case.
+let recoveredCases=0;
+for(const skill of ['analysis','documentation','database','integrity']){
+  for(const level of packs[skill].levels){
+    let probe=harness();
+    probe.act('plane',{plane:'01'});
+    const schedulingBefore=clone(probe.read().tracks['airline:scheduling']);
+    probe.act('switch-skill',{skill});
+    probe.act('level',{id:String(level.id)});
+    const clean=probe.read();
+    for(const broken of [{},null,[],{invalid:true}]){
+      const damaged=clone(clean);
+      damaged.tracks['airline:'+skill].current.state.play=broken;
+      const raw=JSON.stringify(damaged);
+      const restored=harness({entries:[[key,raw]]});
+      const saved=restored.read();
+      same(saved.tracks['airline:scheduling'],schedulingBefore,'recovery preserves another track');
+      same(saved.tracks['airline:'+skill].current.level,1,'damaged case restarts safely');
+      same(JSON.parse(restored.entries().find(([k])=>k==='force-multiplier-worlds-22-recovery')?.[1]).raw,raw,'exact original profile retained for recovery');
+      yes(restored.html().includes('game-shell'),'recovery renders playable UI');
+      recoveredCases++;
+    }
+  }
+}
+console.log('PASS: '+recoveredCases+' malformed-save recovery cases across all pack levels; '+assertions+' total shell assertions.');
