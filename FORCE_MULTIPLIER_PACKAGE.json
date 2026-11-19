@@ -1,0 +1,9 @@
+{
+  "app": "Force Multiplier \u2014 Revenge of the Nonner",
+  "version": "22.16.0",
+  "sourceCommit": "local-build-22.16.0",
+  "sourceSiteVersion": null,
+  "sourceSite": null,
+  "status": "Source and interaction checks passed; 22.16.0 content retained. Phone rendering and signed iOS device testing remain unverified for this update. No upload to TestFlight performed.",
+  "release": "22.16.0 \u00b7 One-screen Block Academy, paged aircraft/decision choices, tap replacement, undo, compact sliding controls and teaching overlays."
+}

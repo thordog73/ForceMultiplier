@@ -1,0 +1,3907 @@
+{
+  "title": "Force Multiplier:100 simulated MXMGR perspectives",
+  "date": "2026-11-11",
+  "baseline_commit": "670247748710f2bf06f7749bc7a5d6aa34310ed6",
+  "method": "100 AI-constructed evaluation perspectives,20 per specialty, spanning five experience groups and four world/play contexts. Not real participants, votes, learner outcomes or measured usability. Verified software findings are distinguished from predicted reactions.",
+  "personas": [
+    {
+      "id": "S01",
+      "skill": "Scheduling",
+      "experience": "newcomer",
+      "context": "desktop visual",
+      "world": "Airline",
+      "value": "A newcomer can begin by selecting aircraft without reading a maintenance manual.",
+      "concern": "The first request for a hint earns fewer stars than repeated failed checks, which may discourage asking how the game works.",
+      "priority": "medium",
+      "evidence": [
+        "SA-F05"
+      ]
+    },
+    {
+      "id": "S02",
+      "skill": "Scheduling",
+      "experience": "newcomer",
+      "context": "small phone",
+      "world": "Bus Company",
+      "value": "The Bus Company setting makes the relationship between vehicles and repeated trips approachable.",
+      "concern": "Later boards could feel like a large amount of scrolling and repeated tapping on a phone; confirm this with actual phone users.",
+      "priority": "medium",
+      "evidence": [
+        "SA-F03"
+      ]
+    },
+    {
+      "id": "S03",
+      "skill": "Scheduling",
+      "experience": "newcomer",
+      "context": "keyboard",
+      "world": "Cat Hugs",
+      "value": "Named buttons and aircraft labels support keyboard access to the opening exercises.",
+      "concern": "Primary actions could lose keyboard focus after rerendering in the baseline build.",
+      "priority": "medium",
+      "evidence": [
+        "SA-F06"
+      ]
+    },
+    {
+      "id": "S04",
+      "skill": "Scheduling",
+      "experience": "newcomer",
+      "context": "fast/skipping",
+      "world": "Secret Squirrel",
+      "value": "The level map lets a curious newcomer see the destination before committing to a sequence.",
+      "concern": "Skipping directly to a checkerboard may bypass the cues that explain curing and work placement.",
+      "priority": "medium",
+      "evidence": [
+        "SA-P01",
+        "SA-F04"
+      ]
+    },
+    {
+      "id": "S05",
+      "skill": "Scheduling",
+      "experience": "early practitioner",
+      "context": "desktop visual",
+      "world": "Airline",
+      "value": "The shared-cure exercise makes a scheduling efficiency visible as fewer grounded days.",
+      "concern": "A learner should be able to explain why the shared cure is valid in this fictional model before transferring the shortcut to real work.",
+      "priority": "medium",
+      "evidence": [
+        "SA-F04",
+        "SA-F08"
+      ]
+    },
+    {
+      "id": "S06",
+      "skill": "Scheduling",
+      "experience": "early practitioner",
+      "context": "small phone",
+      "world": "Bus Company",
+      "value": "Small daily missions give a practical foothold before the whole checkerboard appears.",
+      "concern": "The jump from9 core actions in level6 to48 in level7 may add input effort faster than it adds new concepts.",
+      "priority": "medium",
+      "evidence": [
+        "SA-F03"
+      ]
+    },
+    {
+      "id": "S07",
+      "skill": "Scheduling",
+      "experience": "early practitioner",
+      "context": "keyboard",
+      "world": "Cat Hugs",
+      "value": "Undo and source-specific error messages make incorrect assignments recoverable.",
+      "concern": "A later112-cell board remains cumbersome to traverse one Tab at a time even after focus is repaired.",
+      "priority": "medium",
+      "evidence": [
+        "SA-F06"
+      ]
+    },
+    {
+      "id": "S08",
+      "skill": "Scheduling",
+      "experience": "early practitioner",
+      "context": "fast/skipping",
+      "world": "Secret Squirrel",
+      "value": "The final outage provides a reason to revise an existing plan rather than rebuild mindlessly.",
+      "concern": "New cases retain the same structural pattern, so a changed tail number is a limited test of adaptation.",
+      "priority": "medium",
+      "evidence": [
+        "SA-F08",
+        "SA-F04"
+      ]
+    },
+    {
+      "id": "S09",
+      "skill": "Scheduling",
+      "experience": "experienced technician",
+      "context": "desktop visual",
+      "world": "Airline",
+      "value": "Feasible alternatives are accepted; the game does not demand the authors one exact schedule.",
+      "concern": "The model lacks dock capacity, labor qualifications and other resource constraints needed for a later job-level assessment.",
+      "priority": "high for proficiency claims",
+      "evidence": [
+        "SA-F04"
+      ]
+    },
+    {
+      "id": "S10",
+      "skill": "Scheduling",
+      "experience": "experienced technician",
+      "context": "small phone",
+      "world": "Bus Company",
+      "value": "A compact checkerboard can make availability and commitments visible together.",
+      "concern": "The135 core actions in level12 may reward patience with tapping as well as planning skill.",
+      "priority": "medium",
+      "evidence": [
+        "SA-F03"
+      ]
+    },
+    {
+      "id": "S11",
+      "skill": "Scheduling",
+      "experience": "experienced technician",
+      "context": "keyboard",
+      "world": "Cat Hugs",
+      "value": "Cell labels identify aircraft, day and wave status rather than relying on color alone.",
+      "concern": "A keyboard scheduler needs predictable continuation at the next relevant work cell after each command.",
+      "priority": "medium",
+      "evidence": [
+        "SA-F06"
+      ]
+    },
+    {
+      "id": "S12",
+      "skill": "Scheduling",
+      "experience": "experienced technician",
+      "context": "fast/skipping",
+      "world": "Secret Squirrel",
+      "value": "Direct level access respects an experienced scheduler who already understands six-turn-four.",
+      "concern": "Every generated capstone is solvable; there is no decision about escalating impossible demand or accepting a tradeoff.",
+      "priority": "high for proficiency claims",
+      "evidence": [
+        "SA-F04"
+      ]
+    },
+    {
+      "id": "S13",
+      "skill": "Scheduling",
+      "experience": "trainer",
+      "context": "desktop visual",
+      "world": "Airline",
+      "value": "The progression isolates useful teaching points, especially active work versus elapsed curing.",
+      "concern": "The trainer cannot yet ask the game to distinguish guided practice from a separate unseen independent assessment.",
+      "priority": "medium",
+      "evidence": [
+        "SA-F05",
+        "SA-F04"
+      ]
+    },
+    {
+      "id": "S14",
+      "skill": "Scheduling",
+      "experience": "trainer",
+      "context": "small phone",
+      "world": "Bus Company",
+      "value": "Students can enter the game on a browser without a large document download.",
+      "concern": "Students on multiple devices will not automatically bring their progress or artifacts to a shared trainer view.",
+      "priority": "medium",
+      "evidence": [
+        "SA-F09"
+      ]
+    },
+    {
+      "id": "S15",
+      "skill": "Scheduling",
+      "experience": "trainer",
+      "context": "keyboard",
+      "world": "Cat Hugs",
+      "value": "Worked examples are marked as demonstrations and do not earn independent stars.",
+      "concern": "Zero demo stars are useful, but completion alone does not show whether the learner could reproduce the reasoning.",
+      "priority": "high for proficiency claims",
+      "evidence": [
+        "SA-F04"
+      ]
+    },
+    {
+      "id": "S16",
+      "skill": "Scheduling",
+      "experience": "trainer",
+      "context": "fast/skipping",
+      "world": "Secret Squirrel",
+      "value": "A trainer can move directly to a selected challenge during a discussion.",
+      "concern": "The working group needs an easy way to inspect the finished work and the reason for choices, beyond the star total.",
+      "priority": "medium",
+      "evidence": [
+        "SA-F09",
+        "SA-F04"
+      ]
+    },
+    {
+      "id": "S17",
+      "skill": "Scheduling",
+      "experience": "supervisor",
+      "context": "desktop visual",
+      "world": "Airline",
+      "value": "The final model checks both maintenance work and flying commitments.",
+      "concern": "A two-week eight-asset solution does not yet demonstrate the users larger occupational capstone.",
+      "priority": "high for proficiency claims",
+      "evidence": [
+        "SA-F04"
+      ]
+    },
+    {
+      "id": "S18",
+      "skill": "Scheduling",
+      "experience": "supervisor",
+      "context": "small phone",
+      "world": "Bus Company",
+      "value": "Airline and Bus Company make the underlying resource-allocation problem recognizable outside military vocabulary.",
+      "concern": "A whimsical world may engage some staff and distract others; preference needs real-user observation, not an invented approval percentage.",
+      "priority": "research question",
+      "evidence": [
+        "SA-F08"
+      ]
+    },
+    {
+      "id": "S19",
+      "skill": "Scheduling",
+      "experience": "supervisor",
+      "context": "keyboard",
+      "world": "Cat Hugs",
+      "value": "Explicitly bounded game rules help separate fictional practice from actual maintenance instructions.",
+      "concern": "A supervisor should interpret stars as game feedback, not as evidence of independent job qualification.",
+      "priority": "high for proficiency claims",
+      "evidence": [
+        "SA-F04",
+        "SA-F05"
+      ]
+    },
+    {
+      "id": "S20",
+      "skill": "Scheduling",
+      "experience": "supervisor",
+      "context": "fast/skipping",
+      "world": "Secret Squirrel",
+      "value": "The changed-demand level is a useful starting point for a scenario-based working-group discussion.",
+      "concern": "The app still needs a final communicate-and-defend activity to match the full performance framework.",
+      "priority": "high for proficiency claims",
+      "evidence": [
+        "SA-F04",
+        "SA-F09"
+      ]
+    },
+    {
+      "id": "A01",
+      "skill": "Analysis",
+      "experience": "newcomer",
+      "context": "desktop visual",
+      "world": "Airline",
+      "value": "Selecting completed jobs introduces the distinction between planned and finished work through an action.",
+      "concern": "The completed-job target count is visible, so this proves classification more directly than independent counting.",
+      "priority": "scope note",
+      "evidence": [
+        "SA-P02",
+        "SA-F04"
+      ]
+    },
+    {
+      "id": "A02",
+      "skill": "Analysis",
+      "experience": "newcomer",
+      "context": "small phone",
+      "world": "Bus Company",
+      "value": "The first analysis cases are short enough to enter without facing a spreadsheet full of numbers.",
+      "concern": "A newcomer may avoid Hint because of the scoring penalty even when the instruction is unfamiliar.",
+      "priority": "medium",
+      "evidence": [
+        "SA-F05"
+      ]
+    },
+    {
+      "id": "A03",
+      "skill": "Analysis",
+      "experience": "newcomer",
+      "context": "keyboard",
+      "world": "Cat Hugs",
+      "value": "Number tiles and source records are ordinary buttons with labels.",
+      "concern": "The baseline primary Check action needed stable focus after feedback.",
+      "priority": "medium",
+      "evidence": [
+        "SA-F06"
+      ]
+    },
+    {
+      "id": "A04",
+      "skill": "Analysis",
+      "experience": "newcomer",
+      "context": "fast/skipping",
+      "world": "Secret Squirrel",
+      "value": "A newcomer can try a chart challenge directly and return to counting when ready.",
+      "concern": "Jumping to pooled reports without learning denominator scope may create guessing rather than a useful challenge.",
+      "priority": "medium",
+      "evidence": [
+        "SA-F04",
+        "SA-F07"
+      ]
+    },
+    {
+      "id": "A05",
+      "skill": "Analysis",
+      "experience": "early practitioner",
+      "context": "desktop visual",
+      "world": "Airline",
+      "value": "Assembling the numerator and denominator makes the rate structure visible.",
+      "concern": "Both pooled/report denominators were always100 in the baseline. This memorization shortcut is now corrected for new cases.",
+      "priority": "resolved",
+      "evidence": [
+        "SA-F01"
+      ]
+    },
+    {
+      "id": "A06",
+      "skill": "Analysis",
+      "experience": "early practitioner",
+      "context": "small phone",
+      "world": "Bus Company",
+      "value": "Moving tokens to balance four stacks gives a concrete image of the mean.",
+      "concern": "Only whole-number means from four stacks are practiced, so fractional averages need a later bridge.",
+      "priority": "medium",
+      "evidence": [
+        "SA-F07"
+      ]
+    },
+    {
+      "id": "A07",
+      "skill": "Analysis",
+      "experience": "early practitioner",
+      "context": "keyboard",
+      "world": "Cat Hugs",
+      "value": "The missing-value case requires the matching day and unit, not only the right number.",
+      "concern": "A correct filled value must remain tied to its evidence after later edits; the reducer tests verify this behavior.",
+      "priority": "covered risk",
+      "evidence": [
+        "SA-P02"
+      ]
+    },
+    {
+      "id": "A08",
+      "skill": "Analysis",
+      "experience": "early practitioner",
+      "context": "fast/skipping",
+      "world": "Secret Squirrel",
+      "value": "The first report requires selecting the correct time window instead of including every visible row.",
+      "concern": "Fixed answer sets can demonstrate recognition without requiring the learner to construct an explanation.",
+      "priority": "medium",
+      "evidence": [
+        "SA-F04",
+        "SA-F07"
+      ]
+    },
+    {
+      "id": "A09",
+      "skill": "Analysis",
+      "experience": "experienced technician",
+      "context": "desktop visual",
+      "world": "Airline",
+      "value": "Pooling actual counts teaches why group size matters.",
+      "concern": "Unequal groups need varied totals; baseline totals of100 did not adequately vary the denominator. New cases now do.",
+      "priority": "resolved",
+      "evidence": [
+        "SA-F01"
+      ]
+    },
+    {
+      "id": "A10",
+      "skill": "Analysis",
+      "experience": "experienced technician",
+      "context": "small phone",
+      "world": "Bus Company",
+      "value": "Comparing equal means with different spreads introduces a useful operational distinction.",
+      "concern": "The spread lesson uses range alone; a later extension should distinguish range, distribution and sample size.",
+      "priority": "medium",
+      "evidence": [
+        "SA-F07"
+      ]
+    },
+    {
+      "id": "A11",
+      "skill": "Analysis",
+      "experience": "experienced technician",
+      "context": "keyboard",
+      "world": "Cat Hugs",
+      "value": "Charts include text descriptions and visible observation values.",
+      "concern": "Level was an impossible correct answer in baseline trend/scatter replay. Neutral cases are now included.",
+      "priority": "resolved",
+      "evidence": [
+        "SA-F02"
+      ]
+    },
+    {
+      "id": "A12",
+      "skill": "Analysis",
+      "experience": "experienced technician",
+      "context": "fast/skipping",
+      "world": "Secret Squirrel",
+      "value": "The game rewards a scoped statement rather than a claim guaranteed forever.",
+      "concern": "The final report does not yet combine trends, variation or unfamiliar evidence into the same decision.",
+      "priority": "high for proficiency claims",
+      "evidence": [
+        "SA-F04"
+      ]
+    },
+    {
+      "id": "A13",
+      "skill": "Analysis",
+      "experience": "trainer",
+      "context": "desktop visual",
+      "world": "Airline",
+      "value": "The stages separate counting, rates, center, missing data, trends and reporting.",
+      "concern": "The introductory sequence is promising, but a trainer still needs an unseen transfer task before claiming learning.",
+      "priority": "high for proficiency claims",
+      "evidence": [
+        "SA-F04",
+        "SA-F08"
+      ]
+    },
+    {
+      "id": "A14",
+      "skill": "Analysis",
+      "experience": "trainer",
+      "context": "small phone",
+      "world": "Bus Company",
+      "value": "The simple game can be an approachable first exposure before a larger statistics lab.",
+      "concern": "Repeated fixed-layout scenarios may teach where to click; vary the problem structure after the basics.",
+      "priority": "medium",
+      "evidence": [
+        "SA-F07",
+        "SA-F08"
+      ]
+    },
+    {
+      "id": "A15",
+      "skill": "Analysis",
+      "experience": "trainer",
+      "context": "keyboard",
+      "world": "Cat Hugs",
+      "value": "Reducers preserve prior states, and Undo supports discussing a mistaken analytical step.",
+      "concern": "Keyboard focus and concise error feedback matter when a trainer demonstrates a wrong denominator live.",
+      "priority": "medium",
+      "evidence": [
+        "SA-F06"
+      ]
+    },
+    {
+      "id": "A16",
+      "skill": "Analysis",
+      "experience": "trainer",
+      "context": "fast/skipping",
+      "world": "Secret Squirrel",
+      "value": "A trainer can select the exact concept that a learner is having trouble applying.",
+      "concern": "The neutral scatter correction must say no clear linear trend rather than claiming that no relationship exists; the patch does.",
+      "priority": "resolved",
+      "evidence": [
+        "SA-F02"
+      ]
+    },
+    {
+      "id": "A17",
+      "skill": "Analysis",
+      "experience": "supervisor",
+      "context": "desktop visual",
+      "world": "Airline",
+      "value": "A correct rate requires the right records and matching counts, not merely a plausible percentage.",
+      "concern": "Completion stars do not show that a learner can investigate a bad source, make a decision and defend it independently.",
+      "priority": "high for proficiency claims",
+      "evidence": [
+        "SA-F04",
+        "SA-F09"
+      ]
+    },
+    {
+      "id": "A18",
+      "skill": "Analysis",
+      "experience": "supervisor",
+      "context": "small phone",
+      "world": "Bus Company",
+      "value": "World vocabulary connects the same analytic structure to flights, runs, visits or missions.",
+      "concern": "Changing the world alone does not add a distinct industry data model or demonstrate occupational transfer.",
+      "priority": "medium",
+      "evidence": [
+        "SA-F08"
+      ]
+    },
+    {
+      "id": "A19",
+      "skill": "Analysis",
+      "experience": "supervisor",
+      "context": "keyboard",
+      "world": "Cat Hugs",
+      "value": "The code explicitly rejects causal conclusions drawn only from the shown scatter.",
+      "concern": "No causal choice is valid in these observational scenarios, appropriately; later learning should still demand reasoning beyond remembering that rule.",
+      "priority": "medium",
+      "evidence": [
+        "SA-F07"
+      ]
+    },
+    {
+      "id": "A20",
+      "skill": "Analysis",
+      "experience": "supervisor",
+      "context": "fast/skipping",
+      "world": "Secret Squirrel",
+      "value": "The last challenge assembles a small report from competing records and a time window.",
+      "concern": "A supervisor needs inspectable evidence of the actual report and rationale, not only a best score.",
+      "priority": "high for proficiency claims",
+      "evidence": [
+        "SA-F04",
+        "SA-F09"
+      ]
+    },
+    {
+      "id": "D01",
+      "skill": "Documentation",
+      "experience": "newcomer",
+      "context": "desktop visual",
+      "world": "Airline",
+      "value": "The first record match gives an immediate, concrete starting point.",
+      "concern": "A newcomer may mistake the act of attaching a requirement for evidence that the inspection itself is complete.",
+      "priority": "low",
+      "evidence": [
+        "R11",
+        "R14"
+      ],
+      "model_probe_seed": 1
+    },
+    {
+      "id": "D02",
+      "skill": "Documentation",
+      "experience": "newcomer",
+      "context": "small phone",
+      "world": "Bus Company",
+      "value": "Short prompts and large asset cards offer a manageable first phone task.",
+      "concern": "Small applicability and interval metadata may require zooming on a physical phone.",
+      "priority": "medium",
+      "evidence": [
+        "R10",
+        "R11"
+      ],
+      "model_probe_seed": 2
+    },
+    {
+      "id": "D03",
+      "skill": "Documentation",
+      "experience": "newcomer",
+      "context": "keyboard",
+      "world": "Cat Hugs",
+      "value": "Buttons and explicit labels can support keyboard-only play.",
+      "concern": "The baseline capstone reused answer-focus identities and could silently focus the next correct answer.",
+      "priority": "high",
+      "evidence": [
+        "R01"
+      ],
+      "model_probe_seed": 3
+    },
+    {
+      "id": "D04",
+      "skill": "Documentation",
+      "experience": "newcomer",
+      "context": "fast/skipping",
+      "world": "Secret Squirrel",
+      "value": "Open level selection lets an impatient learner explore the later work pack.",
+      "concern": "Skipping to the final pack can produce a completion badge without practicing applicability or forecast decisions.",
+      "priority": "medium",
+      "evidence": [
+        "R04",
+        "R09"
+      ],
+      "model_probe_seed": 4
+    },
+    {
+      "id": "D05",
+      "skill": "Documentation",
+      "experience": "early practitioner",
+      "context": "desktop visual",
+      "world": "Airline",
+      "value": "Combining family and serial range is more useful than memorizing a definition.",
+      "concern": "Exact target counts may let a learner stop searching when the meter fills rather than verifying applicability.",
+      "priority": "low",
+      "evidence": [
+        "R11",
+        "R13"
+      ],
+      "model_probe_seed": 5
+    },
+    {
+      "id": "D06",
+      "skill": "Documentation",
+      "experience": "early practitioner",
+      "context": "small phone",
+      "world": "Bus Company",
+      "value": "The first-due-day challenge clearly introduces two competing limits.",
+      "concern": "The fixed-use forecast may look easier than a changing operational forecast, and compact source cards need a real-phone check.",
+      "priority": "medium",
+      "evidence": [
+        "R05",
+        "R10"
+      ],
+      "model_probe_seed": 6
+    },
+    {
+      "id": "D07",
+      "skill": "Documentation",
+      "experience": "early practitioner",
+      "context": "keyboard",
+      "world": "Cat Hugs",
+      "value": "The register supports alternative valid row ordering.",
+      "concern": "A replacement records only a short Linked message, so the old interval is not visible in the register trail.",
+      "priority": "medium",
+      "evidence": [
+        "R06",
+        "R11"
+      ],
+      "model_probe_seed": 7
+    },
+    {
+      "id": "D08",
+      "skill": "Documentation",
+      "experience": "early practitioner",
+      "context": "fast/skipping",
+      "world": "Secret Squirrel",
+      "value": "New cases change asset numbers and intervals.",
+      "concern": "The final five-choice structure remains predictable even when numbers change.",
+      "priority": "medium",
+      "evidence": [
+        "R04",
+        "R08"
+      ],
+      "model_probe_seed": 8
+    },
+    {
+      "id": "D09",
+      "skill": "Documentation",
+      "experience": "experienced technician",
+      "context": "desktop visual",
+      "world": "Airline",
+      "value": "Current, draft and superseded copies teach a useful source-control distinction.",
+      "concern": "A veteran may find a single Approved choice too obvious to exercise judgment.",
+      "priority": "medium",
+      "evidence": [
+        "R12"
+      ],
+      "model_probe_seed": 9
+    },
+    {
+      "id": "D10",
+      "skill": "Documentation",
+      "experience": "experienced technician",
+      "context": "small phone",
+      "world": "Bus Company",
+      "value": "The matching-work-plus-passed-check closeout is a practical distinction.",
+      "concern": "The strongest evidence labels become small on phone layouts; real users should confirm they can compare them easily.",
+      "priority": "low",
+      "evidence": [
+        "R10",
+        "R14"
+      ],
+      "model_probe_seed": 10
+    },
+    {
+      "id": "D11",
+      "skill": "Documentation",
+      "experience": "experienced technician",
+      "context": "keyboard",
+      "world": "Cat Hugs",
+      "value": "Either parts-first or slot-first is accepted when prerequisites are satisfied.",
+      "concern": "The baseline auto-advance focus rewarded repeated activation instead of deliberate inspection of the next stage.",
+      "priority": "high",
+      "evidence": [
+        "R01",
+        "R11"
+      ],
+      "model_probe_seed": 11
+    },
+    {
+      "id": "D12",
+      "skill": "Documentation",
+      "experience": "experienced technician",
+      "context": "fast/skipping",
+      "world": "Secret Squirrel",
+      "value": "The work-pack path brings several basic decisions together quickly.",
+      "concern": "It still cues each target and has no conflicting sources, changed demand or reasoned defense.",
+      "priority": "medium",
+      "evidence": [
+        "R04",
+        "R05",
+        "R12"
+      ],
+      "model_probe_seed": 12
+    },
+    {
+      "id": "D13",
+      "skill": "Documentation",
+      "experience": "trainer",
+      "context": "desktop visual",
+      "world": "Airline",
+      "value": "A trainer can demonstrate wrong applicability, wrong revisions and invalid closeouts safely.",
+      "concern": "Stars alone do not show which concept the learner misunderstood or whether the learner can repeat the task independently.",
+      "priority": "medium",
+      "evidence": [
+        "R09",
+        "R11",
+        "R14"
+      ],
+      "model_probe_seed": 13
+    },
+    {
+      "id": "D14",
+      "skill": "Documentation",
+      "experience": "trainer",
+      "context": "small phone",
+      "world": "Bus Company",
+      "value": "A trainer can use the phone-friendly cards during short practice sessions.",
+      "concern": "Hint scoring could discourage a learner from requesting the help the trainer wants them to use.",
+      "priority": "low",
+      "evidence": [
+        "R07",
+        "R10"
+      ],
+      "model_probe_seed": 14
+    },
+    {
+      "id": "D15",
+      "skill": "Documentation",
+      "experience": "trainer",
+      "context": "keyboard",
+      "world": "Cat Hugs",
+      "value": "Keyboard play can make a projector walkthrough efficient.",
+      "concern": "Automatic focus must move to the next stage, not a preselected correct answer; the pack fix now supplies that target.",
+      "priority": "high",
+      "evidence": [
+        "R01"
+      ],
+      "model_probe_seed": 15
+    },
+    {
+      "id": "D16",
+      "skill": "Documentation",
+      "experience": "trainer",
+      "context": "fast/skipping",
+      "world": "Secret Squirrel",
+      "value": "Direct access to any level helps a trainer target a weak skill.",
+      "concern": "A later unseen work-product challenge is needed if the trainer wants evidence beyond recognition of the displayed cues.",
+      "priority": "medium",
+      "evidence": [
+        "R04",
+        "R09"
+      ],
+      "model_probe_seed": 16
+    },
+    {
+      "id": "D17",
+      "skill": "Documentation",
+      "experience": "supervisor",
+      "context": "desktop visual",
+      "world": "Airline",
+      "value": "The model accepts valid alternatives and enforces prerequisite logic.",
+      "concern": "A supervisor should not read a best-star total as demonstrated job qualification.",
+      "priority": "medium",
+      "evidence": [
+        "R09",
+        "R11"
+      ],
+      "model_probe_seed": 17
+    },
+    {
+      "id": "D18",
+      "skill": "Documentation",
+      "experience": "supervisor",
+      "context": "small phone",
+      "world": "Bus Company",
+      "value": "Short sessions can fit around work without a long lesson page.",
+      "concern": "The supervisor still needs observable work products and a practical review rubric to compare learners.",
+      "priority": "medium",
+      "evidence": [
+        "R09"
+      ],
+      "model_probe_seed": 18
+    },
+    {
+      "id": "D19",
+      "skill": "Documentation",
+      "experience": "supervisor",
+      "context": "keyboard",
+      "world": "Cat Hugs",
+      "value": "The correct-current-source rule and reopened closeout reinforce documentation discipline.",
+      "concern": "The simpler register history should eventually preserve before/after detail so both record specialties teach compatible audit habits.",
+      "priority": "medium",
+      "evidence": [
+        "R06",
+        "R14"
+      ],
+      "model_probe_seed": 19
+    },
+    {
+      "id": "D20",
+      "skill": "Documentation",
+      "experience": "supervisor",
+      "context": "fast/skipping",
+      "world": "Secret Squirrel",
+      "value": "World changes show that the underlying record skills are broader than one aircraft community.",
+      "concern": "Changing the label to a bus or rover does not by itself establish transfer to a different occupation.",
+      "priority": "low",
+      "evidence": [
+        "R08",
+        "R09"
+      ],
+      "model_probe_seed": 20
+    },
+    {
+      "id": "I01",
+      "skill": "Data Integrity",
+      "experience": "newcomer",
+      "context": "desktop visual",
+      "world": "Airline",
+      "value": "One wrong number gives a novice an easy first success.",
+      "concern": "The Match source button performs the correction automatically; a novice can succeed without identifying the mismatched field.",
+      "priority": "medium",
+      "evidence": [
+        "R03"
+      ],
+      "model_probe_seed": 1
+    },
+    {
+      "id": "I02",
+      "skill": "Data Integrity",
+      "experience": "newcomer",
+      "context": "small phone",
+      "world": "Bus Company",
+      "value": "Unknown and zero appear side by side with short labels.",
+      "concern": "Their small metadata should remain readable on a real phone so the distinction is not reduced to blind tapping.",
+      "priority": "low",
+      "evidence": [
+        "R10",
+        "R15"
+      ],
+      "model_probe_seed": 2
+    },
+    {
+      "id": "I03",
+      "skill": "Data Integrity",
+      "experience": "newcomer",
+      "context": "keyboard",
+      "world": "Cat Hugs",
+      "value": "Source and record cards make the evidence relationship visible.",
+      "concern": "An already-correct retained row originally had no persistent reviewed marker after keyboard verification.",
+      "priority": "medium",
+      "evidence": [
+        "R02"
+      ],
+      "model_probe_seed": 3
+    },
+    {
+      "id": "I04",
+      "skill": "Data Integrity",
+      "experience": "newcomer",
+      "context": "fast/skipping",
+      "world": "Secret Squirrel",
+      "value": "Immediate corrections make experimentation feel safe.",
+      "concern": "An impatient player may press Match source on every row and learn the button sequence more readily than the verification habit.",
+      "priority": "medium",
+      "evidence": [
+        "R03"
+      ],
+      "model_probe_seed": 4
+    },
+    {
+      "id": "I05",
+      "skill": "Data Integrity",
+      "experience": "early practitioner",
+      "context": "desktop visual",
+      "world": "Airline",
+      "value": "Unit conversion requires choosing both a number and a unit.",
+      "concern": "A later mixed-unit batch would be needed to see whether this carries over when the unit mismatch is not announced in the prompt.",
+      "priority": "low",
+      "evidence": [
+        "R03",
+        "R15"
+      ],
+      "model_probe_seed": 5
+    },
+    {
+      "id": "I06",
+      "skill": "Data Integrity",
+      "experience": "early practitioner",
+      "context": "small phone",
+      "world": "Bus Company",
+      "value": "Event IDs and times make duplicate comparison concrete.",
+      "concern": "Side-by-side comparisons and small labels may become tiring on a phone during a larger batch.",
+      "priority": "low",
+      "evidence": [
+        "R10",
+        "R15"
+      ],
+      "model_probe_seed": 6
+    },
+    {
+      "id": "I07",
+      "skill": "Data Integrity",
+      "experience": "early practitioner",
+      "context": "keyboard",
+      "world": "Cat Hugs",
+      "value": "Linking child records to existing parents gives a concrete identity task.",
+      "concern": "The reviewed-state marker was necessary so keyboard users could keep their place in a mixed batch.",
+      "priority": "medium",
+      "evidence": [
+        "R02",
+        "R15"
+      ],
+      "model_probe_seed": 7
+    },
+    {
+      "id": "I08",
+      "skill": "Data Integrity",
+      "experience": "early practitioner",
+      "context": "fast/skipping",
+      "world": "Secret Squirrel",
+      "value": "Keeping zero-result records teaches a useful reconciliation habit.",
+      "concern": "The exact expected record count is displayed, so the task does not yet assess when the search is complete.",
+      "priority": "low",
+      "evidence": [
+        "R13",
+        "R15"
+      ],
+      "model_probe_seed": 8
+    },
+    {
+      "id": "I09",
+      "skill": "Data Integrity",
+      "experience": "experienced technician",
+      "context": "desktop visual",
+      "world": "Airline",
+      "value": "Duplicate events are distinguished from similar but separate events.",
+      "concern": "An experienced reviewer will want ambiguous duplicates and investigation choices, beyond identical event copies.",
+      "priority": "medium",
+      "evidence": [
+        "R03",
+        "R15"
+      ],
+      "model_probe_seed": 9
+    },
+    {
+      "id": "I10",
+      "skill": "Data Integrity",
+      "experience": "experienced technician",
+      "context": "small phone",
+      "world": "Bus Company",
+      "value": "The current-source challenge correctly rejects a newer draft.",
+      "concern": "There is always exactly one Approved choice; real source disputes require more than noticing that label.",
+      "priority": "medium",
+      "evidence": [
+        "R12"
+      ],
+      "model_probe_seed": 10
+    },
+    {
+      "id": "I11",
+      "skill": "Data Integrity",
+      "experience": "experienced technician",
+      "context": "keyboard",
+      "world": "Cat Hugs",
+      "value": "The before-and-after audit trail is a useful foundation.",
+      "concern": "Baseline review of an unchanged record was invisible, making a correct batch harder to inspect; that display issue is now fixed.",
+      "priority": "medium",
+      "evidence": [
+        "R02",
+        "R15"
+      ],
+      "model_probe_seed": 11
+    },
+    {
+      "id": "I12",
+      "skill": "Data Integrity",
+      "experience": "experienced technician",
+      "context": "fast/skipping",
+      "world": "Secret Squirrel",
+      "value": "The prevention gate holds errors while retaining valid zeros.",
+      "concern": "The final batch still supplies the authoritative answer beside every row and copies whole records in one action.",
+      "priority": "medium",
+      "evidence": [
+        "R03",
+        "R15"
+      ],
+      "model_probe_seed": 12
+    },
+    {
+      "id": "I13",
+      "skill": "Data Integrity",
+      "experience": "trainer",
+      "context": "desktop visual",
+      "world": "Airline",
+      "value": "A trainer can demonstrate why an unknown cannot be changed to zero.",
+      "concern": "The trainer needs a later task that requires the learner to choose a correction, not merely request an automatic copy.",
+      "priority": "medium",
+      "evidence": [
+        "R03",
+        "R15"
+      ],
+      "model_probe_seed": 13
+    },
+    {
+      "id": "I14",
+      "skill": "Data Integrity",
+      "experience": "trainer",
+      "context": "small phone",
+      "world": "Bus Company",
+      "value": "Short tasks can support frequent practice and immediate discussion.",
+      "concern": "The star cost of hints may undermine the trainer’s invitation to ask for help.",
+      "priority": "low",
+      "evidence": [
+        "R07"
+      ],
+      "model_probe_seed": 14
+    },
+    {
+      "id": "I15",
+      "skill": "Data Integrity",
+      "experience": "trainer",
+      "context": "keyboard",
+      "world": "Cat Hugs",
+      "value": "Persistent Reviewed indicators now make it easier to explain which rows have been checked.",
+      "concern": "Keyboard and screen-reader behavior still needs live-user validation rather than relying solely on render tests.",
+      "priority": "low",
+      "evidence": [
+        "R02",
+        "R10"
+      ],
+      "model_probe_seed": 15
+    },
+    {
+      "id": "I16",
+      "skill": "Data Integrity",
+      "experience": "trainer",
+      "context": "fast/skipping",
+      "world": "Secret Squirrel",
+      "value": "A trainer can jump to the exact misconception: units, duplicates, period or source.",
+      "concern": "Completing a targeted example does not show independent transfer to an unfamiliar combined case.",
+      "priority": "medium",
+      "evidence": [
+        "R03",
+        "R09"
+      ],
+      "model_probe_seed": 16
+    },
+    {
+      "id": "I17",
+      "skill": "Data Integrity",
+      "experience": "supervisor",
+      "context": "desktop visual",
+      "world": "Airline",
+      "value": "The gate checks model prevention as well as cleanup.",
+      "concern": "A supervisor would need evidence that learners can distinguish hold/investigate from correct when sources conflict.",
+      "priority": "medium",
+      "evidence": [
+        "R03",
+        "R12",
+        "R15"
+      ],
+      "model_probe_seed": 17
+    },
+    {
+      "id": "I18",
+      "skill": "Data Integrity",
+      "experience": "supervisor",
+      "context": "small phone",
+      "world": "Bus Company",
+      "value": "Local browser play makes a small exercise easy to start.",
+      "concern": "Current stars do not offer a comparable assessor portfolio or explanation of judgment.",
+      "priority": "medium",
+      "evidence": [
+        "R09"
+      ],
+      "model_probe_seed": 18
+    },
+    {
+      "id": "I19",
+      "skill": "Data Integrity",
+      "experience": "supervisor",
+      "context": "keyboard",
+      "world": "Cat Hugs",
+      "value": "Audit validation checks more than whether the final number happens to be right.",
+      "concern": "Record review and correction history should become part of a larger work-product assessment, not be inferred from stars.",
+      "priority": "medium",
+      "evidence": [
+        "R09",
+        "R15"
+      ],
+      "model_probe_seed": 19
+    },
+    {
+      "id": "I20",
+      "skill": "Data Integrity",
+      "experience": "supervisor",
+      "context": "fast/skipping",
+      "world": "Secret Squirrel",
+      "value": "Airline, bus, cat and squirrel contexts make the same record relationships approachable.",
+      "concern": "The contexts share the same underlying task patterns; they are not evidence of four independent occupational validations.",
+      "priority": "low",
+      "evidence": [
+        "R08",
+        "R09"
+      ],
+      "model_probe_seed": 20
+    },
+    {
+      "id": "B01",
+      "experience": "newcomer",
+      "context": "desktop visual",
+      "world": "Airline",
+      "value": "One request and three keys make the first action easy to understand.",
+      "concern": "I may assume Edit alone is enough until I notice that viewing and editing are separate capabilities in this game.",
+      "priority": "P2",
+      "evidence": [
+        "DB01"
+      ],
+      "skill": "Database Management"
+    },
+    {
+      "id": "B02",
+      "experience": "newcomer",
+      "context": "small phone",
+      "world": "Bus Company",
+      "value": "A short instruction and a few buttons suit a quick practice break.",
+      "concern": "I need the task, person, scope and selected keys to remain visible together on a small display; this requires browser observation, not a claim from code alone.",
+      "priority": "P2",
+      "evidence": [
+        "DB01"
+      ],
+      "skill": "Database Management"
+    },
+    {
+      "id": "B03",
+      "experience": "newcomer",
+      "context": "keyboard",
+      "world": "Cat Hugs",
+      "value": "Labeled buttons and stable focus identifiers give a basis for keyboard interaction.",
+      "concern": "I want a real keyboard walkthrough to confirm that a repaired/re-rendered board does not strand focus; this review did not use a browser.",
+      "priority": "P2",
+      "evidence": [
+        "DB01"
+      ],
+      "skill": "Database Management"
+    },
+    {
+      "id": "B04",
+      "experience": "newcomer",
+      "context": "fast/skipping",
+      "world": "Secret Squirrel",
+      "value": "I can jump to the task that catches my attention and return to fundamentals.",
+      "concern": "If I skip straight to the final service challenge, I may click failure markers without understanding the approval and change sequence.",
+      "priority": "P2",
+      "evidence": [
+        "DB06",
+        "DB07"
+      ],
+      "skill": "Database Management"
+    },
+    {
+      "id": "B05",
+      "experience": "early practitioner",
+      "context": "desktop visual",
+      "world": "Airline",
+      "value": "Permissions, room scope and temporary passes connect to everyday account work.",
+      "concern": "The old identity labels let me choose Approved without reading the unique ID; neutral labels now make that distinction meaningful.",
+      "priority": "P2",
+      "evidence": [
+        "DB04"
+      ],
+      "skill": "Database Management"
+    },
+    {
+      "id": "B06",
+      "experience": "early practitioner",
+      "context": "small phone",
+      "world": "Bus Company",
+      "value": "Local saved work lets me leave a short task and return to it on the same browser.",
+      "concern": "My progress will not automatically follow from my phone to a work computer, and an evaluator cannot infer that these are the same learner.",
+      "priority": "P2",
+      "evidence": [
+        "DB09"
+      ],
+      "skill": "Database Management"
+    },
+    {
+      "id": "B07",
+      "experience": "early practitioner",
+      "context": "keyboard",
+      "world": "Cat Hugs",
+      "value": "Wrong ordering is rejected and I can correct a sequence instead of starting a long lesson again.",
+      "concern": "The detailed error tells me the right order; the resulting corrected-work stars should not be treated as an independent assessment.",
+      "priority": "P1",
+      "evidence": [
+        "DB07"
+      ],
+      "skill": "Database Management"
+    },
+    {
+      "id": "B08",
+      "experience": "early practitioner",
+      "context": "fast/skipping",
+      "world": "Secret Squirrel",
+      "value": "The final challenge combines access, a dependency and a safe change in one place.",
+      "concern": "Repeated final cases previously reused the same action pattern; varied tasks and failures now require me to read the case again.",
+      "priority": "P1",
+      "evidence": [
+        "DB03"
+      ],
+      "skill": "Database Management"
+    },
+    {
+      "id": "B09",
+      "experience": "experienced technician",
+      "context": "desktop visual",
+      "world": "Airline",
+      "value": "The early levels are a useful quick check of least-privilege and access-lifecycle habits.",
+      "concern": "A directly marked failed node is too simple to establish that I can diagnose an interface fault from ambiguous symptoms.",
+      "priority": "P2",
+      "evidence": [
+        "DB06"
+      ],
+      "skill": "Database Management"
+    },
+    {
+      "id": "B10",
+      "experience": "experienced technician",
+      "context": "small phone",
+      "world": "Bus Company",
+      "value": "The modular path lets me practice during short intervals without a setup procedure.",
+      "concern": "I would need a later recovery task that validates actual records; matching a count alone leaves important integrity questions unasked.",
+      "priority": "P2",
+      "evidence": [
+        "DB05"
+      ],
+      "skill": "Database Management"
+    },
+    {
+      "id": "B11",
+      "experience": "experienced technician",
+      "context": "keyboard",
+      "world": "Cat Hugs",
+      "value": "The duplicate-name exercise rewards a precise identifier comparison after the label shortcut was removed.",
+      "concern": "The case still tests a small predetermined permission set; my broader judgement about approvals and exceptional access is not measured.",
+      "priority": "P2",
+      "evidence": [
+        "DB04",
+        "DB07"
+      ],
+      "skill": "Database Management"
+    },
+    {
+      "id": "B12",
+      "experience": "experienced technician",
+      "context": "fast/skipping",
+      "world": "Secret Squirrel",
+      "value": "Level selection lets me bypass already-familiar introductory key puzzles.",
+      "concern": "Four different worlds are context changes around the same mechanics, so completing each is not four independent occupational qualifications.",
+      "priority": "P1",
+      "evidence": [
+        "DB07"
+      ],
+      "skill": "Database Management"
+    },
+    {
+      "id": "B13",
+      "experience": "trainer",
+      "context": "desktop visual",
+      "world": "Airline",
+      "value": "Working examples and repeatable seeded cases support demonstration followed by guided practice.",
+      "concern": "A zero-star demo used to display the same completed checkmark as independent work; the distinction must survive menus and progress summaries.",
+      "priority": "P1",
+      "evidence": [
+        "DB02"
+      ],
+      "skill": "Database Management"
+    },
+    {
+      "id": "B14",
+      "experience": "trainer",
+      "context": "small phone",
+      "world": "Bus Company",
+      "value": "One concept per short task offers a practical way to observe a learner without a slide presentation.",
+      "concern": "I need to see whether the learner avoids Hint to protect stars; that effect cannot be established by this simulated panel.",
+      "priority": "P2",
+      "evidence": [
+        "DB08"
+      ],
+      "skill": "Database Management"
+    },
+    {
+      "id": "B15",
+      "experience": "trainer",
+      "context": "keyboard",
+      "world": "Cat Hugs",
+      "value": "Separate world and specialty progress supports individual pacing and returning to unfinished work.",
+      "concern": "A trainer still needs a way to record the reason behind a learner decision and compare independent performance across unfamiliar cases.",
+      "priority": "P1",
+      "evidence": [
+        "DB07",
+        "DB09"
+      ],
+      "skill": "Database Management"
+    },
+    {
+      "id": "B16",
+      "experience": "trainer",
+      "context": "fast/skipping",
+      "world": "Secret Squirrel",
+      "value": "The now-varied final DBM case is more useful for asking a learner to inspect each new request.",
+      "concern": "The same visible failure cues and fixed safe-change sequence still make this practice, not a fully independent practical examination.",
+      "priority": "P1",
+      "evidence": [
+        "DB03",
+        "DB06",
+        "DB07"
+      ],
+      "skill": "Database Management"
+    },
+    {
+      "id": "B17",
+      "experience": "supervisor",
+      "context": "desktop visual",
+      "world": "Airline",
+      "value": "The five-specialty structure makes the expected fundamentals visible and easy to discuss with a working group.",
+      "concern": "I cannot answer who is ready to perform the full job from game completion alone; I need an unfamiliar work product and its defense.",
+      "priority": "P1",
+      "evidence": [
+        "DB07"
+      ],
+      "skill": "Database Management"
+    },
+    {
+      "id": "B18",
+      "experience": "supervisor",
+      "context": "small phone",
+      "world": "Bus Company",
+      "value": "A browser game lowers the effort required to demonstrate the concept to colleagues.",
+      "concern": "Local browser scores are not an auditable team proficiency record and may be lost when moving devices or clearing data.",
+      "priority": "P2",
+      "evidence": [
+        "DB09"
+      ],
+      "skill": "Database Management"
+    },
+    {
+      "id": "B19",
+      "experience": "supervisor",
+      "context": "keyboard",
+      "world": "Cat Hugs",
+      "value": "The playful setting can make the same permission and record concepts approachable outside aviation.",
+      "concern": "Accessibility and appeal still need observation with actual users; this role simulation is not evidence of adoption or training effectiveness.",
+      "priority": "P1",
+      "evidence": [
+        "DB01",
+        "DB07"
+      ],
+      "skill": "Database Management"
+    },
+    {
+      "id": "B20",
+      "experience": "supervisor",
+      "context": "fast/skipping",
+      "world": "Secret Squirrel",
+      "value": "Open navigation makes it easy to inspect later tasks without completing every earlier screen.",
+      "concern": "Fast completion, including using examples, must not be used to claim the four-hour or tenfold training targets were achieved.",
+      "priority": "P1",
+      "evidence": [
+        "DB02",
+        "DB07"
+      ],
+      "skill": "Database Management"
+    }
+  ],
+  "findings": [
+    {
+      "id": "SA-P01",
+      "severity": "strength",
+      "observation": "Scheduling introduces counts, priority, unavailability, person-specific assignments, work occupancy, curing, compatible work, weekends, mixed commitments and replanning in successive levels. Core validators accept alternative feasible aircraft selections and work placements.",
+      "source": [
+        "dist/game-rules.js:3-16",
+        "dist/game-rules.js:28-136",
+        "tests/game-rules.cjs"
+      ],
+      "verified_or_hypothesis": "verified source and model behavior",
+      "reproduction": "Ran node tests/game-rules.cjs: 13 levels, 1,300 seeded models, 32,052 assertions. Includes alternative work placements and reverse aircraft selections.",
+      "recommendation": "Preserve constraint-based validation and the short initial interaction."
+    },
+    {
+      "id": "SA-P02",
+      "severity": "strength",
+      "observation": "The Analysis path teaches by classifying jobs, assembling rates, moving conserved tokens, sorting observations, linking missing values to evidence and manipulating chart choices. Inputs and examples pass through immutable reducers.",
+      "source": [
+        "dist/pack-analysis.js:33-139",
+        "dist/pack-analysis.js:274-350",
+        "tests/pack-analysis.cjs"
+      ],
+      "verified_or_hypothesis": "verified source and reducer tests",
+      "reproduction": "Baseline suite passed 4,996 assertions across 12 levels × 20 seeds with actual reducer paths, invalid-work checks and provenance validation.",
+      "recommendation": "Keep direct actions and short post-success explanations; use these as the entry point."
+    },
+    {
+      "id": "SA-F01",
+      "severity": "medium",
+      "observation": "Baseline Analysis levels 5 and 12 always used a pooled denominator of 100. A player could memorize that denominator and avoid transferring the pooling operation to different group totals.",
+      "source": [
+        "dist/pack-analysis.js:63-71",
+        "dist/pack-analysis.js:126-137",
+        "scheduling-analysis-baseline.json"
+      ],
+      "verified_or_hypothesis": "verified generator restriction; learning consequence is a hypothesis",
+      "reproduction": "Generated 100 seeds per level before editing: unique eligible totals were [100] for both levels.",
+      "recommendation": "Vary unequal group sizes and totals while preserving integer counts. Implemented in revision 2; revision 1 retains saved cases.",
+      "status": "fixed in assigned patch"
+    },
+    {
+      "id": "SA-F02",
+      "severity": "medium",
+      "observation": "Baseline trend and scatter levels displayed a Level response but only generated up/down answers. Repeated play could learn that the neutral response was never valid.",
+      "source": [
+        "dist/pack-analysis.js:95-125",
+        "scheduling-analysis-baseline.json"
+      ],
+      "verified_or_hypothesis": "verified generator restriction; guessing behavior is a hypothesis",
+      "reproduction": "Generated 100 baseline seeds per level: directions were only up/down.",
+      "recommendation": "Implemented level time series and scattered weak-linear-pattern cases. Neutral scatter uses a bounded No linear trend claim and does not claim independence.",
+      "status": "fixed in assigned patch"
+    },
+    {
+      "id": "SA-F03",
+      "severity": "medium",
+      "observation": "Scheduling level 12 requires 110 individual flight selections, 20 wave confirmations, four work placements and the Plan flights transition: at least135 core actions from a blank board. Level 6 needs 9 core actions and level 7 needs 48. Mechanical repetition may begin to dominate later practice.",
+      "source": [
+        "dist/game-rules.js:175-216",
+        "dist/game.js:209-239",
+        "scheduling-analysis-baseline.json"
+      ],
+      "verified_or_hypothesis": "action counts verified from generated scenario; fatigue is a usability hypothesis",
+      "reproduction": "Counted required assignments, confirmations, work placements and transition from seeded scenarios; excludes navigation, retries and extra selections.",
+      "recommendation": "After a learner demonstrates a day manually, consider a copy-day action that still exposes and validates changed constraints. Validate with observed real learners before adding automation."
+    },
+    {
+      "id": "SA-F04",
+      "severity": "high for proficiency claims",
+      "observation": "The current Scheduling finish checks an executable two-week model, but does not require a learner to explain a tradeoff, communicate a handover, defend the plan, or solve an infeasible demand case. Analysis level 12 checks report scope and pooled rate, not the entire statistical path.",
+      "source": [
+        "dist/game-rules.js:110-136",
+        "dist/game-rules.js:194-216",
+        "dist/pack-analysis.js:240-245",
+        "dist/game.js:330-337"
+      ],
+      "verified_or_hypothesis": "verified scope of automated checks; effectiveness cannot be inferred",
+      "reproduction": "Inspected final-level generators, checkers, finish and saved-state fields. No required rationale, peer review, or communication work product is present in the game paths.",
+      "recommendation": "Use the game as fundamentals practice. Add a later unfamiliar combined mission with a small decision artifact and human review before treating stars as job-proficiency evidence."
+    },
+    {
+      "id": "SA-F05",
+      "severity": "medium",
+      "observation": "A single Hint lowers the maximum score for the current case to one star, while any number of failed checks can still earn two. This makes a deliberate request for instruction look worse than repeated unassisted guessing.",
+      "source": [
+        "dist/game.js:332",
+        "dist/game.js:420-427"
+      ],
+      "verified_or_hypothesis": "scoring rule verified; learner avoidance is a hypothesis",
+      "reproduction": "Read finish() precedence and showHelp(); hints are recorded before the dialog opens.",
+      "recommendation": "Consider separating practice help from a later independent challenge, or showing coached/independent badges without presenting help-seeking as poorer learning."
+    },
+    {
+      "id": "SA-F06",
+      "severity": "medium",
+      "observation": "Baseline Check, Plan flights and Set wave controls lacked stable focus identifiers although render() replaced the entire UI. Keyboard focus could be lost after checking or changing a board wave. A large board also places many cells in the normal tab sequence.",
+      "source": [
+        "baseline dist/game.js:235-258",
+        "dist/game.js boardScene/render"
+      ],
+      "verified_or_hypothesis": "missing focus identifiers verified from source; root handles browser confirmation",
+      "reproduction": "Compare action controls against render() focus-restoration logic. Pack tiles and aircraft cells already had data-focus; primary check controls did not.",
+      "recommendation": "Root is adding stable focus restoration. Separately consider arrow-key grid navigation for the checkerboard.",
+      "status": "Fixed for primary check/action controls. Browser verification passed. Arrow-key grid navigation remains a recommendation."
+    },
+    {
+      "id": "SA-F07",
+      "severity": "medium",
+      "observation": "Mean uses exactly four integer-balance stacks; median uses five distinct values; scatter/report claims use a small fixed option set. These make a clear introduction but do not yet exercise even-sized medians, fractional means, sample-size uncertainty or a learner-authored explanation.",
+      "source": [
+        "dist/pack-analysis.js:72-85",
+        "dist/pack-analysis.js:113-137",
+        "dist/pack-analysis.js:304-337"
+      ],
+      "verified_or_hypothesis": "verified content scope; transfer difficulty is a hypothesis",
+      "reproduction": "Inspected scenario families and final checks. No even-sized median or inferential statistics case is generated in the new game path.",
+      "recommendation": "Extend later levels only after validating these foundations; keep the initial game uncluttered."
+    },
+    {
+      "id": "SA-F08",
+      "severity": "medium",
+      "observation": "All four worlds reuse the same underlying models with different vocabulary, vehicles and progress tracks. Different-world success alone would not establish transfer to independent industry constraints.",
+      "source": [
+        "dist/game-worlds.js",
+        "dist/game.js selectEngine/switchTrack",
+        "dist/game-rules.js",
+        "dist/pack-analysis.js"
+      ],
+      "verified_or_hypothesis": "verified implementation scope; transfer measurement is a design inference",
+      "reproduction": "The same Flight engine and Analysis pack are used for every world; world values are passed to rendering.",
+      "recommendation": "Retain playful worlds. Later use genuinely different constraint sets and unseen tasks when testing transfer, rather than counting a skin change as a new occupational test."
+    },
+    {
+      "id": "SA-F09",
+      "severity": "medium",
+      "observation": "Stars and current work are browser-local. The main game does not provide a trainer report/export of decisions, mistakes or work products, unlike the separate earlier practice workspace.",
+      "source": [
+        "dist/game.js persist/finish/menu",
+        "README.md Five specialties, four worlds"
+      ],
+      "verified_or_hypothesis": "verified main-game feature scope",
+      "reproduction": "Inspected persistence shape and menu actions; localStorage contains current state and best stars but no trainer-facing export action.",
+      "recommendation": "A working-group pilot needs a lightweight results sheet or separate observation form; add an optional work-product export later without interrupting play."
+    },
+    {
+      "id": "R01",
+      "severity": "high",
+      "observation": "Baseline Documentation level 10 reused the same answer focus keys across auto-advanced tabs. After choosing the correct first asset, focus could land on the correct answer in every following tab, allowing repeated Enter to supply the remaining answers.",
+      "source": [
+        "dist/pack-documentation.js: act(pack), render(level 10), btn helper",
+        "dist/game.js: render focus restoration"
+      ],
+      "verified_or_hypothesis": "Verified source/model defect; browser reproduction is owned by root.",
+      "reproduction": "For seeds 1–20, every tab contained data-focus=\"doc-pack-a\" and id a was the correct choice; repeating that focus identity solved all five links. Baseline probe: records-probes.cjs.",
+      "recommendation": "Give options slot-specific focus keys and move focus to the next tab control after choosing an answer.",
+      "status": "Fixed in pack and shared shell. Browser verified focus moves to the next stage tab, not its correct answer."
+    },
+    {
+      "id": "R02",
+      "severity": "medium",
+      "observation": "Baseline Integrity level 10 recorded review of an already-correct row internally but rendered an identical board before and after; the player had no persistent per-row sign that review was complete.",
+      "source": [
+        "dist/pack-integrity.js: act(copy), render(records)"
+      ],
+      "verified_or_hypothesis": "Verified source/render defect.",
+      "reproduction": "Copy/verify row d in level 10 for seeds1–20. reviewed gains d but the complete rendered board HTML was identical.",
+      "recommendation": "Persist a Reviewed label/checkmark and accessible pressed state for reviewed rows.",
+      "status": "Fixed. Browser verified visible/accessibility Reviewed state; model probes cover already-correct rows."
+    },
+    {
+      "id": "R03",
+      "severity": "medium",
+      "observation": "Integrity levels 1,2,8 and10 correct every field via one Match source action. The final batch still supplies the authoritative source beside each record and one-click correction; it does not require selecting which fields or source facts support a correction.",
+      "source": [
+        "dist/pack-integrity.js: make levels1,2,8,10; act(copy); render(records)"
+      ],
+      "verified_or_hypothesis": "Verified interaction scope; possible effect on independent proficiency is a hypothesis.",
+      "reproduction": "The copy reducer replaces the whole record with sources[eventId], including identity,value and units.",
+      "recommendation": "Keep this as initial scaffolding; add a later challenge with plausible source candidates, field-level corrections and a choice of keep, correct, hold, or investigate.",
+      "status": "Backlog; not changed during focused fixes."
+    },
+    {
+      "id": "R04",
+      "severity": "medium",
+      "observation": "The Documentation final pack is five cued choices. Its source card tells the required asset, approved revision, kit and acceptable timing; it does not make the player discover requirements from an unfamiliar work product or defend a decision.",
+      "source": [
+        "dist/pack-documentation.js: make level10; render level10"
+      ],
+      "verified_or_hypothesis": "Verified curriculum scope; transfer concern is a hypothesis.",
+      "reproduction": "Follow the five labeled tabs; each shows three candidates and explicit target details.",
+      "recommendation": "Follow the game foundation with a short unfamiliar case that combines applicability, due forecasting, register reconciliation and closeout evidence without identifying every target first.",
+      "status": "Backlog."
+    },
+    {
+      "id": "R05",
+      "severity": "low",
+      "observation": "Documentation forecasting uses exact constant daily usage and integer days. It teaches the earlier-of-two-limits rule, but not changed demand, fractional threshold crossing or forecasting uncertainty.",
+      "source": [
+        "dist/pack-documentation.js: make levels4–5; check levels4–5"
+      ],
+      "verified_or_hypothesis": "Verified model simplification; difficulty or real-world transfer effect needs users.",
+      "reproduction": "Level 5 sets limit=now+daily*usageDays and compares that exact day with a calendar day.",
+      "recommendation": "Preserve the simple first exercise and add a later changed-use-rate case or one that asks whether more evidence is needed.",
+      "status": "Intentional foundation scope; possible expansion."
+    },
+    {
+      "id": "R06",
+      "severity": "medium",
+      "observation": "Documentation register repair stores trail strings such as Linked R-123 or Archived R-OLD; replacing a row does not retain its old interval or old row contents in that trail. Integrity later teaches a fuller before-and-after trail.",
+      "source": [
+        "dist/pack-documentation.js: act(place/archive), render level9",
+        "dist/pack-integrity.js: act(copy), check requireAudit"
+      ],
+      "verified_or_hypothesis": "Verified difference in modeled traceability; instructional inconsistency risk is a hypothesis.",
+      "reproduction": "Replace the incorrect interval in Documentation9; p.trail records the linked requirement ID but not the previous interval.",
+      "recommendation": "In an advanced register exercise, retain before/after/source/reason for replacements and archive actions, consistent with Integrity.",
+      "status": "Backlog."
+    },
+    {
+      "id": "R07",
+      "severity": "low",
+      "observation": "A hint limits a case to one star, while failed checks followed by correction can still earn two. The game therefore rewards unsupported trial-and-error more highly than intentionally asking for help.",
+      "source": [
+        "dist/game.js: finish; showHelp; game-rules dialog"
+      ],
+      "verified_or_hypothesis": "Verified scoring rule; whether it discourages help is a simulated-user hypothesis.",
+      "reproduction": "finish chooses assisted?0:hints?1:mistakes?2:3.",
+      "recommendation": "Keep assisted and independent attempts distinguishable, but consider separate practice rewards and independent-check badges so learners are not discouraged from opening a hint.",
+      "status": "Backlog; no change to established scoring during this review."
+    },
+    {
+      "id": "R08",
+      "severity": "low",
+      "observation": "Worlds change context labels, icons, vehicles and seed/progress state; the core Documentation and Integrity task structures stay the same.",
+      "source": [
+        "dist/game-worlds.js: worlds/text",
+        "dist/pack-documentation.js: render ui.world",
+        "dist/pack-integrity.js: render ui.world"
+      ],
+      "verified_or_hypothesis": "Verified architecture; user preferences and transfer to civilian occupations remain hypotheses.",
+      "reproduction": "Render any case with each world object; requirements and validators remain the same.",
+      "recommendation": "Describe these as contextual worlds around shared fundamentals. Later add genuinely different constraints when industry-specific transfer is the goal.",
+      "status": "Current design, not a defect."
+    },
+    {
+      "id": "R09",
+      "severity": "medium",
+      "observation": "The game shell primarily preserves current work and best stars. It does not present an assessor with a comparable portfolio showing reasoning, unseen-case performance and an explanation rubric across the two record specialties.",
+      "source": [
+        "dist/game.js: persist, finish, winMarkup",
+        "README.md: game scope versus preserved courses workspace"
+      ],
+      "verified_or_hypothesis": "Verified current game scope; sufficiency for job qualification must be evaluated separately.",
+      "reproduction": "Game completion shows stars and a short reveal, then next-level/new-case/review choices.",
+      "recommendation": "Keep stars as game feedback. Add an optional later independent work-product challenge and assessor rubric if the working group wants evidence of practical proficiency.",
+      "status": "Backlog; not a claim of measured training effectiveness."
+    },
+    {
+      "id": "R10",
+      "severity": "low",
+      "observation": "Several compact-screen metadata labels are rendered at 9–10px; record comparison and register tasks rely on these details.",
+      "source": [
+        "dist/skill-games.css: max-width680 and max-width480 rules"
+      ],
+      "verified_or_hypothesis": "CSS sizes verified; readability concern is a hypothesis requiring real device/user testing.",
+      "reproduction": "Inspect sg-card-meta, sg-label and sg-note in the small-screen rules.",
+      "recommendation": "Check on a physical phone with typical users; prioritize asset IDs, intervals, units and source status over decorative labels, and support enlarged text.",
+      "status": "Root owns browser/responsive verification."
+    },
+    {
+      "id": "R11",
+      "severity": "positive",
+      "observation": "Documentation validators correctly enforce both applicability conditions, current approved instructions, prerequisite order, matching evidence and the absence of duplicate/extra requirements. Alternative register row order and either parts/slot prerequisite order are accepted.",
+      "source": [
+        "dist/pack-documentation.js: check, assessTrail",
+        "tests/pack-documentation.cjs"
+      ],
+      "verified_or_hypothesis": "Verified by source and passing model/event tests.",
+      "reproduction": "Run tests/pack-documentation.cjs; checks include extra tagged assets, draft revisions, reordered valid prerequisites, duplicate requirements and alternative register order.",
+      "recommendation": "Retain these checks and acceptance of valid alternatives.",
+      "status": "Strength retained."
+    },
+    {
+      "id": "R12",
+      "severity": "low",
+      "observation": "Current-source exercises show one approved source, one superseded source and one draft. They do not yet include two approved versions with different effective dates or conflicting authoritative records.",
+      "source": [
+        "dist/pack-documentation.js: make level3",
+        "dist/pack-integrity.js: make level7"
+      ],
+      "verified_or_hypothesis": "Verified scenario pattern; risk of learning only the Approved label is a hypothesis.",
+      "reproduction": "Generate any seed; source status categories and correct status remain fixed.",
+      "recommendation": "Add a later source-selection case with more than one approved-looking record, an effective-date boundary or an unresolved conflict requiring investigation.",
+      "status": "Backlog."
+    },
+    {
+      "id": "R13",
+      "severity": "low",
+      "observation": "Applicability and period-selection meters reveal the number of required selections, which is helpful scaffolding but reduces the need to decide whether the search is complete.",
+      "source": [
+        "dist/pack-documentation.js: meter level2",
+        "dist/pack-integrity.js: meter window"
+      ],
+      "verified_or_hypothesis": "Verified UI behavior; influence on learning is a hypothesis.",
+      "reproduction": "Untouched tasks show tagged/records selected against the exact number expected.",
+      "recommendation": "Keep counts in introductory play; remove the answer-count cue in a later independent challenge while retaining an explicit Check action.",
+      "status": "Possible advanced-mode change."
+    },
+    {
+      "id": "R14",
+      "severity": "positive",
+      "observation": "Documentation will not close a job with only a plan, a wrong-asset record or a failed check; editing linked evidence reopens the closeout.",
+      "source": [
+        "dist/pack-documentation.js: make/check/act level8",
+        "tests/pack-documentation.cjs: closeout checks"
+      ],
+      "verified_or_hypothesis": "Verified by model tests.",
+      "reproduction": "Attempt stamp with incomplete evidence, or remove an evidence link after a valid closeout.",
+      "recommendation": "Retain the distinction between scheduled and verified-completed work.",
+      "status": "Strength retained."
+    },
+    {
+      "id": "R15",
+      "severity": "positive",
+      "observation": "Integrity preserves unknown-versus-zero, requires matching units, distinguishes a duplicate event from a similar event, retains zero-result records in period totals, rejects overbroad zero filtering and checks correction history.",
+      "source": [
+        "dist/pack-integrity.js: check levels2–10",
+        "tests/pack-integrity.cjs"
+      ],
+      "verified_or_hypothesis": "Verified by source and model/event tests.",
+      "reproduction": "Run tests/pack-integrity.cjs; the negative cases cover each distinction and both valid duplicate-removal alternatives.",
+      "recommendation": "Retain these fundamentals and make them recur in later mixed challenges.",
+      "status": "Strength retained."
+    },
+    {
+      "id": "DB01",
+      "severity": "strength",
+      "observation": "The ten-level path introduces access keys, scope, expiry, offboarding, unique identity, dependencies, controlled change, recovery, then a combined service challenge. Seeded action tests find each level solvable and reject several important invalid states.",
+      "source": [
+        "/workspace/sites/force-multiplier-v22/dist/pack-database.js:levels/make/check/act",
+        "/workspace/sites/force-multiplier-v22/tests/pack-database.cjs"
+      ],
+      "verified_or_hypothesis": "verified software behavior; learning benefit remains a hypothesis",
+      "reproduction": "Run node tests/pack-database.cjs. Original suite passed 2053 assertions; after focused fixes the suite passed 4301.",
+      "recommendation": "Keep the one-action opening and progressively combined work. Do not add a prerequisite lecture."
+    },
+    {
+      "id": "DB02",
+      "severity": "P1 assessment display",
+      "observation": "Before this review, completing a shown example wrote best[level]=0 yet displayed the same completed checkmark and incremented the same specialty completion count as independent work. This did not award stars, but the completion display blurred the distinction.",
+      "source": [
+        "/workspace/sites/force-multiplier-v22/dist/game.js:finish/track/skillsMenu/levelMap"
+      ],
+      "verified_or_hypothesis": "verified in real shell event harness",
+      "reproduction": "Database level 1 → Show a working example → Open access → Next level. Persisted best={1:0}; level 1 got class=\"level-dot done\" and check icon; Object.keys(best).length=1.",
+      "recommendation": "Implemented by root: demonstrations remain recorded but have a distinct demo marker and do not contribute to completed-level counts.",
+      "status": "fixed by root in shared shell; root reports225 shell assertions passing"
+    },
+    {
+      "id": "DB03",
+      "severity": "P1 assessment variation",
+      "observation": "The published DBM10 generator changed names and button order but repeated the same two access requests, same excess/missing key positions and same broken connection. One hundred seeds produced one substantive constraint pattern.",
+      "source": [
+        "/workspace/sites/force-multiplier-v22/dist/pack-database.js:make level10",
+        "/workspace/sites/force-multiplier-v22/tests/pack-database.cjs:capstone variation/revision checks"
+      ],
+      "verified_or_hypothesis": "verified generator limitation; fixed in local source",
+      "reproduction": "Normalize names and key-bank order; compare actors task/scope/required keys, initial grants and broken dependency across seeds1–100. Before:1 pattern. After:51 patterns, with36 connection,34 database and30 report failures.",
+      "recommendation": "Implemented varied scope/task pairs, actor access correction positions and failed dependencies. Existing saved DBM10 work keeps revision 1; new cases use revision 2.",
+      "status": "fixed; revision 1 exactly matches published generator for 100 seeds"
+    },
+    {
+      "id": "DB04",
+      "severity": "P2 answer shortcut",
+      "observation": "The unique-identity exercise originally labeled the target account Approved and the other No request, so a player could find the answer without matching the unique identifier on the source request.",
+      "source": [
+        "/workspace/sites/force-multiplier-v22/dist/pack-database.js:make level6/render permissions",
+        "/workspace/sites/force-multiplier-v22/tests/pack-database.cjs:identity regression"
+      ],
+      "verified_or_hypothesis": "verified source/render shortcut; fixed in local source",
+      "reproduction": "Inspect both account task chips in level 6. Published labels disclosed the requested account. New labels both say View reports; approval and unique ID remain on the separate source request.",
+      "recommendation": "Implemented neutral account task labels. Preserve the duplicate display name and require the identifier to distinguish accounts.",
+      "status": "fixed; focused regression passes"
+    },
+    {
+      "id": "DB05",
+      "severity": "P2 future depth",
+      "observation": "Recovery verifies only an expected record count after restore/replay. The model has no record contents, reconciliation samples, duplicates or last-transaction evidence to inspect.",
+      "source": [
+        "/workspace/sites/force-multiplier-v22/dist/pack-database.js:make level9/check recovery/act verify/render recovery"
+      ],
+      "verified_or_hypothesis": "verified model scope; risk of transfer overconfidence is a hypothesis",
+      "reproduction": "Level 9 state contains restored,replayed,verified,opened,count. Verify succeeds when count equals snapshot+pending and stage flags are true.",
+      "recommendation": "Keep count verification as the introductory task. Add a later recovery case that compares sample contents or transaction evidence, ideally crossing into Data Integrity."
+    },
+    {
+      "id": "DB06",
+      "severity": "P2 future depth",
+      "observation": "Troubleshooting displays the single failed component directly and repairs it with one action. This practices recognizing a dependency and leaving healthy components alone, but does not require diagnosis from incomplete symptoms.",
+      "source": [
+        "/workspace/sites/force-multiplier-v22/dist/pack-database.js:make level7/render pipeline/act repair"
+      ],
+      "verified_or_hypothesis": "verified model scope; experienced-user reaction is simulated",
+      "reproduction": "Every case has one false node, explicitly labeled with its failure and Tap to repair; healthy-node clicks leave state unchanged.",
+      "recommendation": "Retain the simple opening. Later introduce an inspect step, downstream symptoms, and a choice of corrective action rather than only clicking the displayed failure."
+    },
+    {
+      "id": "DB07",
+      "severity": "P1 evaluation boundary",
+      "observation": "Main-game stars measure no failed checks, corrected work, hint use and example use. The shell does not collect a rationale, briefing, independent assessor rating, time-to-proficiency record or cross-specialty work product. It therefore does not establish the full Discover→Evaluate→Decide→Act→Communicate→Defend objective.",
+      "source": [
+        "/workspace/sites/force-multiplier-v22/dist/game.js:finish/showRules/persist",
+        "/workspace/sites/force-multiplier-v22/README.md:Five specialties/four worlds and Deliberate scope"
+      ],
+      "verified_or_hypothesis": "verified main-game evidence scope; proposed evaluation design is a recommendation",
+      "reproduction": "Inspect persisted current state and best stars, then finish a game level. No communication/defense artifact or assessor rubric is produced by the game path. Earlier practice workspace is separate.",
+      "recommendation": "Use the game as fundamentals practice. Follow with an unfamiliar combined work task, a brief explanation of choices and independent assessor review; compare with baseline and delayed transfer before claiming four-hour proficiency or tenfold efficiency."
+    },
+    {
+      "id": "DB08",
+      "severity": "P2 hypothesis to test",
+      "observation": "Using a hint reduces the same-case result to one star. A learner focused on collecting stars might avoid asking for help, even during initial learning. No actual learner behavior was observed.",
+      "source": [
+        "/workspace/sites/force-multiplier-v22/dist/game.js:showHelp/finish/showRules"
+      ],
+      "verified_or_hypothesis": "scoring rule verified; behavioral effect explicitly hypothetical",
+      "reproduction": "Hint → solve correctly gives one star. A new case resets assistance. Restart and Undo retain it.",
+      "recommendation": "During a real pilot, observe help-seeking and frustration. Consider separate practice encouragement and independent-challenge badges if star pressure discourages learning."
+    },
+    {
+      "id": "DB09",
+      "severity": "P2 pilot readiness",
+      "observation": "The main game stores its current case and best stars locally by world and specialty, but it does not expose a portable record of learner decisions for a working-group evaluator. Earlier workspace exports do not represent the new game path.",
+      "source": [
+        "/workspace/sites/force-multiplier-v22/dist/game.js:persist/menu",
+        "/workspace/sites/force-multiplier-v22/README.md:progress storage"
+      ],
+      "verified_or_hypothesis": "verified implementation boundary; workflow impact is simulated",
+      "reproduction": "Inspect main game menu and progress object: world/skill/current/best exist; no learner-evidence export action or cross-device account workflow exists.",
+      "recommendation": "For a pilot, use a short observer sheet or later add an optional local progress/evidence export. Do not interpret browser-local stars as an authenticated qualification record."
+    },
+    {
+      "id": "UI01",
+      "severity": "medium",
+      "observation": "A failed keyboard check removed the focused button and left focus on the page body.",
+      "source": [
+        "dist/game.js:render/skillScene/boardScene",
+        "tests/worlds-shell.cjs"
+      ],
+      "verified_or_hypothesis": "Verified in the published browser before editing, then verified repaired in local preview.",
+      "reproduction": "Press Enter on Check it with incomplete work. Baseline activeElement was BODY; revised activeElement remains the skill-check BUTTON.",
+      "recommendation": "Stable focus identifiers now cover primary check and action controls.",
+      "status": "Fixed and browser verified. Large-grid arrow navigation remains a separate improvement."
+    }
+  ],
+  "implemented_fixes": [
+    [
+      "Vary the real task",
+      "Analysis pooling and report cases now use unequal groups with totals beyond 100. New cases require finding the denominator."
+    ],
+    [
+      "Let a neutral pattern be correct",
+      "Trend cases can be level. Scatter cases can support No linear trend without claiming that no relationship exists."
+    ],
+    [
+      "Remove a keyboard answer shortcut",
+      "Documentation moves focus to the next stage tab. It no longer focuses the next correct answer automatically."
+    ],
+    [
+      "Keep keyboard players in place",
+      "Failed checks retain focus on the Check control instead of returning the player to the top-level page."
+    ],
+    [
+      "Show which records were reviewed",
+      "Data Integrity keeps a Reviewed marker even when the original record was already correct."
+    ],
+    [
+      "Distinguish an example from completion",
+      "Viewed demonstrations get their own marker and no longer increase the completed-level count."
+    ],
+    [
+      "Make identity matching matter",
+      "The account cards no longer disclose which same-name account is approved. The player must match the unique identifier."
+    ],
+    [
+      "Vary the combined service challenge",
+      "Database Management changes access tasks, scopes, excess/missing keys and failed dependencies across new cases."
+    ]
+  ],
+  "checks": [
+    {
+      "label": "Scheduling",
+      "assertions": 32052
+    },
+    {
+      "label": "Analysis",
+      "assertions": 6670
+    },
+    {
+      "label": "Documentation",
+      "assertions": 6040
+    },
+    {
+      "label": "Database Management",
+      "assertions": 4301
+    },
+    {
+      "label": "Data Integrity",
+      "assertions": 2021
+    },
+    {
+      "label": "Navigation and saved cases",
+      "assertions": 225
+    }
+  ],
+  "component_reviews": [
+    {
+      "title": "Scheduling and Analysis: 40 simulated MXMGR perspectives",
+      "disclaimer": "AI-authored persona review, not a survey or human playtest. No real participants were recruited. Persona reactions are predictions. Only separately identified source inspections and code/model probes were executed.",
+      "baseline_commit": "670247748710f2bf06f7749bc7a5d6aa34310ed6",
+      "coverage": {
+        "Scheduling": {
+          "levels": 13,
+          "persona_count": 20
+        },
+        "Analysis": {
+          "levels": 12,
+          "persona_count": 20
+        },
+        "design": "Five experience groups × four play contexts per specialty; each context is paired with one world. This is deliberate review coverage, not a demographic estimate."
+      },
+      "actual_checks": [
+        {
+          "command": "node tests/game-rules.cjs",
+          "result": "PASS:13levels,1300seededmodels,32052assertions"
+        },
+        {
+          "command": "node tests/pack-analysis.cjs (baseline)",
+          "result": "PASS:12levels×20seeds,4996assertions and real reducer paths"
+        },
+        {
+          "command": "Generator probes across100seeds at levels5,9,11,12",
+          "result": "Confirmed totals100-only and up/down-only baseline restrictions"
+        },
+        {
+          "command": "node tests/pack-analysis.cjs (patched)",
+          "result": "PASS:6670assertions, including new varied totals and neutral cases"
+        },
+        {
+          "command": "Deep equality against pre-review generator, all12levels×100seeds",
+          "result": "PASS:1200legacy cases unchanged under revision1 after removing additive revision/expectedClaim fields"
+        }
+      ],
+      "implemented_changes": [
+        "Analysis revision2 varies unequal group totals for pooled/report challenges.",
+        "Analysis revision2 generates level time series and weak-linear-pattern scatter cases with a cautious No linear trend claim.",
+        "Analysis revision1 remains available so the shell can restore unfinished baseline cases exactly.",
+        "Regression tests preserve legacy inputs and prove newly offered neutral answers can actually be correct."
+      ],
+      "findings": [
+        {
+          "id": "SA-P01",
+          "severity": "strength",
+          "observation": "Scheduling introduces counts, priority, unavailability, person-specific assignments, work occupancy, curing, compatible work, weekends, mixed commitments and replanning in successive levels. Core validators accept alternative feasible aircraft selections and work placements.",
+          "source": [
+            "dist/game-rules.js:3-16",
+            "dist/game-rules.js:28-136",
+            "tests/game-rules.cjs"
+          ],
+          "verified_or_hypothesis": "verified source and model behavior",
+          "reproduction": "Ran node tests/game-rules.cjs: 13 levels, 1,300 seeded models, 32,052 assertions. Includes alternative work placements and reverse aircraft selections.",
+          "recommendation": "Preserve constraint-based validation and the short initial interaction."
+        },
+        {
+          "id": "SA-P02",
+          "severity": "strength",
+          "observation": "The Analysis path teaches by classifying jobs, assembling rates, moving conserved tokens, sorting observations, linking missing values to evidence and manipulating chart choices. Inputs and examples pass through immutable reducers.",
+          "source": [
+            "dist/pack-analysis.js:33-139",
+            "dist/pack-analysis.js:274-350",
+            "tests/pack-analysis.cjs"
+          ],
+          "verified_or_hypothesis": "verified source and reducer tests",
+          "reproduction": "Baseline suite passed 4,996 assertions across 12 levels × 20 seeds with actual reducer paths, invalid-work checks and provenance validation.",
+          "recommendation": "Keep direct actions and short post-success explanations; use these as the entry point."
+        },
+        {
+          "id": "SA-F01",
+          "severity": "medium",
+          "observation": "Baseline Analysis levels 5 and 12 always used a pooled denominator of 100. A player could memorize that denominator and avoid transferring the pooling operation to different group totals.",
+          "source": [
+            "dist/pack-analysis.js:63-71",
+            "dist/pack-analysis.js:126-137",
+            "scheduling-analysis-baseline.json"
+          ],
+          "verified_or_hypothesis": "verified generator restriction; learning consequence is a hypothesis",
+          "reproduction": "Generated 100 seeds per level before editing: unique eligible totals were [100] for both levels.",
+          "recommendation": "Vary unequal group sizes and totals while preserving integer counts. Implemented in revision2; revision1 retains saved cases.",
+          "status": "fixed in assigned patch"
+        },
+        {
+          "id": "SA-F02",
+          "severity": "medium",
+          "observation": "Baseline trend and scatter levels displayed a Level response but only generated up/down answers. Repeated play could learn that the neutral response was never valid.",
+          "source": [
+            "dist/pack-analysis.js:95-125",
+            "scheduling-analysis-baseline.json"
+          ],
+          "verified_or_hypothesis": "verified generator restriction; guessing behavior is a hypothesis",
+          "reproduction": "Generated 100 baseline seeds per level: directions were only up/down.",
+          "recommendation": "Implemented level time series and scattered weak-linear-pattern cases. Neutral scatter uses a bounded No linear trend claim and does not claim independence.",
+          "status": "fixed in assigned patch"
+        },
+        {
+          "id": "SA-F03",
+          "severity": "medium",
+          "observation": "Scheduling level12 requires 110 individual flight selections, 20 wave confirmations, four work placements and the Plan flights transition: at least135 core actions from a blank board. Level6 needs9 core actions and level7 needs48. Mechanical repetition may begin to dominate later practice.",
+          "source": [
+            "dist/game-rules.js:175-216",
+            "dist/game.js:209-239",
+            "scheduling-analysis-baseline.json"
+          ],
+          "verified_or_hypothesis": "action counts verified from generated scenario; fatigue is a usability hypothesis",
+          "reproduction": "Counted required assignments, confirmations, work placements and transition from seeded scenarios; excludes navigation, retries and extra selections.",
+          "recommendation": "After a learner demonstrates a day manually, consider a copy-day action that still exposes and validates changed constraints. Validate with observed real learners before adding automation."
+        },
+        {
+          "id": "SA-F04",
+          "severity": "high for proficiency claims",
+          "observation": "The current Scheduling finish checks an executable two-week model, but does not require a learner to explain a tradeoff, communicate a handover, defend the plan, or solve an infeasible demand case. Analysis level12 checks report scope and pooled rate, not the entire statistical path.",
+          "source": [
+            "dist/game-rules.js:110-136",
+            "dist/game-rules.js:194-216",
+            "dist/pack-analysis.js:240-245",
+            "dist/game.js:330-337"
+          ],
+          "verified_or_hypothesis": "verified scope of automated checks; effectiveness cannot be inferred",
+          "reproduction": "Inspected final-level generators, checkers, finish and saved-state fields. No required rationale, peer review, or communication work product is present in the game paths.",
+          "recommendation": "Use the game as fundamentals practice. Add a later unfamiliar combined mission with a small decision artifact and human review before treating stars as job-proficiency evidence."
+        },
+        {
+          "id": "SA-F05",
+          "severity": "medium",
+          "observation": "A single Hint lowers the maximum score for the current case to one star, while any number of failed checks can still earn two. This makes a deliberate request for instruction look worse than repeated unassisted guessing.",
+          "source": [
+            "dist/game.js:332",
+            "dist/game.js:420-427"
+          ],
+          "verified_or_hypothesis": "scoring rule verified; learner avoidance is a hypothesis",
+          "reproduction": "Read finish() precedence and showHelp(); hints are recorded before the dialog opens.",
+          "recommendation": "Consider separating practice help from a later independent challenge, or showing coached/independent badges without presenting help-seeking as poorer learning."
+        },
+        {
+          "id": "SA-F06",
+          "severity": "medium",
+          "observation": "Baseline Check, Plan flights and Set wave controls lacked stable focus identifiers although render() replaced the entire UI. Keyboard focus could be lost after checking or changing a board wave. A large board also places many cells in the normal tab sequence.",
+          "source": [
+            "baseline dist/game.js:235-258",
+            "dist/game.js boardScene/render"
+          ],
+          "verified_or_hypothesis": "missing focus identifiers verified from source; root handles browser confirmation",
+          "reproduction": "Compare action controls against render() focus-restoration logic. Pack tiles and aircraft cells already had data-focus; primary check controls did not.",
+          "recommendation": "Root is adding stable focus restoration. Separately consider arrow-key grid navigation for the checkerboard.",
+          "status": "Fixed for primary check/action controls. Browser verification passed. Arrow-key grid navigation remains a recommendation."
+        },
+        {
+          "id": "SA-F07",
+          "severity": "medium",
+          "observation": "Mean uses exactly four integer-balance stacks; median uses five distinct values; scatter/report claims use a small fixed option set. These make a clear introduction but do not yet exercise even-sized medians, fractional means, sample-size uncertainty or a learner-authored explanation.",
+          "source": [
+            "dist/pack-analysis.js:72-85",
+            "dist/pack-analysis.js:113-137",
+            "dist/pack-analysis.js:304-337"
+          ],
+          "verified_or_hypothesis": "verified content scope; transfer difficulty is a hypothesis",
+          "reproduction": "Inspected scenario families and final checks. No even-sized median or inferential statistics case is generated in the new game path.",
+          "recommendation": "Extend later levels only after validating these foundations; keep the initial game uncluttered."
+        },
+        {
+          "id": "SA-F08",
+          "severity": "medium",
+          "observation": "All four worlds reuse the same underlying models with different vocabulary, vehicles and progress tracks. Different-world success alone would not establish transfer to independent industry constraints.",
+          "source": [
+            "dist/game-worlds.js",
+            "dist/game.js selectEngine/switchTrack",
+            "dist/game-rules.js",
+            "dist/pack-analysis.js"
+          ],
+          "verified_or_hypothesis": "verified implementation scope; transfer measurement is a design inference",
+          "reproduction": "The same Flight engine and Analysis pack are used for every world; world values are passed to rendering.",
+          "recommendation": "Retain playful worlds. Later use genuinely different constraint sets and unseen tasks when testing transfer, rather than counting a skin change as a new occupational test."
+        },
+        {
+          "id": "SA-F09",
+          "severity": "medium",
+          "observation": "Stars and current work are browser-local. The main game does not provide a trainer report/export of decisions, mistakes or work products, unlike the separate earlier practice workspace.",
+          "source": [
+            "dist/game.js persist/finish/menu",
+            "README.md Five specialties, four worlds"
+          ],
+          "verified_or_hypothesis": "verified main-game feature scope",
+          "reproduction": "Inspected persistence shape and menu actions; localStorage contains current state and best stars but no trainer-facing export action.",
+          "recommendation": "A working-group pilot needs a lightweight results sheet or separate observation form; add an optional work-product export later without interrupting play."
+        }
+      ],
+      "personas": [
+        {
+          "id": "S01",
+          "skill": "Scheduling",
+          "experience": "newcomer",
+          "context": "desktop visual",
+          "world": "Airline",
+          "value": "A newcomer can begin by selecting aircraft without reading a maintenance manual.",
+          "concern": "The first request for a hint earns fewer stars than repeated failed checks, which may discourage asking how the game works.",
+          "priority": "medium",
+          "evidence": [
+            "SA-F05"
+          ]
+        },
+        {
+          "id": "S02",
+          "skill": "Scheduling",
+          "experience": "newcomer",
+          "context": "small phone",
+          "world": "Bus Company",
+          "value": "The Bus Company setting makes the relationship between vehicles and repeated trips approachable.",
+          "concern": "Later boards could feel like a large amount of scrolling and repeated tapping on a phone; confirm this with actual phone users.",
+          "priority": "medium",
+          "evidence": [
+            "SA-F03"
+          ]
+        },
+        {
+          "id": "S03",
+          "skill": "Scheduling",
+          "experience": "newcomer",
+          "context": "keyboard",
+          "world": "Cat Hugs",
+          "value": "Named buttons and aircraft labels support keyboard access to the opening exercises.",
+          "concern": "Primary actions could lose keyboard focus after rerendering in the baseline build.",
+          "priority": "medium",
+          "evidence": [
+            "SA-F06"
+          ]
+        },
+        {
+          "id": "S04",
+          "skill": "Scheduling",
+          "experience": "newcomer",
+          "context": "fast/skipping",
+          "world": "Secret Squirrel",
+          "value": "The level map lets a curious newcomer see the destination before committing to a sequence.",
+          "concern": "Skipping directly to a checkerboard may bypass the cues that explain curing and work placement.",
+          "priority": "medium",
+          "evidence": [
+            "SA-P01",
+            "SA-F04"
+          ]
+        },
+        {
+          "id": "S05",
+          "skill": "Scheduling",
+          "experience": "early practitioner",
+          "context": "desktop visual",
+          "world": "Airline",
+          "value": "The shared-cure exercise makes a scheduling efficiency visible as fewer grounded days.",
+          "concern": "A learner should be able to explain why the shared cure is valid in this fictional model before transferring the shortcut to real work.",
+          "priority": "medium",
+          "evidence": [
+            "SA-F04",
+            "SA-F08"
+          ]
+        },
+        {
+          "id": "S06",
+          "skill": "Scheduling",
+          "experience": "early practitioner",
+          "context": "small phone",
+          "world": "Bus Company",
+          "value": "Small daily missions give a practical foothold before the whole checkerboard appears.",
+          "concern": "The jump from9 core actions in level6 to48 in level7 may add input effort faster than it adds new concepts.",
+          "priority": "medium",
+          "evidence": [
+            "SA-F03"
+          ]
+        },
+        {
+          "id": "S07",
+          "skill": "Scheduling",
+          "experience": "early practitioner",
+          "context": "keyboard",
+          "world": "Cat Hugs",
+          "value": "Undo and source-specific error messages make incorrect assignments recoverable.",
+          "concern": "A later112-cell board remains cumbersome to traverse one Tab at a time even after focus is repaired.",
+          "priority": "medium",
+          "evidence": [
+            "SA-F06"
+          ]
+        },
+        {
+          "id": "S08",
+          "skill": "Scheduling",
+          "experience": "early practitioner",
+          "context": "fast/skipping",
+          "world": "Secret Squirrel",
+          "value": "The final outage provides a reason to revise an existing plan rather than rebuild mindlessly.",
+          "concern": "New cases retain the same structural pattern, so a changed tail number is a limited test of adaptation.",
+          "priority": "medium",
+          "evidence": [
+            "SA-F08",
+            "SA-F04"
+          ]
+        },
+        {
+          "id": "S09",
+          "skill": "Scheduling",
+          "experience": "experienced technician",
+          "context": "desktop visual",
+          "world": "Airline",
+          "value": "Feasible alternatives are accepted; the game does not demand the authors one exact schedule.",
+          "concern": "The model lacks dock capacity, labor qualifications and other resource constraints needed for a later job-level assessment.",
+          "priority": "high for proficiency claims",
+          "evidence": [
+            "SA-F04"
+          ]
+        },
+        {
+          "id": "S10",
+          "skill": "Scheduling",
+          "experience": "experienced technician",
+          "context": "small phone",
+          "world": "Bus Company",
+          "value": "A compact checkerboard can make availability and commitments visible together.",
+          "concern": "The135 core actions in level12 may reward patience with tapping as well as planning skill.",
+          "priority": "medium",
+          "evidence": [
+            "SA-F03"
+          ]
+        },
+        {
+          "id": "S11",
+          "skill": "Scheduling",
+          "experience": "experienced technician",
+          "context": "keyboard",
+          "world": "Cat Hugs",
+          "value": "Cell labels identify aircraft, day and wave status rather than relying on color alone.",
+          "concern": "A keyboard scheduler needs predictable continuation at the next relevant work cell after each command.",
+          "priority": "medium",
+          "evidence": [
+            "SA-F06"
+          ]
+        },
+        {
+          "id": "S12",
+          "skill": "Scheduling",
+          "experience": "experienced technician",
+          "context": "fast/skipping",
+          "world": "Secret Squirrel",
+          "value": "Direct level access respects an experienced scheduler who already understands six-turn-four.",
+          "concern": "Every generated capstone is solvable; there is no decision about escalating impossible demand or accepting a tradeoff.",
+          "priority": "high for proficiency claims",
+          "evidence": [
+            "SA-F04"
+          ]
+        },
+        {
+          "id": "S13",
+          "skill": "Scheduling",
+          "experience": "trainer",
+          "context": "desktop visual",
+          "world": "Airline",
+          "value": "The progression isolates useful teaching points, especially active work versus elapsed curing.",
+          "concern": "The trainer cannot yet ask the game to distinguish guided practice from a separate unseen independent assessment.",
+          "priority": "medium",
+          "evidence": [
+            "SA-F05",
+            "SA-F04"
+          ]
+        },
+        {
+          "id": "S14",
+          "skill": "Scheduling",
+          "experience": "trainer",
+          "context": "small phone",
+          "world": "Bus Company",
+          "value": "Students can enter the game on a browser without a large document download.",
+          "concern": "Students on multiple devices will not automatically bring their progress or artifacts to a shared trainer view.",
+          "priority": "medium",
+          "evidence": [
+            "SA-F09"
+          ]
+        },
+        {
+          "id": "S15",
+          "skill": "Scheduling",
+          "experience": "trainer",
+          "context": "keyboard",
+          "world": "Cat Hugs",
+          "value": "Worked examples are marked as demonstrations and do not earn independent stars.",
+          "concern": "Zero demo stars are useful, but completion alone does not show whether the learner could reproduce the reasoning.",
+          "priority": "high for proficiency claims",
+          "evidence": [
+            "SA-F04"
+          ]
+        },
+        {
+          "id": "S16",
+          "skill": "Scheduling",
+          "experience": "trainer",
+          "context": "fast/skipping",
+          "world": "Secret Squirrel",
+          "value": "A trainer can move directly to a selected challenge during a discussion.",
+          "concern": "The working group needs an easy way to inspect the finished work and the reason for choices, beyond the star total.",
+          "priority": "medium",
+          "evidence": [
+            "SA-F09",
+            "SA-F04"
+          ]
+        },
+        {
+          "id": "S17",
+          "skill": "Scheduling",
+          "experience": "supervisor",
+          "context": "desktop visual",
+          "world": "Airline",
+          "value": "The final model checks both maintenance work and flying commitments.",
+          "concern": "A two-week eight-asset solution does not yet demonstrate the users larger occupational capstone.",
+          "priority": "high for proficiency claims",
+          "evidence": [
+            "SA-F04"
+          ]
+        },
+        {
+          "id": "S18",
+          "skill": "Scheduling",
+          "experience": "supervisor",
+          "context": "small phone",
+          "world": "Bus Company",
+          "value": "Airline and Bus Company make the underlying resource-allocation problem recognizable outside military vocabulary.",
+          "concern": "A whimsical world may engage some staff and distract others; preference needs real-user observation, not an invented approval percentage.",
+          "priority": "research question",
+          "evidence": [
+            "SA-F08"
+          ]
+        },
+        {
+          "id": "S19",
+          "skill": "Scheduling",
+          "experience": "supervisor",
+          "context": "keyboard",
+          "world": "Cat Hugs",
+          "value": "Explicitly bounded game rules help separate fictional practice from actual maintenance instructions.",
+          "concern": "A supervisor should interpret stars as game feedback, not as evidence of independent job qualification.",
+          "priority": "high for proficiency claims",
+          "evidence": [
+            "SA-F04",
+            "SA-F05"
+          ]
+        },
+        {
+          "id": "S20",
+          "skill": "Scheduling",
+          "experience": "supervisor",
+          "context": "fast/skipping",
+          "world": "Secret Squirrel",
+          "value": "The changed-demand level is a useful starting point for a scenario-based working-group discussion.",
+          "concern": "The app still needs a final communicate-and-defend activity to match the full performance framework.",
+          "priority": "high for proficiency claims",
+          "evidence": [
+            "SA-F04",
+            "SA-F09"
+          ]
+        },
+        {
+          "id": "A01",
+          "skill": "Analysis",
+          "experience": "newcomer",
+          "context": "desktop visual",
+          "world": "Airline",
+          "value": "Selecting completed jobs introduces the distinction between planned and finished work through an action.",
+          "concern": "The completed-job target count is visible, so this proves classification more directly than independent counting.",
+          "priority": "scope note",
+          "evidence": [
+            "SA-P02",
+            "SA-F04"
+          ]
+        },
+        {
+          "id": "A02",
+          "skill": "Analysis",
+          "experience": "newcomer",
+          "context": "small phone",
+          "world": "Bus Company",
+          "value": "The first analysis cases are short enough to enter without facing a spreadsheet full of numbers.",
+          "concern": "A newcomer may avoid Hint because of the scoring penalty even when the instruction is unfamiliar.",
+          "priority": "medium",
+          "evidence": [
+            "SA-F05"
+          ]
+        },
+        {
+          "id": "A03",
+          "skill": "Analysis",
+          "experience": "newcomer",
+          "context": "keyboard",
+          "world": "Cat Hugs",
+          "value": "Number tiles and source records are ordinary buttons with labels.",
+          "concern": "The baseline primary Check action needed stable focus after feedback.",
+          "priority": "medium",
+          "evidence": [
+            "SA-F06"
+          ]
+        },
+        {
+          "id": "A04",
+          "skill": "Analysis",
+          "experience": "newcomer",
+          "context": "fast/skipping",
+          "world": "Secret Squirrel",
+          "value": "A newcomer can try a chart challenge directly and return to counting when ready.",
+          "concern": "Jumping to pooled reports without learning denominator scope may create guessing rather than a useful challenge.",
+          "priority": "medium",
+          "evidence": [
+            "SA-F04",
+            "SA-F07"
+          ]
+        },
+        {
+          "id": "A05",
+          "skill": "Analysis",
+          "experience": "early practitioner",
+          "context": "desktop visual",
+          "world": "Airline",
+          "value": "Assembling the numerator and denominator makes the rate structure visible.",
+          "concern": "Both pooled/report denominators were always100 in the baseline. This memorization shortcut is now corrected for new cases.",
+          "priority": "resolved",
+          "evidence": [
+            "SA-F01"
+          ]
+        },
+        {
+          "id": "A06",
+          "skill": "Analysis",
+          "experience": "early practitioner",
+          "context": "small phone",
+          "world": "Bus Company",
+          "value": "Moving tokens to balance four stacks gives a concrete image of the mean.",
+          "concern": "Only whole-number means from four stacks are practiced, so fractional averages need a later bridge.",
+          "priority": "medium",
+          "evidence": [
+            "SA-F07"
+          ]
+        },
+        {
+          "id": "A07",
+          "skill": "Analysis",
+          "experience": "early practitioner",
+          "context": "keyboard",
+          "world": "Cat Hugs",
+          "value": "The missing-value case requires the matching day and unit, not only the right number.",
+          "concern": "A correct filled value must remain tied to its evidence after later edits; the reducer tests verify this behavior.",
+          "priority": "covered risk",
+          "evidence": [
+            "SA-P02"
+          ]
+        },
+        {
+          "id": "A08",
+          "skill": "Analysis",
+          "experience": "early practitioner",
+          "context": "fast/skipping",
+          "world": "Secret Squirrel",
+          "value": "The first report requires selecting the correct time window instead of including every visible row.",
+          "concern": "Fixed answer sets can demonstrate recognition without requiring the learner to construct an explanation.",
+          "priority": "medium",
+          "evidence": [
+            "SA-F04",
+            "SA-F07"
+          ]
+        },
+        {
+          "id": "A09",
+          "skill": "Analysis",
+          "experience": "experienced technician",
+          "context": "desktop visual",
+          "world": "Airline",
+          "value": "Pooling actual counts teaches why group size matters.",
+          "concern": "Unequal groups need varied totals; baseline totals of100 did not adequately vary the denominator. New cases now do.",
+          "priority": "resolved",
+          "evidence": [
+            "SA-F01"
+          ]
+        },
+        {
+          "id": "A10",
+          "skill": "Analysis",
+          "experience": "experienced technician",
+          "context": "small phone",
+          "world": "Bus Company",
+          "value": "Comparing equal means with different spreads introduces a useful operational distinction.",
+          "concern": "The spread lesson uses range alone; a later extension should distinguish range, distribution and sample size.",
+          "priority": "medium",
+          "evidence": [
+            "SA-F07"
+          ]
+        },
+        {
+          "id": "A11",
+          "skill": "Analysis",
+          "experience": "experienced technician",
+          "context": "keyboard",
+          "world": "Cat Hugs",
+          "value": "Charts include text descriptions and visible observation values.",
+          "concern": "Level was an impossible correct answer in baseline trend/scatter replay. Neutral cases are now included.",
+          "priority": "resolved",
+          "evidence": [
+            "SA-F02"
+          ]
+        },
+        {
+          "id": "A12",
+          "skill": "Analysis",
+          "experience": "experienced technician",
+          "context": "fast/skipping",
+          "world": "Secret Squirrel",
+          "value": "The game rewards a scoped statement rather than a claim guaranteed forever.",
+          "concern": "The final report does not yet combine trends, variation or unfamiliar evidence into the same decision.",
+          "priority": "high for proficiency claims",
+          "evidence": [
+            "SA-F04"
+          ]
+        },
+        {
+          "id": "A13",
+          "skill": "Analysis",
+          "experience": "trainer",
+          "context": "desktop visual",
+          "world": "Airline",
+          "value": "The stages separate counting, rates, center, missing data, trends and reporting.",
+          "concern": "The introductory sequence is promising, but a trainer still needs an unseen transfer task before claiming learning.",
+          "priority": "high for proficiency claims",
+          "evidence": [
+            "SA-F04",
+            "SA-F08"
+          ]
+        },
+        {
+          "id": "A14",
+          "skill": "Analysis",
+          "experience": "trainer",
+          "context": "small phone",
+          "world": "Bus Company",
+          "value": "The simple game can be an approachable first exposure before a larger statistics lab.",
+          "concern": "Repeated fixed-layout scenarios may teach where to click; vary the problem structure after the basics.",
+          "priority": "medium",
+          "evidence": [
+            "SA-F07",
+            "SA-F08"
+          ]
+        },
+        {
+          "id": "A15",
+          "skill": "Analysis",
+          "experience": "trainer",
+          "context": "keyboard",
+          "world": "Cat Hugs",
+          "value": "Reducers preserve prior states, and Undo supports discussing a mistaken analytical step.",
+          "concern": "Keyboard focus and concise error feedback matter when a trainer demonstrates a wrong denominator live.",
+          "priority": "medium",
+          "evidence": [
+            "SA-F06"
+          ]
+        },
+        {
+          "id": "A16",
+          "skill": "Analysis",
+          "experience": "trainer",
+          "context": "fast/skipping",
+          "world": "Secret Squirrel",
+          "value": "A trainer can select the exact concept that a learner is having trouble applying.",
+          "concern": "The neutral scatter correction must say no clear linear trend rather than claiming that no relationship exists; the patch does.",
+          "priority": "resolved",
+          "evidence": [
+            "SA-F02"
+          ]
+        },
+        {
+          "id": "A17",
+          "skill": "Analysis",
+          "experience": "supervisor",
+          "context": "desktop visual",
+          "world": "Airline",
+          "value": "A correct rate requires the right records and matching counts, not merely a plausible percentage.",
+          "concern": "Completion stars do not show that a learner can investigate a bad source, make a decision and defend it independently.",
+          "priority": "high for proficiency claims",
+          "evidence": [
+            "SA-F04",
+            "SA-F09"
+          ]
+        },
+        {
+          "id": "A18",
+          "skill": "Analysis",
+          "experience": "supervisor",
+          "context": "small phone",
+          "world": "Bus Company",
+          "value": "World vocabulary connects the same analytic structure to flights, runs, visits or missions.",
+          "concern": "Changing the world alone does not add a distinct industry data model or demonstrate occupational transfer.",
+          "priority": "medium",
+          "evidence": [
+            "SA-F08"
+          ]
+        },
+        {
+          "id": "A19",
+          "skill": "Analysis",
+          "experience": "supervisor",
+          "context": "keyboard",
+          "world": "Cat Hugs",
+          "value": "The code explicitly rejects causal conclusions drawn only from the shown scatter.",
+          "concern": "No causal choice is valid in these observational scenarios, appropriately; later learning should still demand reasoning beyond remembering that rule.",
+          "priority": "medium",
+          "evidence": [
+            "SA-F07"
+          ]
+        },
+        {
+          "id": "A20",
+          "skill": "Analysis",
+          "experience": "supervisor",
+          "context": "fast/skipping",
+          "world": "Secret Squirrel",
+          "value": "The last challenge assembles a small report from competing records and a time window.",
+          "concern": "A supervisor needs inspectable evidence of the actual report and rationale, not only a best score.",
+          "priority": "high for proficiency claims",
+          "evidence": [
+            "SA-F04",
+            "SA-F09"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Simulated MXMGR review — Documentation and Data Integrity",
+      "method": "40 constructed perspectives, not human participants. Every persona is an evaluation lens. Code and deterministic event-path tests cover all ten levels in each specialty across 20 seeds; these tests are not modeled human success rates. Source/render probes verified two concrete baseline defects. Persona reactions and transfer concerns remain hypotheses for real users.",
+      "baseline_commit": "670247748710f2bf06f7749bc7a5d6aa34310ed6",
+      "review_scope": {
+        "specialties": 2,
+        "levels_each": 10,
+        "personas": 40,
+        "experience_groups": [
+          "newcomer",
+          "early practitioner",
+          "experienced technician",
+          "trainer",
+          "supervisor"
+        ],
+        "contexts": [
+          [
+            "desktop visual",
+            "Airline"
+          ],
+          [
+            "small phone",
+            "Bus Company"
+          ],
+          [
+            "keyboard",
+            "Cat Hugs"
+          ],
+          [
+            "fast/skipping",
+            "Secret Squirrel"
+          ]
+        ]
+      },
+      "verification": {
+        "baseline_documentation_assertions": 6011,
+        "baseline_integrity_assertions": 2018,
+        "baseline_probe_seeds": 20,
+        "baseline_repeated_focus_cases": 20,
+        "baseline_invisible_review_cases": 20,
+        "post_fix_documentation_assertions": 6040,
+        "post_fix_integrity_assertions": 2021
+      },
+      "findings": [
+        {
+          "id": "R01",
+          "severity": "high",
+          "observation": "Baseline Documentation level 10 reused the same answer focus keys across auto-advanced tabs. After choosing the correct first asset, focus could land on the correct answer in every following tab, allowing repeated Enter to supply the remaining answers.",
+          "source": [
+            "dist/pack-documentation.js: act(pack), render(level 10), btn helper",
+            "dist/game.js: render focus restoration"
+          ],
+          "verified_or_hypothesis": "Verified source/model defect; browser reproduction is owned by root.",
+          "reproduction": "For seeds 1–20, every tab contained data-focus=\"doc-pack-a\" and id a was the correct choice; repeating that focus identity solved all five links. Baseline probe: records-probes.cjs.",
+          "recommendation": "Give options slot-specific focus keys and move focus to the next tab control after choosing an answer.",
+          "status": "Fixed in pack and shared shell. Browser verified focus moves to the next stage tab, not its correct answer."
+        },
+        {
+          "id": "R02",
+          "severity": "medium",
+          "observation": "Baseline Integrity level 10 recorded review of an already-correct row internally but rendered an identical board before and after; the player had no persistent per-row sign that review was complete.",
+          "source": [
+            "dist/pack-integrity.js: act(copy), render(records)"
+          ],
+          "verified_or_hypothesis": "Verified source/render defect.",
+          "reproduction": "Copy/verify row d in level10 for seeds1–20. reviewed gains d but the complete rendered board HTML was identical.",
+          "recommendation": "Persist a Reviewed label/checkmark and accessible pressed state for reviewed rows.",
+          "status": "Fixed. Browser verified visible/accessibility Reviewed state; model probes cover already-correct rows."
+        },
+        {
+          "id": "R03",
+          "severity": "medium",
+          "observation": "Integrity levels 1,2,8 and10 correct every field via one Match source action. The final batch still supplies the authoritative source beside each record and one-click correction; it does not require selecting which fields or source facts support a correction.",
+          "source": [
+            "dist/pack-integrity.js: make levels1,2,8,10; act(copy); render(records)"
+          ],
+          "verified_or_hypothesis": "Verified interaction scope; possible effect on independent proficiency is a hypothesis.",
+          "reproduction": "The copy reducer replaces the whole record with sources[eventId], including identity,value and units.",
+          "recommendation": "Keep this as initial scaffolding; add a later challenge with plausible source candidates, field-level corrections and a choice of keep, correct, hold, or investigate.",
+          "status": "Backlog; not changed during focused fixes."
+        },
+        {
+          "id": "R04",
+          "severity": "medium",
+          "observation": "The Documentation final pack is five cued choices. Its source card tells the required asset, approved revision, kit and acceptable timing; it does not make the player discover requirements from an unfamiliar work product or defend a decision.",
+          "source": [
+            "dist/pack-documentation.js: make level10; render level10"
+          ],
+          "verified_or_hypothesis": "Verified curriculum scope; transfer concern is a hypothesis.",
+          "reproduction": "Follow the five labeled tabs; each shows three candidates and explicit target details.",
+          "recommendation": "Follow the game foundation with a short unfamiliar case that combines applicability, due forecasting, register reconciliation and closeout evidence without identifying every target first.",
+          "status": "Backlog."
+        },
+        {
+          "id": "R05",
+          "severity": "low",
+          "observation": "Documentation forecasting uses exact constant daily usage and integer days. It teaches the earlier-of-two-limits rule, but not changed demand, fractional threshold crossing or forecasting uncertainty.",
+          "source": [
+            "dist/pack-documentation.js: make levels4–5; check levels4–5"
+          ],
+          "verified_or_hypothesis": "Verified model simplification; difficulty or real-world transfer effect needs users.",
+          "reproduction": "Level5 sets limit=now+daily*usageDays and compares that exact day with a calendar day.",
+          "recommendation": "Preserve the simple first exercise and add a later changed-use-rate case or one that asks whether more evidence is needed.",
+          "status": "Intentional foundation scope; possible expansion."
+        },
+        {
+          "id": "R06",
+          "severity": "medium",
+          "observation": "Documentation register repair stores trail strings such as Linked R-123 or Archived R-OLD; replacing a row does not retain its old interval or old row contents in that trail. Integrity later teaches a fuller before-and-after trail.",
+          "source": [
+            "dist/pack-documentation.js: act(place/archive), render level9",
+            "dist/pack-integrity.js: act(copy), check requireAudit"
+          ],
+          "verified_or_hypothesis": "Verified difference in modeled traceability; instructional inconsistency risk is a hypothesis.",
+          "reproduction": "Replace the incorrect interval in Documentation9; p.trail records the linked requirement ID but not the previous interval.",
+          "recommendation": "In an advanced register exercise, retain before/after/source/reason for replacements and archive actions, consistent with Integrity.",
+          "status": "Backlog."
+        },
+        {
+          "id": "R07",
+          "severity": "low",
+          "observation": "A hint limits a case to one star, while failed checks followed by correction can still earn two. The game therefore rewards unsupported trial-and-error more highly than intentionally asking for help.",
+          "source": [
+            "dist/game.js: finish; showHelp; game-rules dialog"
+          ],
+          "verified_or_hypothesis": "Verified scoring rule; whether it discourages help is a simulated-user hypothesis.",
+          "reproduction": "finish chooses assisted?0:hints?1:mistakes?2:3.",
+          "recommendation": "Keep assisted and independent attempts distinguishable, but consider separate practice rewards and independent-check badges so learners are not discouraged from opening a hint.",
+          "status": "Backlog; no change to established scoring during this review."
+        },
+        {
+          "id": "R08",
+          "severity": "low",
+          "observation": "Worlds change context labels, icons, vehicles and seed/progress state; the core Documentation and Integrity task structures stay the same.",
+          "source": [
+            "dist/game-worlds.js: worlds/text",
+            "dist/pack-documentation.js: render ui.world",
+            "dist/pack-integrity.js: render ui.world"
+          ],
+          "verified_or_hypothesis": "Verified architecture; user preferences and transfer to civilian occupations remain hypotheses.",
+          "reproduction": "Render any case with each world object; requirements and validators remain the same.",
+          "recommendation": "Describe these as contextual worlds around shared fundamentals. Later add genuinely different constraints when industry-specific transfer is the goal.",
+          "status": "Current design, not a defect."
+        },
+        {
+          "id": "R09",
+          "severity": "medium",
+          "observation": "The game shell primarily preserves current work and best stars. It does not present an assessor with a comparable portfolio showing reasoning, unseen-case performance and an explanation rubric across the two record specialties.",
+          "source": [
+            "dist/game.js: persist, finish, winMarkup",
+            "README.md: game scope versus preserved courses workspace"
+          ],
+          "verified_or_hypothesis": "Verified current game scope; sufficiency for job qualification must be evaluated separately.",
+          "reproduction": "Game completion shows stars and a short reveal, then next-level/new-case/review choices.",
+          "recommendation": "Keep stars as game feedback. Add an optional later independent work-product challenge and assessor rubric if the working group wants evidence of practical proficiency.",
+          "status": "Backlog; not a claim of measured training effectiveness."
+        },
+        {
+          "id": "R10",
+          "severity": "low",
+          "observation": "Several compact-screen metadata labels are rendered at 9–10px; record comparison and register tasks rely on these details.",
+          "source": [
+            "dist/skill-games.css: max-width680 and max-width480 rules"
+          ],
+          "verified_or_hypothesis": "CSS sizes verified; readability concern is a hypothesis requiring real device/user testing.",
+          "reproduction": "Inspect sg-card-meta, sg-label and sg-note in the small-screen rules.",
+          "recommendation": "Check on a physical phone with typical users; prioritize asset IDs, intervals, units and source status over decorative labels, and support enlarged text.",
+          "status": "Root owns browser/responsive verification."
+        },
+        {
+          "id": "R11",
+          "severity": "positive",
+          "observation": "Documentation validators correctly enforce both applicability conditions, current approved instructions, prerequisite order, matching evidence and the absence of duplicate/extra requirements. Alternative register row order and either parts/slot prerequisite order are accepted.",
+          "source": [
+            "dist/pack-documentation.js: check, assessTrail",
+            "tests/pack-documentation.cjs"
+          ],
+          "verified_or_hypothesis": "Verified by source and passing model/event tests.",
+          "reproduction": "Run tests/pack-documentation.cjs; checks include extra tagged assets, draft revisions, reordered valid prerequisites, duplicate requirements and alternative register order.",
+          "recommendation": "Retain these checks and acceptance of valid alternatives.",
+          "status": "Strength retained."
+        },
+        {
+          "id": "R12",
+          "severity": "low",
+          "observation": "Current-source exercises show one approved source, one superseded source and one draft. They do not yet include two approved versions with different effective dates or conflicting authoritative records.",
+          "source": [
+            "dist/pack-documentation.js: make level3",
+            "dist/pack-integrity.js: make level7"
+          ],
+          "verified_or_hypothesis": "Verified scenario pattern; risk of learning only the Approved label is a hypothesis.",
+          "reproduction": "Generate any seed; source status categories and correct status remain fixed.",
+          "recommendation": "Add a later source-selection case with more than one approved-looking record, an effective-date boundary or an unresolved conflict requiring investigation.",
+          "status": "Backlog."
+        },
+        {
+          "id": "R13",
+          "severity": "low",
+          "observation": "Applicability and period-selection meters reveal the number of required selections, which is helpful scaffolding but reduces the need to decide whether the search is complete.",
+          "source": [
+            "dist/pack-documentation.js: meter level2",
+            "dist/pack-integrity.js: meter window"
+          ],
+          "verified_or_hypothesis": "Verified UI behavior; influence on learning is a hypothesis.",
+          "reproduction": "Untouched tasks show tagged/records selected against the exact number expected.",
+          "recommendation": "Keep counts in introductory play; remove the answer-count cue in a later independent challenge while retaining an explicit Check action.",
+          "status": "Possible advanced-mode change."
+        },
+        {
+          "id": "R14",
+          "severity": "positive",
+          "observation": "Documentation will not close a job with only a plan, a wrong-asset record or a failed check; editing linked evidence reopens the closeout.",
+          "source": [
+            "dist/pack-documentation.js: make/check/act level8",
+            "tests/pack-documentation.cjs: closeout checks"
+          ],
+          "verified_or_hypothesis": "Verified by model tests.",
+          "reproduction": "Attempt stamp with incomplete evidence, or remove an evidence link after a valid closeout.",
+          "recommendation": "Retain the distinction between scheduled and verified-completed work.",
+          "status": "Strength retained."
+        },
+        {
+          "id": "R15",
+          "severity": "positive",
+          "observation": "Integrity preserves unknown-versus-zero, requires matching units, distinguishes a duplicate event from a similar event, retains zero-result records in period totals, rejects overbroad zero filtering and checks correction history.",
+          "source": [
+            "dist/pack-integrity.js: check levels2–10",
+            "tests/pack-integrity.cjs"
+          ],
+          "verified_or_hypothesis": "Verified by source and model/event tests.",
+          "reproduction": "Run tests/pack-integrity.cjs; the negative cases cover each distinction and both valid duplicate-removal alternatives.",
+          "recommendation": "Retain these fundamentals and make them recur in later mixed challenges.",
+          "status": "Strength retained."
+        }
+      ],
+      "personas": [
+        {
+          "id": "D01",
+          "skill": "Documentation",
+          "experience": "newcomer",
+          "context": "desktop visual",
+          "world": "Airline",
+          "value": "The first record match gives an immediate, concrete starting point.",
+          "concern": "A newcomer may mistake the act of attaching a requirement for evidence that the inspection itself is complete.",
+          "priority": "low",
+          "evidence": [
+            "R11",
+            "R14"
+          ],
+          "model_probe_seed": 1
+        },
+        {
+          "id": "D02",
+          "skill": "Documentation",
+          "experience": "newcomer",
+          "context": "small phone",
+          "world": "Bus Company",
+          "value": "Short prompts and large asset cards offer a manageable first phone task.",
+          "concern": "Small applicability and interval metadata may require zooming on a physical phone.",
+          "priority": "medium",
+          "evidence": [
+            "R10",
+            "R11"
+          ],
+          "model_probe_seed": 2
+        },
+        {
+          "id": "D03",
+          "skill": "Documentation",
+          "experience": "newcomer",
+          "context": "keyboard",
+          "world": "Cat Hugs",
+          "value": "Buttons and explicit labels can support keyboard-only play.",
+          "concern": "The baseline capstone reused answer-focus identities and could silently focus the next correct answer.",
+          "priority": "high",
+          "evidence": [
+            "R01"
+          ],
+          "model_probe_seed": 3
+        },
+        {
+          "id": "D04",
+          "skill": "Documentation",
+          "experience": "newcomer",
+          "context": "fast/skipping",
+          "world": "Secret Squirrel",
+          "value": "Open level selection lets an impatient learner explore the later work pack.",
+          "concern": "Skipping to the final pack can produce a completion badge without practicing applicability or forecast decisions.",
+          "priority": "medium",
+          "evidence": [
+            "R04",
+            "R09"
+          ],
+          "model_probe_seed": 4
+        },
+        {
+          "id": "D05",
+          "skill": "Documentation",
+          "experience": "early practitioner",
+          "context": "desktop visual",
+          "world": "Airline",
+          "value": "Combining family and serial range is more useful than memorizing a definition.",
+          "concern": "Exact target counts may let a learner stop searching when the meter fills rather than verifying applicability.",
+          "priority": "low",
+          "evidence": [
+            "R11",
+            "R13"
+          ],
+          "model_probe_seed": 5
+        },
+        {
+          "id": "D06",
+          "skill": "Documentation",
+          "experience": "early practitioner",
+          "context": "small phone",
+          "world": "Bus Company",
+          "value": "The first-due-day challenge clearly introduces two competing limits.",
+          "concern": "The fixed-use forecast may look easier than a changing operational forecast, and compact source cards need a real-phone check.",
+          "priority": "medium",
+          "evidence": [
+            "R05",
+            "R10"
+          ],
+          "model_probe_seed": 6
+        },
+        {
+          "id": "D07",
+          "skill": "Documentation",
+          "experience": "early practitioner",
+          "context": "keyboard",
+          "world": "Cat Hugs",
+          "value": "The register supports alternative valid row ordering.",
+          "concern": "A replacement records only a short Linked message, so the old interval is not visible in the register trail.",
+          "priority": "medium",
+          "evidence": [
+            "R06",
+            "R11"
+          ],
+          "model_probe_seed": 7
+        },
+        {
+          "id": "D08",
+          "skill": "Documentation",
+          "experience": "early practitioner",
+          "context": "fast/skipping",
+          "world": "Secret Squirrel",
+          "value": "New cases change asset numbers and intervals.",
+          "concern": "The final five-choice structure remains predictable even when numbers change.",
+          "priority": "medium",
+          "evidence": [
+            "R04",
+            "R08"
+          ],
+          "model_probe_seed": 8
+        },
+        {
+          "id": "D09",
+          "skill": "Documentation",
+          "experience": "experienced technician",
+          "context": "desktop visual",
+          "world": "Airline",
+          "value": "Current, draft and superseded copies teach a useful source-control distinction.",
+          "concern": "A veteran may find a single Approved choice too obvious to exercise judgment.",
+          "priority": "medium",
+          "evidence": [
+            "R12"
+          ],
+          "model_probe_seed": 9
+        },
+        {
+          "id": "D10",
+          "skill": "Documentation",
+          "experience": "experienced technician",
+          "context": "small phone",
+          "world": "Bus Company",
+          "value": "The matching-work-plus-passed-check closeout is a practical distinction.",
+          "concern": "The strongest evidence labels become small on phone layouts; real users should confirm they can compare them easily.",
+          "priority": "low",
+          "evidence": [
+            "R10",
+            "R14"
+          ],
+          "model_probe_seed": 10
+        },
+        {
+          "id": "D11",
+          "skill": "Documentation",
+          "experience": "experienced technician",
+          "context": "keyboard",
+          "world": "Cat Hugs",
+          "value": "Either parts-first or slot-first is accepted when prerequisites are satisfied.",
+          "concern": "The baseline auto-advance focus rewarded repeated activation instead of deliberate inspection of the next stage.",
+          "priority": "high",
+          "evidence": [
+            "R01",
+            "R11"
+          ],
+          "model_probe_seed": 11
+        },
+        {
+          "id": "D12",
+          "skill": "Documentation",
+          "experience": "experienced technician",
+          "context": "fast/skipping",
+          "world": "Secret Squirrel",
+          "value": "The work-pack path brings several basic decisions together quickly.",
+          "concern": "It still cues each target and has no conflicting sources, changed demand or reasoned defense.",
+          "priority": "medium",
+          "evidence": [
+            "R04",
+            "R05",
+            "R12"
+          ],
+          "model_probe_seed": 12
+        },
+        {
+          "id": "D13",
+          "skill": "Documentation",
+          "experience": "trainer",
+          "context": "desktop visual",
+          "world": "Airline",
+          "value": "A trainer can demonstrate wrong applicability, wrong revisions and invalid closeouts safely.",
+          "concern": "Stars alone do not show which concept the learner misunderstood or whether the learner can repeat the task independently.",
+          "priority": "medium",
+          "evidence": [
+            "R09",
+            "R11",
+            "R14"
+          ],
+          "model_probe_seed": 13
+        },
+        {
+          "id": "D14",
+          "skill": "Documentation",
+          "experience": "trainer",
+          "context": "small phone",
+          "world": "Bus Company",
+          "value": "A trainer can use the phone-friendly cards during short practice sessions.",
+          "concern": "Hint scoring could discourage a learner from requesting the help the trainer wants them to use.",
+          "priority": "low",
+          "evidence": [
+            "R07",
+            "R10"
+          ],
+          "model_probe_seed": 14
+        },
+        {
+          "id": "D15",
+          "skill": "Documentation",
+          "experience": "trainer",
+          "context": "keyboard",
+          "world": "Cat Hugs",
+          "value": "Keyboard play can make a projector walkthrough efficient.",
+          "concern": "Automatic focus must move to the next stage, not a preselected correct answer; the pack fix now supplies that target.",
+          "priority": "high",
+          "evidence": [
+            "R01"
+          ],
+          "model_probe_seed": 15
+        },
+        {
+          "id": "D16",
+          "skill": "Documentation",
+          "experience": "trainer",
+          "context": "fast/skipping",
+          "world": "Secret Squirrel",
+          "value": "Direct access to any level helps a trainer target a weak skill.",
+          "concern": "A later unseen work-product challenge is needed if the trainer wants evidence beyond recognition of the displayed cues.",
+          "priority": "medium",
+          "evidence": [
+            "R04",
+            "R09"
+          ],
+          "model_probe_seed": 16
+        },
+        {
+          "id": "D17",
+          "skill": "Documentation",
+          "experience": "supervisor",
+          "context": "desktop visual",
+          "world": "Airline",
+          "value": "The model accepts valid alternatives and enforces prerequisite logic.",
+          "concern": "A supervisor should not read a best-star total as demonstrated job qualification.",
+          "priority": "medium",
+          "evidence": [
+            "R09",
+            "R11"
+          ],
+          "model_probe_seed": 17
+        },
+        {
+          "id": "D18",
+          "skill": "Documentation",
+          "experience": "supervisor",
+          "context": "small phone",
+          "world": "Bus Company",
+          "value": "Short sessions can fit around work without a long lesson page.",
+          "concern": "The supervisor still needs observable work products and a practical review rubric to compare learners.",
+          "priority": "medium",
+          "evidence": [
+            "R09"
+          ],
+          "model_probe_seed": 18
+        },
+        {
+          "id": "D19",
+          "skill": "Documentation",
+          "experience": "supervisor",
+          "context": "keyboard",
+          "world": "Cat Hugs",
+          "value": "The correct-current-source rule and reopened closeout reinforce documentation discipline.",
+          "concern": "The simpler register history should eventually preserve before/after detail so both record specialties teach compatible audit habits.",
+          "priority": "medium",
+          "evidence": [
+            "R06",
+            "R14"
+          ],
+          "model_probe_seed": 19
+        },
+        {
+          "id": "D20",
+          "skill": "Documentation",
+          "experience": "supervisor",
+          "context": "fast/skipping",
+          "world": "Secret Squirrel",
+          "value": "World changes show that the underlying record skills are broader than one aircraft community.",
+          "concern": "Changing the label to a bus or rover does not by itself establish transfer to a different occupation.",
+          "priority": "low",
+          "evidence": [
+            "R08",
+            "R09"
+          ],
+          "model_probe_seed": 20
+        },
+        {
+          "id": "I01",
+          "skill": "Data Integrity",
+          "experience": "newcomer",
+          "context": "desktop visual",
+          "world": "Airline",
+          "value": "One wrong number gives a novice an easy first success.",
+          "concern": "The Match source button performs the correction automatically; a novice can succeed without identifying the mismatched field.",
+          "priority": "medium",
+          "evidence": [
+            "R03"
+          ],
+          "model_probe_seed": 1
+        },
+        {
+          "id": "I02",
+          "skill": "Data Integrity",
+          "experience": "newcomer",
+          "context": "small phone",
+          "world": "Bus Company",
+          "value": "Unknown and zero appear side by side with short labels.",
+          "concern": "Their small metadata should remain readable on a real phone so the distinction is not reduced to blind tapping.",
+          "priority": "low",
+          "evidence": [
+            "R10",
+            "R15"
+          ],
+          "model_probe_seed": 2
+        },
+        {
+          "id": "I03",
+          "skill": "Data Integrity",
+          "experience": "newcomer",
+          "context": "keyboard",
+          "world": "Cat Hugs",
+          "value": "Source and record cards make the evidence relationship visible.",
+          "concern": "An already-correct retained row originally had no persistent reviewed marker after keyboard verification.",
+          "priority": "medium",
+          "evidence": [
+            "R02"
+          ],
+          "model_probe_seed": 3
+        },
+        {
+          "id": "I04",
+          "skill": "Data Integrity",
+          "experience": "newcomer",
+          "context": "fast/skipping",
+          "world": "Secret Squirrel",
+          "value": "Immediate corrections make experimentation feel safe.",
+          "concern": "An impatient player may press Match source on every row and learn the button sequence more readily than the verification habit.",
+          "priority": "medium",
+          "evidence": [
+            "R03"
+          ],
+          "model_probe_seed": 4
+        },
+        {
+          "id": "I05",
+          "skill": "Data Integrity",
+          "experience": "early practitioner",
+          "context": "desktop visual",
+          "world": "Airline",
+          "value": "Unit conversion requires choosing both a number and a unit.",
+          "concern": "A later mixed-unit batch would be needed to see whether this carries over when the unit mismatch is not announced in the prompt.",
+          "priority": "low",
+          "evidence": [
+            "R03",
+            "R15"
+          ],
+          "model_probe_seed": 5
+        },
+        {
+          "id": "I06",
+          "skill": "Data Integrity",
+          "experience": "early practitioner",
+          "context": "small phone",
+          "world": "Bus Company",
+          "value": "Event IDs and times make duplicate comparison concrete.",
+          "concern": "Side-by-side comparisons and small labels may become tiring on a phone during a larger batch.",
+          "priority": "low",
+          "evidence": [
+            "R10",
+            "R15"
+          ],
+          "model_probe_seed": 6
+        },
+        {
+          "id": "I07",
+          "skill": "Data Integrity",
+          "experience": "early practitioner",
+          "context": "keyboard",
+          "world": "Cat Hugs",
+          "value": "Linking child records to existing parents gives a concrete identity task.",
+          "concern": "The reviewed-state marker was necessary so keyboard users could keep their place in a mixed batch.",
+          "priority": "medium",
+          "evidence": [
+            "R02",
+            "R15"
+          ],
+          "model_probe_seed": 7
+        },
+        {
+          "id": "I08",
+          "skill": "Data Integrity",
+          "experience": "early practitioner",
+          "context": "fast/skipping",
+          "world": "Secret Squirrel",
+          "value": "Keeping zero-result records teaches a useful reconciliation habit.",
+          "concern": "The exact expected record count is displayed, so the task does not yet assess when the search is complete.",
+          "priority": "low",
+          "evidence": [
+            "R13",
+            "R15"
+          ],
+          "model_probe_seed": 8
+        },
+        {
+          "id": "I09",
+          "skill": "Data Integrity",
+          "experience": "experienced technician",
+          "context": "desktop visual",
+          "world": "Airline",
+          "value": "Duplicate events are distinguished from similar but separate events.",
+          "concern": "An experienced reviewer will want ambiguous duplicates and investigation choices, beyond identical event copies.",
+          "priority": "medium",
+          "evidence": [
+            "R03",
+            "R15"
+          ],
+          "model_probe_seed": 9
+        },
+        {
+          "id": "I10",
+          "skill": "Data Integrity",
+          "experience": "experienced technician",
+          "context": "small phone",
+          "world": "Bus Company",
+          "value": "The current-source challenge correctly rejects a newer draft.",
+          "concern": "There is always exactly one Approved choice; real source disputes require more than noticing that label.",
+          "priority": "medium",
+          "evidence": [
+            "R12"
+          ],
+          "model_probe_seed": 10
+        },
+        {
+          "id": "I11",
+          "skill": "Data Integrity",
+          "experience": "experienced technician",
+          "context": "keyboard",
+          "world": "Cat Hugs",
+          "value": "The before-and-after audit trail is a useful foundation.",
+          "concern": "Baseline review of an unchanged record was invisible, making a correct batch harder to inspect; that display issue is now fixed.",
+          "priority": "medium",
+          "evidence": [
+            "R02",
+            "R15"
+          ],
+          "model_probe_seed": 11
+        },
+        {
+          "id": "I12",
+          "skill": "Data Integrity",
+          "experience": "experienced technician",
+          "context": "fast/skipping",
+          "world": "Secret Squirrel",
+          "value": "The prevention gate holds errors while retaining valid zeros.",
+          "concern": "The final batch still supplies the authoritative answer beside every row and copies whole records in one action.",
+          "priority": "medium",
+          "evidence": [
+            "R03",
+            "R15"
+          ],
+          "model_probe_seed": 12
+        },
+        {
+          "id": "I13",
+          "skill": "Data Integrity",
+          "experience": "trainer",
+          "context": "desktop visual",
+          "world": "Airline",
+          "value": "A trainer can demonstrate why an unknown cannot be changed to zero.",
+          "concern": "The trainer needs a later task that requires the learner to choose a correction, not merely request an automatic copy.",
+          "priority": "medium",
+          "evidence": [
+            "R03",
+            "R15"
+          ],
+          "model_probe_seed": 13
+        },
+        {
+          "id": "I14",
+          "skill": "Data Integrity",
+          "experience": "trainer",
+          "context": "small phone",
+          "world": "Bus Company",
+          "value": "Short tasks can support frequent practice and immediate discussion.",
+          "concern": "The star cost of hints may undermine the trainer’s invitation to ask for help.",
+          "priority": "low",
+          "evidence": [
+            "R07"
+          ],
+          "model_probe_seed": 14
+        },
+        {
+          "id": "I15",
+          "skill": "Data Integrity",
+          "experience": "trainer",
+          "context": "keyboard",
+          "world": "Cat Hugs",
+          "value": "Persistent Reviewed indicators now make it easier to explain which rows have been checked.",
+          "concern": "Keyboard and screen-reader behavior still needs live-user validation rather than relying solely on render tests.",
+          "priority": "low",
+          "evidence": [
+            "R02",
+            "R10"
+          ],
+          "model_probe_seed": 15
+        },
+        {
+          "id": "I16",
+          "skill": "Data Integrity",
+          "experience": "trainer",
+          "context": "fast/skipping",
+          "world": "Secret Squirrel",
+          "value": "A trainer can jump to the exact misconception: units, duplicates, period or source.",
+          "concern": "Completing a targeted example does not show independent transfer to an unfamiliar combined case.",
+          "priority": "medium",
+          "evidence": [
+            "R03",
+            "R09"
+          ],
+          "model_probe_seed": 16
+        },
+        {
+          "id": "I17",
+          "skill": "Data Integrity",
+          "experience": "supervisor",
+          "context": "desktop visual",
+          "world": "Airline",
+          "value": "The gate checks model prevention as well as cleanup.",
+          "concern": "A supervisor would need evidence that learners can distinguish hold/investigate from correct when sources conflict.",
+          "priority": "medium",
+          "evidence": [
+            "R03",
+            "R12",
+            "R15"
+          ],
+          "model_probe_seed": 17
+        },
+        {
+          "id": "I18",
+          "skill": "Data Integrity",
+          "experience": "supervisor",
+          "context": "small phone",
+          "world": "Bus Company",
+          "value": "Local browser play makes a small exercise easy to start.",
+          "concern": "Current stars do not offer a comparable assessor portfolio or explanation of judgment.",
+          "priority": "medium",
+          "evidence": [
+            "R09"
+          ],
+          "model_probe_seed": 18
+        },
+        {
+          "id": "I19",
+          "skill": "Data Integrity",
+          "experience": "supervisor",
+          "context": "keyboard",
+          "world": "Cat Hugs",
+          "value": "Audit validation checks more than whether the final number happens to be right.",
+          "concern": "Record review and correction history should become part of a larger work-product assessment, not be inferred from stars.",
+          "priority": "medium",
+          "evidence": [
+            "R09",
+            "R15"
+          ],
+          "model_probe_seed": 19
+        },
+        {
+          "id": "I20",
+          "skill": "Data Integrity",
+          "experience": "supervisor",
+          "context": "fast/skipping",
+          "world": "Secret Squirrel",
+          "value": "Airline, bus, cat and squirrel contexts make the same record relationships approachable.",
+          "concern": "The contexts share the same underlying task patterns; they are not evidence of four independent occupational validations.",
+          "priority": "low",
+          "evidence": [
+            "R08",
+            "R09"
+          ],
+          "model_probe_seed": 20
+        }
+      ],
+      "changes": [
+        {
+          "files": [
+            "dist/pack-documentation.js",
+            "tests/pack-documentation.cjs"
+          ],
+          "change": "Unique answer focus keys per tab; result.focus points to the newly active tab control; regressions cover target existence and removal of previous answer identity."
+        },
+        {
+          "files": [
+            "dist/pack-integrity.js",
+            "tests/pack-integrity.cjs"
+          ],
+          "change": "Reviewed checkmark, label and aria-pressed state persist after row verification, including unchanged correct records; render regressions added."
+        }
+      ]
+    },
+    {
+      "title": "Database Management and assessment review —20 simulated MXMGR perspectives",
+      "date": "2026-11-11",
+      "methodology": {
+        "participants": "No real participants. Twenty constructed role/context perspectives, not twenty independent empirical observations.",
+        "coverage": "All10 Database Management levels reviewed through source and pure-model/shell probes; cross-specialty assessment concerns refer to the shared main game shell.",
+        "matrix": "Five experience profiles × four play contexts/worlds. Worlds are assigned review contexts, not evidence that twenty human players used them.",
+        "actual_methods": [
+          "Source inspection",
+          "Seeded reducer/checker tests",
+          "DOM-free execution of real shell event handlers",
+          "Published-generator comparison for legacy case compatibility"
+        ],
+        "not_performed": [
+          "Real user recruitment",
+          "Human completion-rate measurement",
+          "Timed usability study",
+          "Browser automation by this reviewer",
+          "Training-effectiveness experiment"
+        ]
+      },
+      "findings": [
+        {
+          "id": "DB01",
+          "severity": "strength",
+          "observation": "The ten-level path introduces access keys, scope, expiry, offboarding, unique identity, dependencies, controlled change, recovery, then a combined service challenge. Seeded action tests find each level solvable and reject several important invalid states.",
+          "source": [
+            "/workspace/sites/force-multiplier-v22/dist/pack-database.js:levels/make/check/act",
+            "/workspace/sites/force-multiplier-v22/tests/pack-database.cjs"
+          ],
+          "verified_or_hypothesis": "verified software behavior; learning benefit remains a hypothesis",
+          "reproduction": "Run node tests/pack-database.cjs. Original suite passed2053 assertions; after focused fixes the suite passed4301.",
+          "recommendation": "Keep the one-action opening and progressively combined work. Do not add a prerequisite lecture."
+        },
+        {
+          "id": "DB02",
+          "severity": "P1 assessment display",
+          "observation": "Before this review, completing a shown example wrote best[level]=0 yet displayed the same completed checkmark and incremented the same specialty completion count as independent work. This did not award stars, but the completion display blurred the distinction.",
+          "source": [
+            "/workspace/sites/force-multiplier-v22/dist/game.js:finish/track/skillsMenu/levelMap"
+          ],
+          "verified_or_hypothesis": "verified in real shell event harness",
+          "reproduction": "Database level1 → Show a working example → Open access → Next level. Persisted best={1:0}; level1 got class=\"level-dot done\" and check icon; Object.keys(best).length=1.",
+          "recommendation": "Implemented by root: demonstrations remain recorded but have a distinct demo marker and do not contribute to completed-level counts.",
+          "status": "fixed by root in shared shell; root reports225 shell assertions passing"
+        },
+        {
+          "id": "DB03",
+          "severity": "P1 assessment variation",
+          "observation": "The published DBM10 generator changed names and button order but repeated the same two access requests, same excess/missing key positions and same broken connection. One hundred seeds produced one substantive constraint pattern.",
+          "source": [
+            "/workspace/sites/force-multiplier-v22/dist/pack-database.js:make level10",
+            "/workspace/sites/force-multiplier-v22/tests/pack-database.cjs:capstone variation/revision checks"
+          ],
+          "verified_or_hypothesis": "verified generator limitation; fixed in local source",
+          "reproduction": "Normalize names and key-bank order; compare actors task/scope/required keys, initial grants and broken dependency across seeds1–100. Before:1 pattern. After:51 patterns, with36 connection,34 database and30 report failures.",
+          "recommendation": "Implemented varied scope/task pairs, actor access correction positions and failed dependencies. Existing saved DBM10 work keeps revision1; new cases use revision2.",
+          "status": "fixed; revision1 exactly matches published generator for100seeds"
+        },
+        {
+          "id": "DB04",
+          "severity": "P2 answer shortcut",
+          "observation": "The unique-identity exercise originally labeled the target account Approved and the other No request, so a player could find the answer without matching the unique identifier on the source request.",
+          "source": [
+            "/workspace/sites/force-multiplier-v22/dist/pack-database.js:make level6/render permissions",
+            "/workspace/sites/force-multiplier-v22/tests/pack-database.cjs:identity regression"
+          ],
+          "verified_or_hypothesis": "verified source/render shortcut; fixed in local source",
+          "reproduction": "Inspect both account task chips in level6. Published labels disclosed the requested account. New labels both say View reports; approval and unique ID remain on the separate source request.",
+          "recommendation": "Implemented neutral account task labels. Preserve the duplicate display name and require the identifier to distinguish accounts.",
+          "status": "fixed; focused regression passes"
+        },
+        {
+          "id": "DB05",
+          "severity": "P2 future depth",
+          "observation": "Recovery verifies only an expected record count after restore/replay. The model has no record contents, reconciliation samples, duplicates or last-transaction evidence to inspect.",
+          "source": [
+            "/workspace/sites/force-multiplier-v22/dist/pack-database.js:make level9/check recovery/act verify/render recovery"
+          ],
+          "verified_or_hypothesis": "verified model scope; risk of transfer overconfidence is a hypothesis",
+          "reproduction": "Level9 state contains restored,replayed,verified,opened,count. Verify succeeds when count equals snapshot+pending and stage flags are true.",
+          "recommendation": "Keep count verification as the introductory task. Add a later recovery case that compares sample contents or transaction evidence, ideally crossing into Data Integrity."
+        },
+        {
+          "id": "DB06",
+          "severity": "P2 future depth",
+          "observation": "Troubleshooting displays the single failed component directly and repairs it with one action. This practices recognizing a dependency and leaving healthy components alone, but does not require diagnosis from incomplete symptoms.",
+          "source": [
+            "/workspace/sites/force-multiplier-v22/dist/pack-database.js:make level7/render pipeline/act repair"
+          ],
+          "verified_or_hypothesis": "verified model scope; experienced-user reaction is simulated",
+          "reproduction": "Every case has one false node, explicitly labeled with its failure and Tap to repair; healthy-node clicks leave state unchanged.",
+          "recommendation": "Retain the simple opening. Later introduce an inspect step, downstream symptoms, and a choice of corrective action rather than only clicking the displayed failure."
+        },
+        {
+          "id": "DB07",
+          "severity": "P1 evaluation boundary",
+          "observation": "Main-game stars measure no failed checks, corrected work, hint use and example use. The shell does not collect a rationale, briefing, independent assessor rating, time-to-proficiency record or cross-specialty work product. It therefore does not establish the full Discover→Evaluate→Decide→Act→Communicate→Defend objective.",
+          "source": [
+            "/workspace/sites/force-multiplier-v22/dist/game.js:finish/showRules/persist",
+            "/workspace/sites/force-multiplier-v22/README.md:Five specialties/four worlds and Deliberate scope"
+          ],
+          "verified_or_hypothesis": "verified main-game evidence scope; proposed evaluation design is a recommendation",
+          "reproduction": "Inspect persisted current state and best stars, then finish a game level. No communication/defense artifact or assessor rubric is produced by the game path. Earlier practice workspace is separate.",
+          "recommendation": "Use the game as fundamentals practice. Follow with an unfamiliar combined work task, a brief explanation of choices and independent assessor review; compare with baseline and delayed transfer before claiming four-hour proficiency or tenfold efficiency."
+        },
+        {
+          "id": "DB08",
+          "severity": "P2 hypothesis to test",
+          "observation": "Using a hint reduces the same-case result to one star. A learner focused on collecting stars might avoid asking for help, even during initial learning. No actual learner behavior was observed.",
+          "source": [
+            "/workspace/sites/force-multiplier-v22/dist/game.js:showHelp/finish/showRules"
+          ],
+          "verified_or_hypothesis": "scoring rule verified; behavioral effect explicitly hypothetical",
+          "reproduction": "Hint → solve correctly gives one star. A new case resets assistance. Restart and Undo retain it.",
+          "recommendation": "During a real pilot, observe help-seeking and frustration. Consider separate practice encouragement and independent-challenge badges if star pressure discourages learning."
+        },
+        {
+          "id": "DB09",
+          "severity": "P2 pilot readiness",
+          "observation": "The main game stores its current case and best stars locally by world and specialty, but it does not expose a portable record of learner decisions for a working-group evaluator. Earlier workspace exports do not represent the new game path.",
+          "source": [
+            "/workspace/sites/force-multiplier-v22/dist/game.js:persist/menu",
+            "/workspace/sites/force-multiplier-v22/README.md:progress storage"
+          ],
+          "verified_or_hypothesis": "verified implementation boundary; workflow impact is simulated",
+          "reproduction": "Inspect main game menu and progress object: world/skill/current/best exist; no learner-evidence export action or cross-device account workflow exists.",
+          "recommendation": "For a pilot, use a short observer sheet or later add an optional local progress/evidence export. Do not interpret browser-local stars as an authenticated qualification record."
+        }
+      ],
+      "personas": [
+        {
+          "id": "B01",
+          "experience": "newcomer",
+          "context": "desktop visual",
+          "world": "Airline",
+          "value": "One request and three keys make the first action easy to understand.",
+          "concern": "I may assume Edit alone is enough until I notice that viewing and editing are separate capabilities in this game.",
+          "priority": "P2",
+          "evidence": [
+            "DB01"
+          ],
+          "skill": "Database Management"
+        },
+        {
+          "id": "B02",
+          "experience": "newcomer",
+          "context": "small phone",
+          "world": "Bus Company",
+          "value": "A short instruction and a few buttons suit a quick practice break.",
+          "concern": "I need the task, person, scope and selected keys to remain visible together on a small display; this requires browser observation, not a claim from code alone.",
+          "priority": "P2",
+          "evidence": [
+            "DB01"
+          ],
+          "skill": "Database Management"
+        },
+        {
+          "id": "B03",
+          "experience": "newcomer",
+          "context": "keyboard",
+          "world": "Cat Hugs",
+          "value": "Labeled buttons and stable focus identifiers give a basis for keyboard interaction.",
+          "concern": "I want a real keyboard walkthrough to confirm that a repaired/re-rendered board does not strand focus; this review did not use a browser.",
+          "priority": "P2",
+          "evidence": [
+            "DB01"
+          ],
+          "skill": "Database Management"
+        },
+        {
+          "id": "B04",
+          "experience": "newcomer",
+          "context": "fast/skipping",
+          "world": "Secret Squirrel",
+          "value": "I can jump to the task that catches my attention and return to fundamentals.",
+          "concern": "If I skip straight to the final service challenge, I may click failure markers without understanding the approval and change sequence.",
+          "priority": "P2",
+          "evidence": [
+            "DB06",
+            "DB07"
+          ],
+          "skill": "Database Management"
+        },
+        {
+          "id": "B05",
+          "experience": "early practitioner",
+          "context": "desktop visual",
+          "world": "Airline",
+          "value": "Permissions, room scope and temporary passes connect to everyday account work.",
+          "concern": "The old identity labels let me choose Approved without reading the unique ID; neutral labels now make that distinction meaningful.",
+          "priority": "P2",
+          "evidence": [
+            "DB04"
+          ],
+          "skill": "Database Management"
+        },
+        {
+          "id": "B06",
+          "experience": "early practitioner",
+          "context": "small phone",
+          "world": "Bus Company",
+          "value": "Local saved work lets me leave a short task and return to it on the same browser.",
+          "concern": "My progress will not automatically follow from my phone to a work computer, and an evaluator cannot infer that these are the same learner.",
+          "priority": "P2",
+          "evidence": [
+            "DB09"
+          ],
+          "skill": "Database Management"
+        },
+        {
+          "id": "B07",
+          "experience": "early practitioner",
+          "context": "keyboard",
+          "world": "Cat Hugs",
+          "value": "Wrong ordering is rejected and I can correct a sequence instead of starting a long lesson again.",
+          "concern": "The detailed error tells me the right order; the resulting corrected-work stars should not be treated as an independent assessment.",
+          "priority": "P1",
+          "evidence": [
+            "DB07"
+          ],
+          "skill": "Database Management"
+        },
+        {
+          "id": "B08",
+          "experience": "early practitioner",
+          "context": "fast/skipping",
+          "world": "Secret Squirrel",
+          "value": "The final challenge combines access, a dependency and a safe change in one place.",
+          "concern": "Repeated final cases previously reused the same action pattern; varied tasks and failures now require me to read the case again.",
+          "priority": "P1",
+          "evidence": [
+            "DB03"
+          ],
+          "skill": "Database Management"
+        },
+        {
+          "id": "B09",
+          "experience": "experienced technician",
+          "context": "desktop visual",
+          "world": "Airline",
+          "value": "The early levels are a useful quick check of least-privilege and access-lifecycle habits.",
+          "concern": "A directly marked failed node is too simple to establish that I can diagnose an interface fault from ambiguous symptoms.",
+          "priority": "P2",
+          "evidence": [
+            "DB06"
+          ],
+          "skill": "Database Management"
+        },
+        {
+          "id": "B10",
+          "experience": "experienced technician",
+          "context": "small phone",
+          "world": "Bus Company",
+          "value": "The modular path lets me practice during short intervals without a setup procedure.",
+          "concern": "I would need a later recovery task that validates actual records; matching a count alone leaves important integrity questions unasked.",
+          "priority": "P2",
+          "evidence": [
+            "DB05"
+          ],
+          "skill": "Database Management"
+        },
+        {
+          "id": "B11",
+          "experience": "experienced technician",
+          "context": "keyboard",
+          "world": "Cat Hugs",
+          "value": "The duplicate-name exercise rewards a precise identifier comparison after the label shortcut was removed.",
+          "concern": "The case still tests a small predetermined permission set; my broader judgement about approvals and exceptional access is not measured.",
+          "priority": "P2",
+          "evidence": [
+            "DB04",
+            "DB07"
+          ],
+          "skill": "Database Management"
+        },
+        {
+          "id": "B12",
+          "experience": "experienced technician",
+          "context": "fast/skipping",
+          "world": "Secret Squirrel",
+          "value": "Level selection lets me bypass already-familiar introductory key puzzles.",
+          "concern": "Four different worlds are context changes around the same mechanics, so completing each is not four independent occupational qualifications.",
+          "priority": "P1",
+          "evidence": [
+            "DB07"
+          ],
+          "skill": "Database Management"
+        },
+        {
+          "id": "B13",
+          "experience": "trainer",
+          "context": "desktop visual",
+          "world": "Airline",
+          "value": "Working examples and repeatable seeded cases support demonstration followed by guided practice.",
+          "concern": "A zero-star demo used to display the same completed checkmark as independent work; the distinction must survive menus and progress summaries.",
+          "priority": "P1",
+          "evidence": [
+            "DB02"
+          ],
+          "skill": "Database Management"
+        },
+        {
+          "id": "B14",
+          "experience": "trainer",
+          "context": "small phone",
+          "world": "Bus Company",
+          "value": "One concept per short task offers a practical way to observe a learner without a slide presentation.",
+          "concern": "I need to see whether the learner avoids Hint to protect stars; that effect cannot be established by this simulated panel.",
+          "priority": "P2",
+          "evidence": [
+            "DB08"
+          ],
+          "skill": "Database Management"
+        },
+        {
+          "id": "B15",
+          "experience": "trainer",
+          "context": "keyboard",
+          "world": "Cat Hugs",
+          "value": "Separate world and specialty progress supports individual pacing and returning to unfinished work.",
+          "concern": "A trainer still needs a way to record the reason behind a learner decision and compare independent performance across unfamiliar cases.",
+          "priority": "P1",
+          "evidence": [
+            "DB07",
+            "DB09"
+          ],
+          "skill": "Database Management"
+        },
+        {
+          "id": "B16",
+          "experience": "trainer",
+          "context": "fast/skipping",
+          "world": "Secret Squirrel",
+          "value": "The now-varied final DBM case is more useful for asking a learner to inspect each new request.",
+          "concern": "The same visible failure cues and fixed safe-change sequence still make this practice, not a fully independent practical examination.",
+          "priority": "P1",
+          "evidence": [
+            "DB03",
+            "DB06",
+            "DB07"
+          ],
+          "skill": "Database Management"
+        },
+        {
+          "id": "B17",
+          "experience": "supervisor",
+          "context": "desktop visual",
+          "world": "Airline",
+          "value": "The five-specialty structure makes the expected fundamentals visible and easy to discuss with a working group.",
+          "concern": "I cannot answer who is ready to perform the full job from game completion alone; I need an unfamiliar work product and its defense.",
+          "priority": "P1",
+          "evidence": [
+            "DB07"
+          ],
+          "skill": "Database Management"
+        },
+        {
+          "id": "B18",
+          "experience": "supervisor",
+          "context": "small phone",
+          "world": "Bus Company",
+          "value": "A browser game lowers the effort required to demonstrate the concept to colleagues.",
+          "concern": "Local browser scores are not an auditable team proficiency record and may be lost when moving devices or clearing data.",
+          "priority": "P2",
+          "evidence": [
+            "DB09"
+          ],
+          "skill": "Database Management"
+        },
+        {
+          "id": "B19",
+          "experience": "supervisor",
+          "context": "keyboard",
+          "world": "Cat Hugs",
+          "value": "The playful setting can make the same permission and record concepts approachable outside aviation.",
+          "concern": "Accessibility and appeal still need observation with actual users; this role simulation is not evidence of adoption or training effectiveness.",
+          "priority": "P1",
+          "evidence": [
+            "DB01",
+            "DB07"
+          ],
+          "skill": "Database Management"
+        },
+        {
+          "id": "B20",
+          "experience": "supervisor",
+          "context": "fast/skipping",
+          "world": "Secret Squirrel",
+          "value": "Open navigation makes it easy to inspect later tasks without completing every earlier screen.",
+          "concern": "Fast completion, including using examples, must not be used to claim the four-hour or tenfold training targets were achieved.",
+          "priority": "P1",
+          "evidence": [
+            "DB02",
+            "DB07"
+          ],
+          "skill": "Database Management"
+        }
+      ],
+      "verification": {
+        "baseline_database_assertions": 2053,
+        "baseline_shell_assertions": 188,
+        "updated_database_assertions": 4301,
+        "database_capstone_seed_probe": 100,
+        "constraint_patterns_before": 1,
+        "constraint_patterns_after": 51,
+        "legacy_published_generator_exact_matches": 100,
+        "changed_files": [
+          "/workspace/sites/force-multiplier-v22/dist/pack-database.js",
+          "/workspace/sites/force-multiplier-v22/tests/pack-database.cjs"
+        ],
+        "updated_shell_assertions_reported_by_root": 225
+      }
+    }
+  ]
+}
